@@ -56,6 +56,8 @@
       baseModules ? [
         inputs.nix-index-database.hmModules.nix-index
         ./modules/home
+        ./modules/home/fonts
+        ./modules/home/cli
         {
           home = {
             inherit username;
@@ -79,7 +81,7 @@
       };
   in {
     homeConfigurations = {
-      breezy = mkHomeConfig {
+      "bchoy@BREEZY" = mkHomeConfig {
         isWsl = true;
         system = "x86_64-linux";
         username = "bchoy";

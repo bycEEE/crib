@@ -32,11 +32,17 @@ Currently only used on my WSL setup.
 
   ```sh
   curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
-  nix build "github:bycEEE/crib#homeConfigurations.breezy.activationPackage" && ./result/activate
+  nix build "github:bycEEE/crib#homeConfigurations.bchoy@BREEZY.activationPackage" && ./result/activate
   git clone git@github.com:bycEEE/crib.git ~/crib
   # sudo echo "$(pwd)/.nix-profile/bin/bash" >> /etc/shells
   sudo echo "$(pwd)/.nix-profile/bin/zsh" >> /etc/shells
   chsh -s $(pwd)/.nix-profile/bin/zsh
+  ```
+
+- Subsequent runs:
+
+  ```sh
+  just apply
   ```
 
 ## Resources

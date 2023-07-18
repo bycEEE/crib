@@ -10,18 +10,18 @@ update:
 	nix flake update
 
 build:
-	nix build .#homeConfigurations.breezy.activationPackage && ./result/activate
+	nix build .#homeConfigurations.bchoy@{{HOSTNAME}}.activationPackage && ./result/activate
 
 apply:
-	# nix run .#homeConfigurations.breezy.activationPackage
-	home-manager switch --flake .#breezy
+	# nix run .#homeConfigurations.bchoy@{{HOSTNAME}}.activationPackage
+	home-manager switch --flake .#bchoy@{{HOSTNAME}}
 
 push-cachix:
 	just build
 	cachix push byceee ./result
 
 rebuild:
-	sudo nixos-rebuild switch --flake .#breezy
+	sudo nixos-rebuild switch --flake .#bchoy@${HOSTNAME}
 
 clean:
 	nix-store --gc
