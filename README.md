@@ -54,7 +54,7 @@ Currently only used on my WSL setup.
 - [This Cute World](https://nixos-and-flakes.thiscute.world/introduction/)
 - [myme.no NixOS Confederation](https://myme.no/posts/2022-06-14-nixos-confederation.html#wsl)
 - [NixOS on WSL](https://forrestjacobs.com/nixos-on-wsl/)
--
+
 ### Useful Links
 
 - [NixOS Packages Search](https://search.nixos.org/packages)
@@ -66,7 +66,6 @@ Currently only used on my WSL setup.
 
 ### Inspirations
 
-- <https://github.com/shaunsingh/nix-darwin-dotfiles>
 - [the-nix-way/nome](https://github.com/the-nix-way/nome) - Home Manager Config
 - [kclejeune/system](https://github.com/kclejeune/system)
 - [ELD/nix-system](https://github.com/ELD/nix-system)
@@ -74,7 +73,7 @@ Currently only used on my WSL setup.
 - [matlob/nixpkgs](https://github.com/malob/nixpkgs)
 - [vegaelle/nix-nvim](https://framagit.org/vegaelle/nix-nvim)
 - [dustinlyons/nixos-config](https://github.com/dustinlyons/nixos-config)
-
+- [shaunsingh/nix-darwin-dotfiles](https://github.com/shaunsingh/nix-darwin-dotfiles)
 
 - [nbdd0121/wsld](https://github.com/nbdd0121/wsld) WSL2 daemon for x11 and etc
 - [yuanw/nix-home](https://github.com/yuanw/nix-home) macos readme
