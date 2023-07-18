@@ -2,6 +2,8 @@
   description = "bycEEE WSL2/Darwin/Windows Configurations";
 
   nixConfig = {
+    commit-lockfile-summary = "flake: bump inputs";
+
     substituters = [
       "https://cache.nixos.org"
       # "https://nix-community.cachix.org"
