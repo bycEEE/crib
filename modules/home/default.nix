@@ -242,6 +242,7 @@ Useful links:
     #   });
     # };
 
+    # Copied from: https://github.com/fortuneteller2k/nix-config/blob/master/modules/shared/home-manager/default.nix
     htop = {
       enable = true;
       settings =
@@ -284,7 +285,8 @@ Useful links:
 
     jq.enable = true;
 
-    # nix-index-database.comma.enable = true;
+    nix-index.enable = true;
+    nix-index-database.comma.enable = true;
 
     zoxide = {
       enable = true;

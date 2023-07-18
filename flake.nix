@@ -20,15 +20,18 @@
     stable.url = "github:nixos/nixpkgs/nixos-23.05";
     home-manager.url = "github:nix-community/home-manager";
     darwin.url = "github:lnl7/nix-darwin";
+    nix-index-database.url = "github:Mic92/nix-index-database";
 
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
     self,
     darwin,
     home-manager,
+    nix-index-database,
     ...
   } @ inputs: let
     isDarwin = system: (builtins.elem system inputs.nixpkgs.lib.platforms.darwin);
@@ -49,6 +52,7 @@
       nixpkgs ? inputs.nixpkgs,
       isWsl ? false,
       baseModules ? [
+        inputs.nix-index-database.hmModules.nix-index
         ./modules/home
         {
           home = {
