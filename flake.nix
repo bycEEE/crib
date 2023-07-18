@@ -41,12 +41,12 @@
       if isDarwin system
       then "/Users"
       else "/home";
-    defaultSystems = [
-      "aarch64-linux"
-      "aarch64-darwin"
-      "x86_64-darwin"
-      "x86_64-linux"
-    ];
+    # defaultSystems = [
+    #   "aarch64-linux"
+    #   "aarch64-darwin"
+    #   "x86_64-darwin"
+    #   "x86_64-linux"
+    # ];
 
     mkHomeConfig = {
       username,
