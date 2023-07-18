@@ -111,6 +111,8 @@ Useful links:
         # ngrok # Allows you to expose a web server running on your local machine to the internet
         postgresql_14
         pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
+        python311
+        python311Packages.pip
         shellcheck # Shell script analysis tool
         sqlite
         tokei # A program that displays statistics about your code
@@ -207,6 +209,7 @@ Useful links:
         # https://github.com/NixOS/nixpkgs/issues/222991
         # _1password-gui
         openssl
+        openssh
       ])
       ++ (lib.lists.optionals (pkgs.system == "aarch64-darwin" || pkgs.system == "x86_64-darwin") [
         dockutil
