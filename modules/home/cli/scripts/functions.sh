@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 function is_wsl() {
   if [[ "$(< /proc/sys/kernel/ostype)" != Linux ]]; then
     return 1 # WSL uses linux

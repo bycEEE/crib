@@ -9,6 +9,7 @@
   functions = builtins.readFile ./scripts/functions.sh;
   agent_bridge = builtins.readFile ./scripts/agent_bridge.sh;
   aliases = rec {
+    k = "kubectl";
     # gst = "git status";
     # gap = "git add -p";
     # gcia = "git commit --amend --no-edit";
@@ -20,9 +21,13 @@
 in {
   programs.zsh = {
     enable = true;
+    enableAutosuggestions = true;
+    enableCompletion = true;
+    # dotDir = ".config/zsh";
     autocd = false;
-    dotDir = ".config/zsh";
+    defaultKeymap = "viins";
     localVariables = {
+      WORDCHARS = "*?_-.[]~=&;!#$%^(){}<>";
       LANG = "en_US.UTF-8";
       GPG_TTY = "/dev/ttys000";
       DEFAULT_USER = "${config.home.username}";
@@ -32,15 +37,17 @@ in {
       TERM = "xterm-256color";
     };
     shellAliases = aliases;
-    initExtraBeforeCompInit = ''
-      fpath+=~/.zfunc
-    '';
+    # initExtraBeforeCompInit = ''
+    #   # fpath+=~/.zfunc
+    # fpath+=("${config.home.profileDirectory}"/share/zsh/site-functions "${config.home.profileDirectory}"/share/zsh/$ZSH_VERSION/functions "${config.home.profileDirectory}"/share/zsh/vendor-completions)
+    # '';
     initExtra = ''
       ${init}
       ${functions}
       ${lib.optionalString isWsl ''
         ${agent_bridge}
       ''}
+
       # unset RPS1
 
       ### fzf-tab
@@ -70,8 +77,8 @@ in {
       # show systemd unit status
       zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
 
-      # show file preview
-      zstyle ':fzf-tab:complete:*:*' fzf-preview '${lib.getExe pkgs.moar} ''${(Q)realpath}'
+      # # show file preview
+      # zstyle ':fzf-tab:complete:*:*' fzf-preview '${lib.getExe pkgs.moar} ''${(Q)realpath}'
 
       # # show command options and subcommands
       # zstyle ':fzf-tab:complete:*:options' fzf-preview
@@ -86,47 +93,17 @@ in {
 
     history = {
       share = false;
+      extended = true; # Save timestamp to history file
+      save = 10000;
+      size = 10000;
     };
 
-    prezto = {
+    historySubstringSearch.enable = true;
+
+    syntaxHighlighting = {
       enable = true;
-      caseSensitive = false;
-      color = true;
-      extraModules = ["attr" "stat"];
-      extraFunctions = ["zargs" "zmv"];
-      pmodules = [
-        "environment"
-        "terminal"
-        "editor"
-        "history"
-        "directory"
-        "spectrum"
-        "utility"
-        "completion"
-        "archive"
-        "docker"
-        "git"
-        "homebrew"
-        "osx"
-        "autosuggestions"
-        "syntax-highlighting"
-        "history-substring-search"
-        "command-not-found"
-        # "gpg"
-      ];
-      editor = {
-        keymap = "vi";
-        dotExpansion = true;
-        promptContext = true;
-      };
-      gnuUtility.prefix = "g";
-      macOS.dashKeyword = "mand";
-      terminal = {
-        autoTitle = true;
-        windowTitleFormat = "%n@%m: %s %d";
-        tabTitleFormat = "%m: %s %d";
-      };
     };
+
     plugins = [
       {
         name = "fzf-tab";
@@ -139,6 +116,7 @@ in {
       }
     ];
   };
+
   programs.bash = {
     enable = true;
     shellAliases = aliases;
