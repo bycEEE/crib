@@ -38,8 +38,7 @@ in {
     };
     shellAliases = aliases;
     # initExtraBeforeCompInit = ''
-    #   # fpath+=~/.zfunc
-    # fpath+=("${config.home.profileDirectory}"/share/zsh/site-functions "${config.home.profileDirectory}"/share/zsh/$ZSH_VERSION/functions "${config.home.profileDirectory}"/share/zsh/vendor-completions)
+    #   fpath+=(${config.home.profileDirectory}/share/bash-completion/completions)
     # '';
     initExtra = ''
       ${init}
@@ -114,11 +113,21 @@ in {
           sha256 = "sha256-gvZp8P3quOtcy1Xtt1LAW1cfZ/zCtnAmnWqcwrKel6w=";
         };
       }
+      {
+        name = "zsh-bash-completions-fallback";
+        src = pkgs.fetchFromGitHub {
+          owner = "3v1n0";
+          repo = "zsh-bash-completions-fallback";
+          rev = "da560de3178ec389562debedbce16eca8cdf06c3";
+          sha256 = "sha256-Sdo+5DwBK2PqpQl/qnmWy+M47VFcE7m4/R1Cu9oHBVg=";
+        };
+      }
     ];
   };
 
   programs.bash = {
     enable = true;
+    enableCompletion = true;
     shellAliases = aliases;
     initExtra = ''
       ${init}
