@@ -24,6 +24,7 @@ Useful links:
     # ./neovim.nix
     ./shell.nix
     ./starship.nix
+    ./tealdeer.nix
   ];
 
   home = {
@@ -75,14 +76,18 @@ Useful links:
 
         ### Terminal
         # choose # A human-friendly and fast alternative to cut and (sometimes) awk
+        chroma # A general purpose syntax highlighter in pure Go
+        du-dust # A more intuitive version of du in rust
+        duf # Disk Usage/Free Utility - a better 'df' alternative
         hyperfine # A command-line benchmarking tool
         mmv # Move/Copy/Append/Link multiple files according to a set of wildcard patterns
+        moar # Pager designed to just do the right thing without any configuration
         navi # An interactive cheatsheet tool for the command-line and application launchers
         ncurses # A free software emulation of curses
         ov # Feature-rich terminal-based text viewer
         # pueue # A daemon for managing long running shell commands
+        riffdiff # Riff is a wrapper around diff that highlights which parts of lines have changed.
         # sd # Intuitive find & replace CLI (sed alternative)
-        tealdeer # A very fast implementation of tldr in Rust
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
         vivid # A themeable LS_COLORS generator with a rich filetype datebase
         # watchman # A file watching service
@@ -90,6 +95,7 @@ Useful links:
 
         ### Development
         # asdf-vm # Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more
+        devbox # A tool for creating isolated development environments using Nix
         # difftastic # A syntax-aware diff
         # git-oxide # An idiomatic, lean, fast & safe pure Rust implementation of Git
         jql # A JSON query language tool built with Rust
@@ -171,7 +177,6 @@ Useful links:
         ### Utilities
         clipboard-jh # Cut, copy, and paste anything, anywhere, all from the terminal
         croc # Easily and securely send things from one computer to another
-        duf # Disk Usage/Free Utility
         eget # Easily install prebuilt binaries from GitHub
         # gdu # Disk usage analyzer with console interface written in Go (clashes with git alias)
         lnav # The Log File Navigator
@@ -211,6 +216,7 @@ Useful links:
     sessionVariables = {
       EDITOR = "vim";
       VISUAL = "vim";
+      PAGER = "moar";
       # NODE_PATH = "${NODE_GLOBAL}/lib";
       # JAVA_HOME = "${pkgs.jdk11}";
       # PNPM_HOME = "${PNPM_DIR}";
@@ -234,8 +240,6 @@ Useful links:
     nix-index.enable = true;
     nix-index-database.comma.enable = true;
 
-    zoxide = {
-      enable = true;
-    };
+    zoxide.enable = true;
   };
 }
