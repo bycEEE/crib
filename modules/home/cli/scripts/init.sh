@@ -12,6 +12,7 @@ fi
 # fi
 
 # Source autocompletions
+[[ $+commands[devbox] ]] && source <(devbox completion zsh)
 [[ $+commands[helmfile] ]] && source <(helmfile completion zsh)
 [[ $+commands[nali] ]] && source <(nali completion zsh)
 

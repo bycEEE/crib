@@ -43,8 +43,42 @@ in {
       ''}
       # unset RPS1
 
+      ### fzf-tab
+      ### https://github.com/Aloxaf/fzf-tab/wiki/Preview
+      # setopt globdots # show hidden files
+
+      # disable sort when completing `git checkout`
+      zstyle ':completion:*:git-checkout:*' sort false
+
+      # set descriptions format to enable group support
+      zstyle ':completion:*:descriptions' format '[%d]'
+
+      # set list-colors to enable filename colorizing
+      zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
+
       # preview directory's content with exa when completing cd
-      zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --icons --group-directories-first --color=always $realpath'
+      zstyle ':fzf-tab:complete:cd:*' fzf-preview '${lib.getExe pkgs.exa} -1 --color=always $realpath'
+
+      # switch group using `,` and `.`
+      zstyle ':fzf-tab:*' switch-group ',' '.'
+
+      # give a preview of commandline arguments when completing `kill`
+      zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
+      zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview '[[ $group == "[process ID]" ]] && ps --pid=$word -o cmd --no-headers -w -w'
+      zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
+
+      # show systemd unit status
+      zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
+
+      # show file preview
+      zstyle ':fzf-tab:complete:*:*' fzf-preview '${lib.getExe pkgs.moar} ''${(Q)realpath}'
+
+      # # show command options and subcommands
+      # zstyle ':fzf-tab:complete:*:options' fzf-preview
+      # zstyle ':fzf-tab:complete:*:argument-1' fzf-preview
+
+      # environment variable
+      zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-preview 'echo ''${(P)word}'
     '';
     profileExtra = ''
       ${lib.optionalString pkgs.stdenvNoCC.isLinux "[[ -e /etc/profile ]] && source /etc/profile"}

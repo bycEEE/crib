@@ -25,6 +25,7 @@ Useful links:
     ./shell.nix
     ./starship.nix
     ./tealdeer.nix
+    ./vim.nix
   ];
 
   home = {
@@ -71,7 +72,6 @@ Useful links:
         ripgrep
         tree
         treefmt
-        vim
         wget
 
         ### Terminal

@@ -1,9 +1,15 @@
 {
   isWsl,
+  lib,
   pkgs,
   ...
-}: {
-  home.packages = [pkgs.github-cli pkgs.difftastic];
+}: let
+  riff = lib.getExe pkgs.riffdiff;
+in {
+  home.packages = [
+    pkgs.github-cli
+    # pkgs.difftastic
+  ];
   programs.git = {
     enable = true;
     userName = "Brian Choy";
@@ -32,10 +38,10 @@
         then "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
         else "gpg";
       user.signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAqeyKQGFLXGhNpu6RwFfbJdofRlfj0aLO0iVvWAyp52";
-      pager.diff = "riff";
-      pager.show = "riff";
-      pager.log = "riff";
-      interactive.diffFilter = "riff";
+      pager.diff = "${riff}";
+      pager.show = "${riff}";
+      pager.log = "${riff}";
+      interactive.diffFilter = "${riff}";
     };
     aliases = {
       ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi";
