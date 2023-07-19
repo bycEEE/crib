@@ -43,6 +43,7 @@ Currently only used on my WSL setup.
 
   ```sh
   sudo ln -s $HOME/.nix-profile/share/applications /usr/local/share/applications
+  sudo ln -s $HOME/.nix-profile/share/icons /usr/local/share/icons
   ```
 
 - Subsequent runs:
