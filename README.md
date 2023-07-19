@@ -39,6 +39,12 @@ Currently only used on my WSL setup.
   chsh -s $(pwd)/.nix-profile/bin/zsh
   ```
 
+- To enable GUI apps in Windows Start Menu:
+
+  ```sh
+  sudo ln -s $HOME/.nix-profile/share/applications /usr/local/share/applications
+  ```
+
 - Subsequent runs:
 
   ```sh
