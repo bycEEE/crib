@@ -29,6 +29,9 @@ clean:
 	# nix-collect-garbage -d
 	home-manager expire-generations "-7 days"
 
+visualise:
+	nix-du -s 100MB | dot -Tsvg > result.svg
+
 # Gets github hash from URL, takes param1: username, param2: reponame
 get-github-hash *args:
 	nix run github:seppeljordan/nix-prefetch-github -- {{args}}

@@ -46,6 +46,7 @@ Useful links:
         # devenv # A tool to create development environments
         # lorri # Fast, persistent and reliable development environment for the Nix ecosystem
         nil # Nix Language Server
+        nix-du # Disk usage analyzer for Nix store paths
         # nix-init # Generate Nix packages from URLs
         nix-output-monitor # Pipe your nix-build output through the nix-output-monitor (aka nom) to get additional information while building.
         nix-tree # Visualize the dependency graph of a Nix derivation
@@ -65,6 +66,7 @@ Useful links:
         findutils
         gawk
         gnugrep
+        gnumake
         gnupg
         gnused
         # openssh
@@ -179,6 +181,7 @@ Useful links:
         croc # Easily and securely send things from one computer to another
         eget # Easily install prebuilt binaries from GitHub
         # gdu # Disk usage analyzer with console interface written in Go (clashes with git alias)
+        graphviz # Graph Visualization Software
         lnav # The Log File Navigator
         # magic-wormhole-rs # Rust implementation of Magic Wormhole, with new features and enhancements
         nali # A tool to display the location of an IP address
