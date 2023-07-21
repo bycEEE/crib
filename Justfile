@@ -1,5 +1,3 @@
-#!/usr/bin/env -S just --justfile
-
 default:
 	just --list
 
@@ -21,7 +19,10 @@ push-cachix:
 	cachix push byceee ./result
 
 rebuild:
-	sudo nixos-rebuild switch --flake .#bchoy@${HOSTNAME}
+	sudo nixos-rebuild switch --flake .#bchoy@{{HOSTNAME}}
+
+repair:
+	nix-store --verify --check-contents --repair
 
 clean:
 	nix-store --gc
