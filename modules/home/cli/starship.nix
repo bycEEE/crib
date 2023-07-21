@@ -32,8 +32,8 @@
 
       cmd_duration = {
         min_time = 1000;
-        format = "\\[[⏱ $duration]($style)\\]";
-        style = "yellow";
+        format = "[⏱ $duration]($style) ";
+        style = "purple";
       };
 
       memory_usage = {
@@ -44,9 +44,9 @@
       };
 
       time = {
-        time_format = "[%m/%d/%Y %T]";
-        format = "$time($style) ";
-        style = "bright-white";
+        time_format = "%m/%d/%Y %T";
+        format = "[$time]($style) ";
+        style = "bold yellow";
         disabled = false;
       };
 
@@ -96,7 +96,8 @@
         modified = "‼";
         renamed = "≡";
         stashed = "⌂";
-        format = ''( [\[$all_status$ahead_behind\]]($style))'';
+        format = ''([\[$all_status$ahead_behind\]]($style))'';
+        style = "dimmed green";
       };
 
       # git_status = {
@@ -211,6 +212,7 @@
 
       helm = {
         format = "\\[[$symbol($version)]($style)\\]";
+        disabled = true;
       };
 
       hg_branch = {
@@ -230,7 +232,7 @@
       };
 
       kubernetes = {
-        format = "\\[[$symbol$context( \\($namespace\\))]($style)\\] ";
+        format = "[$symbol$context( \\($namespace\\))]($style) ";
         symbol = "⎈ ";
         style = "cyan bold";
         disabled = false;
@@ -251,7 +253,7 @@
       nix_shell = {
         # format = "\\[[$symbol$state( \\($name\\))]($style)\\]";
         symbol = "❄️";
-        format = "\\[[$symbol( \\($name\\))]($style)\\]";
+        format = "[$symbol$state( \\($name\\))]($style) ";
       };
 
       nodejs = {
@@ -300,7 +302,7 @@
       };
 
       python = {
-        format = "\\[[$${symbol}$${pyenv_prefix}($${version})(\\($virtualenv\\))]($style)\\]";
+        format = "[$symbol$pyenv_prefix($version) (\\($virtualenv\\))]($style) ";
         style = "bold green";
       };
 
