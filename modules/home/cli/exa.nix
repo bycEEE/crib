@@ -6,6 +6,6 @@
     # la = "exa -a";
     # lt = "exa --tree";
     # lla = "exa -la";
-    enableAliases = true;
+    enableAliases = false;
   };
 }
