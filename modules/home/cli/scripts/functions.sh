@@ -58,7 +58,11 @@ function fix_zsh_history() {
   rm $HOME/.zsh_history_bad
 }
 
+function print_path_newline() {
+  echo "${PATH//:/$'\n'}"
+}
+
 # Set window title
-function precmd () {
+function precmd() {
   echo -ne "\033]0;$(pwd | sed -e "s;^$HOME;~;")\a"
 }

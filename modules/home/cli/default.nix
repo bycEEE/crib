@@ -82,6 +82,7 @@ Useful links:
 
         ### Terminal
         brotli # Generic-purpose lossless compression algorithm
+        catimg # Insanely fast image printing in your terminal
         # choose # A human-friendly and fast alternative to cut and (sometimes) awk
         chroma # A general purpose syntax highlighter in pure Go
         du-dust # A more intuitive version of du in rust
