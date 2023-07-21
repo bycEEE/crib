@@ -20,6 +20,7 @@ Useful links:
     ./htop.nix
     ./go.nix
     # ./gpg.nix
+    ./python.nix
     ./ssh.nix
     # ./neovim.nix
     ./shell.nix
@@ -49,6 +50,8 @@ Useful links:
         nix-du # Disk usage analyzer for Nix store paths
         # nix-init # Generate Nix packages from URLs
         nix-output-monitor # Pipe your nix-build output through the nix-output-monitor (aka nom) to get additional information while building.
+        nix-prefetch-git # A tool to fetch and hash git repositories
+        nix-prefetch-github # A tool to fetch and hash GitHub repositories
         nix-tree # Visualize the dependency graph of a Nix derivation
         nixos-generators # Turns configuration into outputs in different formats
         nixpkgs-fmt # nix code formatter that would be applied on nixpkgs
@@ -59,8 +62,8 @@ Useful links:
 
         ### Linux
         # busybox # Tiny versions of common UNIX utilities in a single small executable
-        # cmake # Cross-platform, open-source build system generator
-        # coreutils-full
+        cmake # Cross-platform, open-source build system generator
+        coreutils-full
         curl
         fd
         findutils
@@ -77,6 +80,7 @@ Useful links:
         wget
 
         ### Terminal
+        brotli # Generic-purpose lossless compression algorithm
         # choose # A human-friendly and fast alternative to cut and (sometimes) awk
         chroma # A general purpose syntax highlighter in pure Go
         du-dust # A more intuitive version of du in rust
@@ -107,8 +111,6 @@ Useful links:
         # ngrok # Allows you to expose a web server running on your local machine to the internet
         postgresql_14
         pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
-        python311
-        python311Packages.pip
         shellcheck # Shell script analysis tool
         sqlite
         tokei # A program that displays statistics about your code
@@ -122,6 +124,7 @@ Useful links:
         docker
         docker-compose
         # hadolint # A smarter Dockerfile linter that helps you build best practice Docker images
+        helm-docs # Generate documentation from Kubernetes Helm charts
         helmfile
         # infracost # Cloud cost estimates for Terraform in pull requests
         k9s # Kubernetes CLI To Manage Your Clusters In Style!
