@@ -12,6 +12,7 @@ Useful links:
 */
 {
   imports = [
+    ./atuin.nix
     ./bat.nix
     ./direnv.nix
     ./exa.nix
@@ -91,6 +92,7 @@ Useful links:
         navi # An interactive cheatsheet tool for the command-line and application launchers
         ncurses # A free software emulation of curses
         ov # Feature-rich terminal-based text viewer
+        procs # A modern replacement for ps written in Rust
         # pueue # A daemon for managing long running shell commands
         riffdiff # Riff is a wrapper around diff that highlights which parts of lines have changed.
         # sd # Intuitive find & replace CLI (sed alternative)
@@ -132,6 +134,7 @@ Useful links:
         # kompose # Tool to move from docker-compose to Kubernetes
         kubectl
         kubectx # Switch faster between clusters and namespaces in kubectl
+        kubent # Easily check your clusters for use of deprecated APIs
         (wrapHelm kubernetes-helm {
           plugins = with kubernetes-helmPlugins; [
             helm-diff
@@ -143,6 +146,7 @@ Useful links:
         nomad
         # skaffold # Easy and Repeatable Kubernetes Development
         # skopeo # Inspect container images and repositories on registries
+        stern # Multi pod and container log tailing for Kubernetes
         # tanka # Flexible, reusable and concise configuration for Kubernetes
         terraform
         # terraform-docs # A utility to generate documentation from Terraform modules in various output formats
