@@ -114,11 +114,12 @@ in {
 
     historySubstringSearch.enable = true;
 
-    syntaxHighlighting = {
-      enable = true;
-    };
-
     plugins = [
+      {
+        name = "fast-syntax-highlighting";
+        file = "share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh";
+        src = pkgs.zsh-fast-syntax-highlighting;
+      }
       {
         name = "fzf-tab";
         src = pkgs.fetchFromGitHub {
@@ -126,6 +127,16 @@ in {
           repo = "fzf-tab";
           rev = "c2b4aa5ad2532cca91f23908ac7f00efb7ff09c9";
           sha256 = "sha256-gvZp8P3quOtcy1Xtt1LAW1cfZ/zCtnAmnWqcwrKel6w=";
+        };
+      }
+      {
+        name = "zsh-nix-shell";
+        file = "nix-shell.plugin.zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "chisui";
+          repo = "zsh-nix-shell";
+          rev = "v0.5.0";
+          sha256 = "0za4aiwwrlawnia4f29msk822rj9bgcygw6a8a6iikiwzjjz0g91";
         };
       }
       # {
