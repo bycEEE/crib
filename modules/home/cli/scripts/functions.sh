@@ -57,3 +57,8 @@ function fix_zsh_history() {
   fc -R $HOME/.zsh_history
   rm $HOME/.zsh_history_bad
 }
+
+# Set window title
+function precmd () {
+  echo -ne "\033]0;$(pwd | sed -e "s;^$HOME;~;")\a"
+}

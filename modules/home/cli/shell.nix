@@ -48,6 +48,16 @@ in {
       ''}
 
       # unset RPS1
+      ## Job Control
+      setopt long_list_jobs # Display PID when suspending processes as well.
+      setopt notify # Report the status of backgrounds jobs immediately.
+
+      ## Set key bindings
+      bindkey "^[[1;5D" backward-word # ctrl + left
+      bindkey "^[[1;5C" forward-word # ctrl + right
+      bindkey "^[[1;3D" beginning-of-line # alt + left
+      bindkey "^[[1;3C" end-of-line # alt + right
+      bindkey "^H" backward-kill-word # ctrl + backspace
 
       ### fzf-tab
       ### https://github.com/Aloxaf/fzf-tab/wiki/Preview
@@ -86,9 +96,9 @@ in {
       # environment variable
       zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-preview 'echo ''${(P)word}'
     '';
-    profileExtra = ''
-      ${lib.optionalString pkgs.stdenvNoCC.isLinux "[[ -e /etc/profile ]] && source /etc/profile"}
-    '';
+    # profileExtra = ''
+    #   ${lib.optionalString pkgs.stdenvNoCC.isLinux "[[ -e /etc/profile ]] && source /etc/profile"}
+    # '';
 
     history = {
       share = false;
@@ -113,15 +123,15 @@ in {
           sha256 = "sha256-gvZp8P3quOtcy1Xtt1LAW1cfZ/zCtnAmnWqcwrKel6w=";
         };
       }
-      {
-        name = "zsh-bash-completions-fallback";
-        src = pkgs.fetchFromGitHub {
-          owner = "3v1n0";
-          repo = "zsh-bash-completions-fallback";
-          rev = "da560de3178ec389562debedbce16eca8cdf06c3";
-          sha256 = "sha256-Sdo+5DwBK2PqpQl/qnmWy+M47VFcE7m4/R1Cu9oHBVg=";
-        };
-      }
+      # {
+      #   name = "zsh-bash-completions-fallback";
+      #   src = pkgs.fetchFromGitHub {
+      #     owner = "3v1n0";
+      #     repo = "zsh-bash-completions-fallback";
+      #     rev = "da560de3178ec389562debedbce16eca8cdf06c3";
+      #     sha256 = "sha256-Sdo+5DwBK2PqpQl/qnmWy+M47VFcE7m4/R1Cu9oHBVg=";
+      #   };
+      # }
     ];
   };
 
