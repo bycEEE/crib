@@ -97,6 +97,7 @@ Useful links:
         # pueue # A daemon for managing long running shell commands
         riffdiff # Riff is a wrapper around diff that highlights which parts of lines have changed.
         # sd # Intuitive find & replace CLI (sed alternative)
+        tmux # A terminal multiplexer
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
         vivid # A themeable LS_COLORS generator with a rich filetype datebase
         # watchman # A file watching service
@@ -110,7 +111,7 @@ Useful links:
         jql # A JSON query language tool built with Rust
         just # A handy way to save and run project-specific commands
         # lefthook # Fast and powerful Git hooks manager for any type of projects
-        # lurk # A simple and pretty alternative to strace
+        lurk # A simple and pretty alternative to strace
         # ngrok # Allows you to expose a web server running on your local machine to the internet
         postgresql_14
         pre-commit # A framework for managing and maintaining multi-language pre-commit hooks

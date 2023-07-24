@@ -1,8 +1,4 @@
-{
-  isWsl,
-  lib,
-  ...
-}:
+{...}:
 /*
 home-manager configuration
 Useful links:
@@ -23,14 +19,4 @@ Useful links:
   #     '';
   #   };
   # };
-
-  targets.genericLinux = lib.mkIf isWsl {
-    enable = true;
-  };
-
-  # xdg.mime.enable = lib.mkIf isWsl true;
-
-  # xdg.systemDirs.data = lib.mkIf isWsl [
-  #   "${config.home.homeDirectory}/.nix-profile/share/applications"
-  # ];
 }

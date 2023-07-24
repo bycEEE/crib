@@ -2,7 +2,6 @@ default:
 	just --list
 
 HOSTNAME := `hostname| sed 's/.local//'`
-# NIXPATH := "nixpkgs=/nix/var/nix/profiles/per-user/tyrel/channels/nixpkgs:/nix/var/nix/profiles/per-user/tyrel/channels"
 
 update:
 	nix flake update

@@ -26,6 +26,7 @@ apps=(
     "Docker.DockerDesktop"
     "Microsoft.WindowsTerminal"
     # "Nvidia.CUDA"
+    "wez.wezterm"
 
     # System Monitoring
     "CPUID.HWMonitor"

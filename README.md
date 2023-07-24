@@ -39,6 +39,12 @@ Currently only used on my WSL setup.
   chsh -s $(pwd)/.nix-profile/bin/zsh
   ```
 
+- Add to trusted users in `/etc/nix/nix.conf`:
+
+  ```sh
+  trusted-users = root bchoy
+  ```
+
 - To enable GUI apps in Windows Start Menu:
 
   ```sh
@@ -93,3 +99,7 @@ Currently only used on my WSL setup.
 - [matthew/nixdot](https://codeberg.org/matthew/nixdot) flake parts example
 - [okpedersen/dotfiles](https://github.com/okpedersen/dotfiles) karbiner
 - [zendo/nsworld](https://github.com/zendo/nsworld/blob/main/home-manager/cli.nix) - Organised apps
+- [davisrichard437/nix-dotfiles](https://gitlab.com/davisrichard437/nix-dotfiles) - package building example
+- [EdenEast/nyx](https://github.com/EdenEast/nyx)
+- [rxyhn/yuki](https://github.com/rxyhn/yuki)
+- [ambroisie/nix-config](https://git.belanyi.fr/ambroisie/nix-config)
