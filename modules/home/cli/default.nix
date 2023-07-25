@@ -105,6 +105,8 @@ Useful links:
 
         ### Development
         # asdf-vm # Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more
+        bore-cli # Rust tool to create TCP tunnels
+        cherrybomb # A CLI tool that helps you avoid undefined user behavior by validating your API specifications
         devbox # A tool for creating isolated development environments using Nix
         # difftastic # A syntax-aware diff
         # git-oxide # An idiomatic, lean, fast & safe pure Rust implementation of Git
@@ -112,9 +114,10 @@ Useful links:
         just # A handy way to save and run project-specific commands
         # lefthook # Fast and powerful Git hooks manager for any type of projects
         lurk # A simple and pretty alternative to strace
-        # ngrok # Allows you to expose a web server running on your local machine to the internet
+        ngrok # Allows you to expose a web server running on your local machine to the internet
         postgresql_14
         pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
+        ruff # An Extremely fast Python linter
         shellcheck # Shell script analysis tool
         sqlite
         tokei # A program that displays statistics about your code
@@ -182,8 +185,10 @@ Useful links:
         # nethogs # A small 'net top' tool
         nettools # A collection of useful network tools
         prettyping # A wrapper around the standard ping tool with the objective of making the output prettier, more colorful, more compact, and easier to read
+        rustscan # A modern replacement for nmap
         sniffnet # Cross-platform application to monitor your network traffic with ease
         traceroute # A tool for tracing the route of IP packets
+        trippy # A traceroute visualizer built with Rust and WebAssembly
 
         ### Utilities
         clipboard-jh # Cut, copy, and paste anything, anywhere, all from the terminal

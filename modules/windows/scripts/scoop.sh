@@ -31,6 +31,7 @@ apps=(
     "7zip"
     "aria2"
     "curl"
+    "czkawka-gui",
     "fiddler"
     "gpg"
     "gpu-z"

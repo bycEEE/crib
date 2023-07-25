@@ -16,6 +16,7 @@ Useful links:
           "FiraCode"
           "JetBrainsMono"
           "Terminus"
+          "Iosevka"
         ];
       })
     ];
