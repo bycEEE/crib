@@ -10,7 +10,7 @@ in {
     serverAliveInterval = 20;
     serverAliveCountMax = 180;
     extraConfig = ''
-      IdentityAgent ${ssh_auth_sock}
+      IdentityAgent "${ssh_auth_sock}"
     '';
   };
 }
