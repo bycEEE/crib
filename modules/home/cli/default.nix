@@ -200,6 +200,7 @@ Useful links:
         neofetch # A fast, highly customizable system info script
         noti # Trigger notifications when a process completes
         ouch # A command-line utility for easily compressing and decompressing files and directories
+        pandoc # Universal markup converter
         speedtest-cli # Command line interface for testing internet bandwidth using speedtest.net
         # ranger # A VIM-inspired filemanager for the console
         # translate-shell # Command-line translator using Google Translate, Bing Translator, Yandex.Translate, etc
@@ -224,7 +225,8 @@ Useful links:
         traceroute # A tool for tracing the route of IP packets
       ])
       ++ (lib.lists.optionals (pkgs.system == "aarch64-darwin" || pkgs.system == "x86_64-darwin") [
-        dockutil
+        asitop # Performance monitoring CLI tool for Apple Silicon
+        dockutil # Command line tool for managing dock items
       ])
       ++ (lib.lists.optionals isWsl) [
         socat # Utility for bidirectional data transfer between two independent data channels, for 1Password SSH agent
