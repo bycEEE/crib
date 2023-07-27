@@ -11,10 +11,10 @@
 #   eval $(ssh-agent -s)
 # fi
 
-# Source brew
-# if [[ -d /opt/homebrew ]]; then
-#   eval "$(/opt/homebrew/bin/brew shellenv)"
-# fi
+Source brew
+if [[ -d /opt/homebrew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # # git installed asdf
 # export ASDF_DIR="$HOME/.asdf"
