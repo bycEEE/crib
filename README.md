@@ -31,7 +31,7 @@ Currently only used on my WSL setup.
 - Install Nix and Home Manager:
 
   ```sh
-  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root bchoy"
+  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root bchoy brian.choy"
   nix build "github:bycEEE/crib#homeConfigurations.bchoy@BREEZY.activationPackage" && ./result/activate
   git clone git@github.com:bycEEE/crib.git ~/crib
   # sudo echo "$(pwd)/.nix-profile/bin/bash" >> /etc/shells
@@ -58,6 +58,7 @@ Currently only used on my WSL setup.
 
   ```sh
   brew list -1 > .brew.backup
+  brew bundle dump
   brew uninstall --force $(brew list)
   brew doctor
   brew cleanup
@@ -74,7 +75,7 @@ Currently only used on my WSL setup.
 - Install Nix and Home Manager:
 
   ```sh
-  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root bchoy"
+  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root bchoy brian.choy"
   git clone git@github.com:bycEEE/crib.git ~/crib
   just build
   # sudo echo "$(pwd)/.nix-profile/bin/bash" >> /etc/shells

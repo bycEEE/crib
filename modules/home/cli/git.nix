@@ -12,8 +12,6 @@ in {
   ];
   programs.git = {
     enable = true;
-    userName = "Brian Choy";
-    userEmail = "bycEEE@gmail.com";
     extraConfig = {
       # credential.helper =
       #   if pkgs.stdenvNoCC.isDarwin
@@ -37,7 +35,6 @@ in {
         else if pkgs.stdenvNoCC.isDarwin
         then "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
         else "\${pkgs.gnupg}/bin/gpg2";
-      user.signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAqeyKQGFLXGhNpu6RwFfbJdofRlfj0aLO0iVvWAyp52";
       pager.diff = "${riff}";
       pager.show = "${riff}";
       pager.log = "${riff}";

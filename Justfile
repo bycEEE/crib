@@ -1,24 +1,25 @@
 default:
 	just --list
 
-HOSTNAME := `hostname| sed 's/.local//'`
+HOSTNAME := if os() == "macos" {`scutil --get LocalHostName`} else {`hostname| sed 's/.local//'`}
+USERNAME := `whoami | sed 's/\.//g'`
 
 update:
 	nix flake update --recreate-lock-file
 
 build:
-	nix build .#homeConfigurations.bchoy@{{HOSTNAME}}.activationPackage && ./result/activate
+	nix build .#homeConfigurations.{{USERNAME}}@{{HOSTNAME}}.activationPackage && ./result/activate
 
 apply:
-	# nix run .#homeConfigurations.bchoy@{{HOSTNAME}}.activationPackage
-	home-manager switch --flake .#bchoy@{{HOSTNAME}}
+	# nix run .#homeConfigurations.{{USERNAME}}@{{HOSTNAME}}.activationPackage
+	home-manager switch --flake .#{{USERNAME}}@{{HOSTNAME}}
 
 push-cachix:
 	just build
 	cachix push byceee ./result
 
 rebuild:
-	sudo nixos-rebuild switch --flake .#bchoy@{{HOSTNAME}}
+	sudo nixos-rebuild switch --flake .#{{USERNAME}}@{{HOSTNAME}}
 
 repair:
 	nix-store --verify --check-contents --repair

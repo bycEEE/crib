@@ -136,7 +136,7 @@ Useful links:
         helmfile
         # infracost # Cloud cost estimates for Terraform in pull requests
         k9s # Kubernetes CLI To Manage Your Clusters In Style!
-        # kind # Kubernetes IN Docker - local clusters for testing Kubernetes
+        kind # Kubernetes IN Docker - local clusters for testing Kubernetes
         # kompose # Tool to move from docker-compose to Kubernetes
         kubectl
         kubectx # Switch faster between clusters and namespaces in kubectl
@@ -162,11 +162,12 @@ Useful links:
         vault
 
         ### Cloud
-        awscli2
         aws-assume-role # Assume AWS IAM roles from the command-line
+        aws-iam-authenticator # A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
+        awscli2
         eksctl
         # google-cloud-sdk
-        # saml2aws # CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
+        saml2aws # CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 
         ### System Monitoring
         bandwhich # Terminal bandwidth utilization tool

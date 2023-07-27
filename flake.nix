@@ -90,6 +90,15 @@
         system = "aarch64-darwin";
         username = "bchoy";
         extraModules = [
+          ./profiles/personal.nix
+          ./modules/home/darwin
+        ];
+      };
+      "brianchoy@Brians-MacBook-Pro-Work" = mkHomeConfig {
+        system = "aarch64-darwin";
+        username = "brian.choy";
+        extraModules = [
+          ./profiles/work.nix
           ./modules/home/darwin
         ];
       };
@@ -97,6 +106,9 @@
         isWsl = true;
         system = "x86_64-linux";
         username = "bchoy";
+        extraModules = [
+          ./profiles/personal.nix
+        ];
       };
     };
     overlays = {
