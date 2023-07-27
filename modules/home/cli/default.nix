@@ -36,9 +36,11 @@ Useful links:
         ### Security
         _1password # 1Password CLI
         age # Modern encryption tool with small explicit keys
+        git-secrets # Prevents you from committing secrets and credentials into git repositories
         sops # Editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats and encrypts with AWS KMS, GCP KMS, Azure Key Vault and PGP
         # tailscale # The easiest, most secure way to use WireGuard and 2FA
         trivy # A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+        trufflehog # Searches through git repositories for secrets, digging deep into commit history and branches
 
         ### Nix tools
         alejandra # The Uncompromising Nix Code Formatter
