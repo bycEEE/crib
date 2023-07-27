@@ -155,7 +155,7 @@ Useful links:
         # skopeo # Inspect container images and repositories on registries
         stern # Multi pod and container log tailing for Kubernetes
         # tanka # Flexible, reusable and concise configuration for Kubernetes
-        terraform
+        # terraform
         # terraform-docs # A utility to generate documentation from Terraform modules in various output formats
         # terraformer # CLI tool to generate terraform files from existing infrastructure (reverse Terraform)
         tflint # A Terraform linter focused on possible errors, best practices, etc
