@@ -4,7 +4,7 @@ default:
 HOSTNAME := `hostname| sed 's/.local//'`
 
 update:
-	nix flake update
+	nix flake update --recreate-lock-file
 
 build:
 	nix build .#homeConfigurations.bchoy@{{HOSTNAME}}.activationPackage && ./result/activate
