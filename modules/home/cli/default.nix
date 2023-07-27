@@ -48,7 +48,6 @@ Useful links:
         # devenv # A tool to create development environments
         # lorri # Fast, persistent and reliable development environment for the Nix ecosystem
         nil # Nix Language Server
-        nix-du # Disk usage analyzer for Nix store paths
         # nix-init # Generate Nix packages from URLs
         nix-output-monitor # Pipe your nix-build output through the nix-output-monitor (aka nom) to get additional information while building.
         nix-prefetch-git # A tool to fetch and hash git repositories
@@ -64,11 +63,12 @@ Useful links:
         ### Linux
         # busybox # Tiny versions of common UNIX utilities in a single small executable
         cmake # Cross-platform, open-source build system generator
-        coreutils-full
+        coreutils
         curl
         fd
         findutils
         gawk
+        gcc
         gnugrep
         gnumake
         gnupg
@@ -113,11 +113,10 @@ Useful links:
         jql # A JSON query language tool built with Rust
         just # A handy way to save and run project-specific commands
         # lefthook # Fast and powerful Git hooks manager for any type of projects
-        lurk # A simple and pretty alternative to strace
         ngrok # Allows you to expose a web server running on your local machine to the internet
         postgresql_14
         pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
-        ruff # An Extremely fast Python linter
+        # ruff # An Extremely fast Python linter
         shellcheck # Shell script analysis tool
         sqlite
         tokei # A program that displays statistics about your code
@@ -147,8 +146,9 @@ Useful links:
           ];
         })
         kustomize
+        # levant # An open source templating and deployment tool for HashiCorp Nomad jobs
+        # nomad
         # podman # A program for managing pods, containers and container images
-        nomad
         # skaffold # Easy and Repeatable Kubernetes Development
         # skopeo # Inspect container images and repositories on registries
         stern # Multi pod and container log tailing for Kubernetes
@@ -179,7 +179,6 @@ Useful links:
         dnspeep # A network debugging tool for DNS
         httpie # A Modern command line HTTP client
         iftop # Display bandwidth usage on an interface
-        iotop-c # A top-like utility for I/O
         # ipinfo # A command-line tool that brings you the IP address information
         mtr # A network diagnostic tool
         # nethogs # A small 'net top' tool
@@ -187,7 +186,6 @@ Useful links:
         prettyping # A wrapper around the standard ping tool with the objective of making the output prettier, more colorful, more compact, and easier to read
         rustscan # A modern replacement for nmap
         sniffnet # Cross-platform application to monitor your network traffic with ease
-        traceroute # A tool for tracing the route of IP packets
         trippy # A traceroute visualizer built with Rust and WebAssembly
 
         ### Utilities
@@ -202,14 +200,12 @@ Useful links:
         neofetch # A fast, highly customizable system info script
         noti # Trigger notifications when a process completes
         ouch # A command-line utility for easily compressing and decompressing files and directories
-        psmisc # A set of tools that use the proc filesystem
         speedtest-cli # Command line interface for testing internet bandwidth using speedtest.net
         # ranger # A VIM-inspired filemanager for the console
         # translate-shell # Command-line translator using Google Translate, Bing Translator, Yandex.Translate, etc
         # zeal # Offline documentation browser inspired by Dash
 
         ### Misc
-        hollywood # A cli tool that turns your terminal into a Hollywood technical melodrama
 
         # inherit (pkgs.gitAndTools) gh;
         # inherit (inputs'.agenix.packages) agenix;
@@ -218,8 +214,14 @@ Useful links:
       ++ (lib.lists.optionals (pkgs.system == "x86_64-linux") [
         # https://github.com/NixOS/nixpkgs/issues/222991
         # _1password-gui
+        hollywood # A cli tool that turns your terminal into a Hollywood technical melodrama
+        iotop-c # A top-like utility for I/O
+        lurk # A simple and pretty alternative to strace
+        nix-du # Disk usage analyzer for Nix store paths
         openssl
         openssh
+        psmisc # A set of tools that use the proc filesystem
+        traceroute # A tool for tracing the route of IP packets
       ])
       ++ (lib.lists.optionals (pkgs.system == "aarch64-darwin" || pkgs.system == "x86_64-darwin") [
         dockutil

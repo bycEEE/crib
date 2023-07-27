@@ -31,18 +31,12 @@ Currently only used on my WSL setup.
 - Install Nix and Home Manager:
 
   ```sh
-  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root bchoy"
   nix build "github:bycEEE/crib#homeConfigurations.bchoy@BREEZY.activationPackage" && ./result/activate
   git clone git@github.com:bycEEE/crib.git ~/crib
   # sudo echo "$(pwd)/.nix-profile/bin/bash" >> /etc/shells
   sudo echo "$(pwd)/.nix-profile/bin/zsh" >> /etc/shells
   chsh -s $(pwd)/.nix-profile/bin/zsh
-  ```
-
-- Add to trusted users in `/etc/nix/nix.conf`:
-
-  ```sh
-  trusted-users = root bchoy
   ```
 
 - To enable GUI apps in Windows Start Menu:
@@ -56,6 +50,35 @@ Currently only used on my WSL setup.
 
   ```sh
   just apply
+  ```
+
+## MacOS
+
+- If coming from brew:
+
+  ```sh
+  brew list -1 > .brew.backup
+  brew uninstall --force $(brew list)
+  brew doctor
+  brew cleanup
+  ```
+
+- Install brew:
+
+  ```sh
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  brew analytics off
+  ```
+
+- Install Nix and Home Manager:
+
+  ```sh
+  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root bchoy"
+  git clone git@github.com:bycEEE/crib.git ~/crib
+  just build
+  # sudo echo "$(pwd)/.nix-profile/bin/bash" >> /etc/shells
+  sudo echo "$(pwd)/.nix-profile/bin/zsh" >> /etc/shells
+  chsh -s $(pwd)/.nix-profile/bin/zsh
   ```
 
 ## Resources
@@ -103,3 +126,4 @@ Currently only used on my WSL setup.
 - [EdenEast/nyx](https://github.com/EdenEast/nyx)
 - [rxyhn/yuki](https://github.com/rxyhn/yuki)
 - [ambroisie/nix-config](https://git.belanyi.fr/ambroisie/nix-config)
+- [okkdev/dotnix](https://github.com/okkdev/dotnix) - home manager homebrew example

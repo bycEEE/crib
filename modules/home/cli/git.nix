@@ -31,12 +31,12 @@ in {
       # push.autoSetupRemote = true;
       commit.gpgsign = true;
       gpg.format = "ssh";
-      gpg.program =
+      "gpg \"ssh\"".program =
         if isWsl
         then "/mnt/c/Program Files/1Password/app/8/op-ssh-sign.exe"
         else if pkgs.stdenvNoCC.isDarwin
         then "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
-        else "gpg";
+        else "\${pkgs.gnupg}/bin/gpg2";
       user.signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAqeyKQGFLXGhNpu6RwFfbJdofRlfj0aLO0iVvWAyp52";
       pager.diff = "${riff}";
       pager.show = "${riff}";

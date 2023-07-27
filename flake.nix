@@ -41,6 +41,7 @@
       if isDarwin system
       then "/Users"
       else "/home";
+
     # defaultSystems = [
     #   "aarch64-linux"
     #   "aarch64-darwin"
@@ -85,6 +86,10 @@
       };
   in {
     homeConfigurations = {
+      "bchoy@Brians-MacBook-Pro" = mkHomeConfig {
+        system = "aarch64-darwin";
+        username = "bchoy";
+      };
       "bchoy@BREEZY" = mkHomeConfig {
         isWsl = true;
         system = "x86_64-linux";
