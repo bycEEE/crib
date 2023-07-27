@@ -61,6 +61,7 @@ Currently only used on my WSL setup.
   brew uninstall --force $(brew list)
   brew doctor
   brew cleanup
+  brew cleanup -s
   ```
 
 - Install brew:
