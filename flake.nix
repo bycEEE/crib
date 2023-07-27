@@ -75,7 +75,7 @@
       ],
       extraModules ? [],
     }:
-      inputs.home-manager.lib.homeManagerConfiguration rec {
+      inputs.home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;
@@ -89,6 +89,9 @@
       "bchoy@Brians-MacBook-Pro" = mkHomeConfig {
         system = "aarch64-darwin";
         username = "bchoy";
+        extraModules = [
+          ./modules/home/darwin
+        ];
       };
       "bchoy@BREEZY" = mkHomeConfig {
         isWsl = true;
