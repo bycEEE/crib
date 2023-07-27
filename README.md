@@ -120,7 +120,7 @@ Currently only used on my WSL setup.
 - [viperML/neoinfra](https://github.com/viperML/neoinfra/blob/master/flake.nix) flake parts infra
 - [viperML/home-manager-wsl](https://github.com/viperML/home-manager-wsl)
 - [matthew/nixdot](https://codeberg.org/matthew/nixdot) flake parts example
-- [okpedersen/dotfiles](https://github.com/okpedersen/dotfiles) karbiner
+- [okpedersen/dotfiles](https://github.com/okpedersen/dotfiles) karabiner
 - [zendo/nsworld](https://github.com/zendo/nsworld/blob/main/home-manager/cli.nix) - Organised apps
 - [davisrichard437/nix-dotfiles](https://gitlab.com/davisrichard437/nix-dotfiles) - package building example
 - [EdenEast/nyx](https://github.com/EdenEast/nyx)
