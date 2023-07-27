@@ -11,7 +11,7 @@
 #   eval $(ssh-agent -s)
 # fi
 
-Source brew
+# Source brew
 if [[ -d /opt/homebrew ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
