@@ -12,7 +12,7 @@ build:
 
 apply:
 	# nix run .#homeConfigurations.{{USERNAME}}@{{HOSTNAME}}.activationPackage
-	home-manager switch --flake .#{{USERNAME}}@{{HOSTNAME}} --show-trace
+	home-manager switch -b backup --flake .#{{USERNAME}}@{{HOSTNAME}} --show-trace
 
 edit package:
 	nix edit -f "<nixpkgs>" {{package}}
