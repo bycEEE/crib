@@ -12,7 +12,10 @@ build:
 
 apply:
 	# nix run .#homeConfigurations.{{USERNAME}}@{{HOSTNAME}}.activationPackage
-	home-manager switch --flake .#{{USERNAME}}@{{HOSTNAME}}
+	home-manager switch --flake .#{{USERNAME}}@{{HOSTNAME}} --show-trace
+
+edit package:
+	nix edit -f "<nixpkgs>" {{package}}
 
 push-cachix:
 	just build
