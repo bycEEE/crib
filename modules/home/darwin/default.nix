@@ -11,5 +11,4 @@ in {
   xdg.configFile."karabiner".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/karabiner";
   xdg.configFile."linearmouse".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/linearmouse";
   home.file."${libraryPath}/Preferences/com.raycast.macos.plist".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/raycast/com.raycast.macos.plist";
-  home.file."${libraryPath}/Containers/cc.ffitch.shottr/Data/Library/Preferences/cc.ffitch.shottr.plist".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/shottr/cc.ffitch.shottr.plist";
 }
