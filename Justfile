@@ -5,7 +5,7 @@ HOSTNAME := if os() == "macos" {`scutil --get LocalHostName`} else {`hostname| s
 USERNAME := `whoami | sed 's/\.//g'`
 
 update:
-	nix flake update --recreate-lock-file
+	nix flake update --commit-lock-file
 
 build:
 	nix build .#homeConfigurations.{{USERNAME}}@{{HOSTNAME}}.activationPackage && ./result/activate
