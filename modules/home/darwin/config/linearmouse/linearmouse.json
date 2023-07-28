@@ -1,5 +1,5 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.0",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.2",
   "schemes" : [
     {
       "pointer" : {
@@ -12,6 +12,9 @@
           "category" : "mouse",
           "vendorID" : "0x46d"
         }
+      },
+      "buttons" : {
+        "universalBackForward" : true
       }
     }
   ]
