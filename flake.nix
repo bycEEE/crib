@@ -23,10 +23,12 @@
     home-manager.url = "github:nix-community/home-manager";
     darwin.url = "github:lnl7/nix-darwin";
     nix-index-database.url = "github:Mic92/nix-index-database";
+    # homeage.url = "github:jordanisaacs/homeage";
 
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+    # homeage.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {

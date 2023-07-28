@@ -173,7 +173,7 @@ Useful links:
         ### System Monitoring
         bandwhich # Terminal bandwidth utilization tool
         bottom # A cross-platform graphical process/system monitor with a customizable interface and a multitude of features
-        # btop # A monitor of resources
+        btop # A monitor of resources
         # ctop # Top-like interface for container metrics
         ncdu # NCurses Disk Usage
 
