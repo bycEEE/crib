@@ -1,22 +1,45 @@
-# Nix Configurations
+# bycEEE Nix Home
 
-I initially managed my dotfiles using [mackup](https://github.com/lra/mackup).
-This worked extremely well until I heard about Nix.
+<p align="center">
+  <a href="https://nixos.org#gh-light-mode-only">
+    <img src="https://raw.githubusercontent.com/NixOS/nixos-homepage/master/logo/nixos-hires.png" width="500px" alt="NixOS logo"/>
+  </a>
+  <a href="https://nixos.org#gh-dark-mode-only">
+    <img src="https://raw.githubusercontent.com/NixOS/nixos-artwork/master/logo/nixos-white.png" width="500px" alt="NixOS logo"/>
+  </a>
+</p>
 
-This repository is a testbed for learning Nix, NixOS, Flakes, and managing my
-systems.
+## Status
 
-**Heavily based on the [kclejeune/system](https://github.com/kclejeune/system)
-repo.**
+Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended for personal use only since I have no clue what I'm doing. Currently based on [kclejeune/system](https://github.com/kclejeune/system) and pieces slammed together from [inspirations](#inspirations).
 
-Currently only used on my WSL setup.
+## Features
 
-## Prerequisites
+### Main
+
+- Manage my main user across WSL and MacOS.
+- Uses 1Password SSH Agent.
+- Personal and work profiles.
+
+### Windows
+
+- Utilises WSL to manage Windows 11 machine host.
+- Manage host applications via bash scripts for [winget](https://winget.run/) and [scoop](https://scoop.sh/) (WIP).
+- Configure host applications (WIP).
+- Manage WSL GUI applications and have them show in host Start menu.
+
+### MacOS
+
+- Configure basic MacOS default preferences (WIP).
+- [homebrew](https://brew.sh/) package management without NixOS.
+- Bootleggedly manages application configuration for non nixpkgs applications such as iTerm2 and Karabiner.
+
+## Installation
+
+### Prerequisites
 
 - [Enable and configure 1Password SSH agent](https://developer.1password.com/docs/ssh/get-started/).
 - [Ensure Window's SSH agent service is not running](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent).
-
-## Installation
 
 ### WSL
 
@@ -31,11 +54,24 @@ Currently only used on my WSL setup.
 - Install Nix and Home Manager:
 
   ```sh
-  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root bchoy brian.choy"
+  # Determinate Systems Nix Installer
+  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root bchoy"
+
+  # Create directory
+  mkdir -p ~/crib
+  cd ~/crib
+
+  # Build and activate
   nix build "github:bycEEE/crib#homeConfigurations.bchoy@BREEZY.activationPackage" && ./result/activate
-  git clone git@github.com:bycEEE/crib.git ~/crib
+
+  # Clone the actual repo
+  git clone git@github.com:bycEEE/crib.git .
+
+  # Add nix installed shells to system (may have to edit files manually)
   # sudo echo "$HOME/.nix-profile/bin/bash" >> /etc/shells
   sudo echo "$HOME/.nix-profile/bin/zsh" >> /etc/shells
+
+  # Change shell
   chsh -s $(pwd)/.nix-profile/bin/zsh
   ```
 
@@ -52,14 +88,19 @@ Currently only used on my WSL setup.
   just apply
   ```
 
-## MacOS
+### MacOS
 
 - If coming from brew:
 
   ```sh
+  # Backup brew packages
   brew list -1 > .brew.backup
   brew bundle dump
+
+  # Uninstall all packages
   brew uninstall --force $(brew list)
+
+  # Fix broken links and clean up
   brew doctor
   brew cleanup
   brew cleanup -s
@@ -74,13 +115,23 @@ Currently only used on my WSL setup.
 
 - Install Nix and Home Manager:
 
+  Note: Haven't tried testing on a fresh system.
+
+  Download [just](https://github.com/casey/just) binary.
+
   ```sh
+  # Determinate Systems Nix Installer
   curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root bchoy brian.choy"
+
   git clone git@github.com:bycEEE/crib.git ~/crib
   just build
-  # sudo echo "$(pwd)/.nix-profile/bin/bash" >> /etc/shells
-  sudo echo "$(pwd)/.nix-profile/bin/zsh" >> /etc/shells
-  chsh -s $(pwd)/.nix-profile/bin/zsh
+
+  # Add nix installed shells to system (may have to edit files manually)
+  # sudo echo "$HOME/.nix-profile/bin/bash" >> /etc/shells
+  sudo echo "$HOME/.nix-profile/bin/zsh" >> /etc/shells
+
+  # Change shell
+  chsh -s $HOME/.nix-profile/bin/zsh
   ```
 
 ## Resources
@@ -95,8 +146,11 @@ Currently only used on my WSL setup.
 
 ### Useful Links
 
+- [MyNixOS Package/Options Search](https://mynixos.com/)
 - [NixOS Packages Search](https://search.nixos.org/packages)
+- [DevBox Package Search](https://www.nixhub.io/)
 - [NixOS Options Search](https://search.nixos.org/options)
+- [NixOS Versioned Packages Search](https://lazamar.co.uk/nix-versions/)
 - [Home Manager Options Search](https://mipmip.github.io/home-manager-option-search/)
 - [Ayats Blog Posts](https://ayats.org/)
 - [Minimal Nix Development Environment on WSL](https://cbailey.co.uk/posts/a_minimal_nix_development_environment_on_wsl)
@@ -104,17 +158,16 @@ Currently only used on my WSL setup.
 
 ### Inspirations
 
-- [the-nix-way/nome](https://github.com/the-nix-way/nome) - Home Manager Config
-- [kclejeune/system](https://github.com/kclejeune/system)
-- [ELD/nix-system](https://github.com/ELD/nix-system)
-- [totoroot/dotfiles](https://github.com/totoroot/dotfiles) - Multi Platform
+- [the-nix-way/nome](https://github.com/the-nix-way/nome) - Home Manager configuration and Nix functions/overlays for projects.
+- [kclejeune/system](https://github.com/kclejeune/system) - Decoupled Home Manager configuration and Nix-Darwin examples.
+- [ELD/nix-system](https://github.com/ELD/nix-system) - Same as kclejeune/system, but with custom personalisations.
+- [totoroot/dotfiles](https://github.com/totoroot/dotfiles) - Multi platform with separated application examples and installation options.
 - [matlob/nixpkgs](https://github.com/malob/nixpkgs)
 - [vegaelle/nix-nvim](https://framagit.org/vegaelle/nix-nvim)
 - [dustinlyons/nixos-config](https://github.com/dustinlyons/nixos-config)
 - [shaunsingh/nix-darwin-dotfiles](https://github.com/shaunsingh/nix-darwin-dotfiles)
-
 - [nbdd0121/wsld](https://github.com/nbdd0121/wsld) WSL2 daemon for x11 and etc
-- [yuanw/nix-home](https://github.com/yuanw/nix-home) macos readme
+- [yuanw/nix-home](https://github.com/yuanw/nix-home) Good MacOS readme. MacOS/Linux setups
 - [akirak/home.nix](https://github.com/akirak/home.nix) wsl stuff
 - [corps/nix-machines](https://github.com/corps/nix-machines) wsl stuff
 - [fortuneteller2k/nix-config](https://github.com/fortuneteller2k/nix-config) wsl stuff, flake parts
