@@ -119,6 +119,7 @@
           config.allowUnfree = true;
         };
       };
+      kubectl = import ./overlays/kubectl.nix;
       extraPackages = final: prev: {
       };
     };
