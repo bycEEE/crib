@@ -9,8 +9,8 @@
     settings = {
       # nix manages this
       update_check = false;
-      # search history from all hosts, all sessions, all directories
-      filter_mode = "global";
+      # search history from session by default
+      filter_mode = "session";
       # fuzzy finder search syntax borrowed from fzf
       search_mode = "skim";
       # disable fancy display
