@@ -59,6 +59,7 @@ Useful links:
         nixpkgs-fmt # nix code formatter that would be applied on nixpkgs
         # nixpkgs-review # A tool for reviewing nixpkgs pull requests
         nurl # Generate Nix fetcher calls from repository URLs
+        nvfetcher # Generate nix sources expr for the latest version of packages
         # rnix-lsp # Language Server Protocol implementation for the Nix language
         # statix# Lints and suggestions for the nix programming language
 
