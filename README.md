@@ -41,7 +41,7 @@ Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended 
 - [Enable and configure 1Password SSH agent](https://developer.1password.com/docs/ssh/get-started/).
 - [Ensure Window's SSH agent service is not running](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent).
 
-### WSL
+### WSL Setup
 
 - Install and set up Ubuntu:
 
@@ -88,7 +88,7 @@ Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended 
   just apply
   ```
 
-### MacOS
+### MacOS Setup
 
 - If coming from brew:
 
