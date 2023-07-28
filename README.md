@@ -34,8 +34,8 @@ Currently only used on my WSL setup.
   curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root bchoy brian.choy"
   nix build "github:bycEEE/crib#homeConfigurations.bchoy@BREEZY.activationPackage" && ./result/activate
   git clone git@github.com:bycEEE/crib.git ~/crib
-  # sudo echo "$(pwd)/.nix-profile/bin/bash" >> /etc/shells
-  sudo echo "$(pwd)/.nix-profile/bin/zsh" >> /etc/shells
+  # sudo echo "$HOME/.nix-profile/bin/bash" >> /etc/shells
+  sudo echo "$HOME/.nix-profile/bin/zsh" >> /etc/shells
   chsh -s $(pwd)/.nix-profile/bin/zsh
   ```
 
