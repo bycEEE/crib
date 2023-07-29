@@ -20,6 +20,7 @@ Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended 
 - Manage my main user across WSL and MacOS.
 - Uses 1Password SSH Agent.
 - Personal and work profiles.
+- Use [DevBox](https://www.jetpack.io/devbox) for individual projects.
 
 ### Windows
 
