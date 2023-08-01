@@ -126,6 +126,7 @@ Useful links:
         yq
 
         ### DevOps
+        act # Run your GitHub Actions locally
         ansible # Radically simple IT automation platform
         chart-testing # CLI tool for linting and testing Helm charts
         # colima # Container runtimes on macOS (and Linux) with minimal setup
