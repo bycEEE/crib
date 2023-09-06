@@ -10,7 +10,7 @@
       # nix manages this
       update_check = false;
       # search history from session by default
-      filter_mode = "session";
+      filter_mode = "global";
       # fuzzy finder search syntax borrowed from fzf
       search_mode = "skim";
       # disable fancy display

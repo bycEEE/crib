@@ -24,8 +24,10 @@ apps=(
     # Development
     "chrisant996.Clink"
     "Docker.DockerDesktop"
+    "Insomnia.Insomnia"
     "Microsoft.WindowsTerminal"
     # "Nvidia.CUDA"
+    "PostgreSQL.pgAdmin"
     "wez.wezterm"
 
     # System Monitoring
