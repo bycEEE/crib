@@ -1,5 +1,5 @@
 {...}: {
-  programs.exa = {
+  programs.eza = {
     enable = true;
     # ls = "exa";
     # ll = "exa -l";
