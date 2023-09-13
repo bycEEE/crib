@@ -11,12 +11,12 @@
   aliases = with pkgs; {
     k = lib.getExe kubectl;
     cat = lib.getExe bat;
-    ls = lib.getExe exa;
-    ll = "${lib.getExe exa} -l";
-    la = "${lib.getExe exa} -a";
-    lt = "${lib.getExe exa} --tree";
-    lla = "${lib.getExe exa} -la";
-    tree = "${lib.getExe exa} --tree --icons --tree";
+    ls = lib.getExe eza;
+    ll = "${lib.getExe eza} -l";
+    la = "${lib.getExe eza} -a";
+    lt = "${lib.getExe eza} --tree";
+    lla = "${lib.getExe eza} -la";
+    tree = "${lib.getExe eza} --tree --icons --tree";
   };
 in {
   programs.zsh = {
@@ -65,8 +65,8 @@ in {
       # set list-colors to enable filename colorizing
       zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
 
-      # preview directory's content with exa when completing cd
-      zstyle ':fzf-tab:complete:cd:*' fzf-preview '${lib.getExe pkgs.exa} -1 --color=always $realpath'
+      # preview directory's content with eza when completing cd
+      zstyle ':fzf-tab:complete:cd:*' fzf-preview '${lib.getExe pkgs.eza} -1 --color=always $realpath'
 
       # switch group using `,` and `.`
       zstyle ':fzf-tab:*' switch-group ',' '.'

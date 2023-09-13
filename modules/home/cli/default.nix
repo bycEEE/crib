@@ -15,7 +15,7 @@ Useful links:
     ./atuin.nix
     ./bat.nix
     ./direnv.nix
-    ./exa.nix
+    ./eza.nix
     ./fzf.nix
     ./git.nix
     ./htop.nix
