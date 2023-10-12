@@ -4,6 +4,9 @@ default:
 HOSTNAME := if os() == "macos" {`scutil --get LocalHostName`} else {`hostname| sed 's/.local//'`}
 USERNAME := `whoami | sed 's/\.//g'`
 
+news:
+	home-manager news --flake .#{{USERNAME}}@{{HOSTNAME}}
+
 update:
 	nix flake update --commit-lock-file
 

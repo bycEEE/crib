@@ -135,6 +135,29 @@ Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended 
   chsh -s $HOME/.nix-profile/bin/zsh
   ```
 
+## Install krew plugins
+
+Not sure how to install via Nix so maintaining a manual list here:
+
+- [rakkess](https://github.com/corneliusweig/rakkess): Review Access - kubectl plugin to show an access matrix for server resources
+  `kubectl krew install access-matrix`.
+- [neat](https://github.com/itaysk/kubectl-neat): Remove clutter from Kubernetes manifests to make them more readable.
+  `kubectl krew install neat`
+- [ksniff](https://github.com/eldadru/ksniff): A kubectl plugin that utilize tcpdump and Wireshark to start a remote capture on any pod in your Kubernetes cluster.
+  `kubectl krew install sniff`
+<!-- - [kubectl-df-pv](https://github.com/yashbhutwala/kubectl-df-pv): A kubectl plugin to see df for persistent volumes.
+  `curl https://krew.sh/df-pv | zsh` -->
+- [outdated](https://github.com/replicatedhq/outdated): kubectl outdated is a kubectl plugin that displays all out-of-date images running in a Kubernetes cluster.
+  `kubectl krew install outdated`
+- [kubectl-kubesec](https://github.com/controlplaneio/kubectl-kubesec): This is a kubectl plugin for scanning Kubernetes pods, deployments, daemonsets and statefulsets with kubesec.io.
+  `kubectl krew install kubesec-scan`
+- [kubectl-node-shell](https://github.com/kvaps/kubectl-node-shell): Start a root shell in the node's host OS running. Uses an alpine pod with nsenter for Linux nodes and a HostProcess pod with PowerShell for Windows nodes.
+
+  ```sh
+  kubectl krew index add kvaps https://github.com/kvaps/krew-index
+  kubectl krew install kvaps/node-shell
+  ```
+
 ## Resources
 
 ### Learning Nix
