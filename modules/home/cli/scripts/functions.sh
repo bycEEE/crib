@@ -66,3 +66,8 @@ function print_path_newline() {
 function precmd() {
   echo -ne "\033]0;$(pwd | sed -e "s;^$HOME;~;")\a"
 }
+
+# Run work commands
+function work_login() {
+  aws sso login --profile infra
+}

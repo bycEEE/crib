@@ -4,7 +4,9 @@
       "inputs": {
         "darwin": "darwin",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1696775529,
@@ -110,11 +112,12 @@
         "narHash": "sha256-2S5eKuFzItf9FNnR+nXhnQDqS6wEjczwhAY58pF1jp4=",
         "ref": "refs/heads/main",
         "rev": "3174104206c6e85d08026d9fd29af2b915d81664",
-        "revCount": 3,
+        "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/bycEEE/stash.git"
       },
       "original": {
+        "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/bycEEE/stash.git"
       }
@@ -141,22 +144,6 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1677676435,
-        "narHash": "sha256-6FxdcmQr5JeZqsQvfinIMr0XcTyTuR7EXX0H3ANShpQ=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "a08d6979dd7c82c4cef0dcc6ac45ab16051c1169",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
         "lastModified": 1697009197,
         "narHash": "sha256-viVRhBTFT8fPJTb1N3brQIpFZnttmwo3JVKNuWRVc3s=",
         "owner": "nixos",
@@ -178,7 +165,7 @@
         "home-manager": "home-manager_2",
         "mystash": "mystash",
         "nix-index-database": "nix-index-database",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "stable": "stable"
       }
     },

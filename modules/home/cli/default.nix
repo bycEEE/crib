@@ -13,6 +13,7 @@ Useful links:
 {
   imports = [
     ./atuin.nix
+    ./aws.nix
     ./bat.nix
     ./direnv.nix
     ./eza.nix
@@ -164,9 +165,8 @@ Useful links:
         vault
 
         ### Cloud
-        aws-assume-role # Assume AWS IAM roles from the command-line
-        aws-iam-authenticator # A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
-        awscli2
+        # aws-iam-authenticator # A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
+        # awscli2
         eksctl
         # google-cloud-sdk
         saml2aws # CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP

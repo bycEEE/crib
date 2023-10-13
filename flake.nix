@@ -23,12 +23,15 @@
     home-manager.url = "github:nix-community/home-manager";
     darwin.url = "github:lnl7/nix-darwin";
     nix-index-database.url = "github:Mic92/nix-index-database";
+    agenix.url = "github:ryantm/agenix";
+    mystash.url = "git+ssh://git@github.com/bycEEE/stash.git?shallow=1";
+    mystash.flake = false;
     # homeage.url = "github:jordanisaacs/homeage";
 
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
-    # homeage.inputs.nixpkgs.follows = "nixpkgs";
+    agenix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -36,6 +39,8 @@
     darwin,
     home-manager,
     nix-index-database,
+    agenix,
+    mystash,
     ...
   } @ inputs: let
     isDarwin = system: (builtins.elem system inputs.nixpkgs.lib.platforms.darwin);
@@ -74,6 +79,7 @@
             };
           };
         }
+        ./modules/home/secrets
       ],
       extraModules ? [],
     }:
@@ -83,7 +89,7 @@
           config.allowUnfree = true;
           overlays = builtins.attrValues self.overlays;
         };
-        extraSpecialArgs = {inherit self inputs nixpkgs isWsl;};
+        extraSpecialArgs = {inherit self inputs nixpkgs isWsl agenix mystash;};
         modules = baseModules ++ extraModules;
       };
   in {

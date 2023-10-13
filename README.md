@@ -206,3 +206,4 @@ Not sure how to install via Nix so maintaining a manual list here:
 - [rxyhn/yuki](https://github.com/rxyhn/yuki)
 - [ambroisie/nix-config](https://git.belanyi.fr/ambroisie/nix-config)
 - [okkdev/dotnix](https://github.com/okkdev/dotnix) - home manager homebrew example
+- [ryan4yin/nix-config](https://github.com/ryan4yin/nix-config) - agenix secrets example
