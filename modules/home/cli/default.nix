@@ -43,7 +43,7 @@ Useful links:
         trivy # A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
         trufflehog # Searches through git repositories for secrets, digging deep into commit history and branches
 
-        ### Nix tools
+        ### Nix Tools
         alejandra # The Uncompromising Nix Code Formatter
         cachix # Command line client for Nix binary cache hosting
         # comma # Runs programs without installing them
@@ -198,6 +198,7 @@ Useful links:
         croc # Easily and securely send things from one computer to another
         eget # Easily install prebuilt binaries from GitHub
         # gdu # Disk usage analyzer with console interface written in Go (clashes with git alias)
+        ffmpeg # A complete, cross-platform solution to record, convert and stream audio and video
         graphviz # Graph Visualization Software
         lnav # The Log File Navigator
         # magic-wormhole-rs # Rust implementation of Magic Wormhole, with new features and enhancements
@@ -212,7 +213,6 @@ Useful links:
         # zeal # Offline documentation browser inspired by Dash
 
         ### Misc
-
         # inherit (pkgs.gitAndTools) gh;
         # inherit (inputs'.agenix.packages) agenix;
         # inherit (inputs'.statix.packages) statix;
