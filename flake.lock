@@ -92,11 +92,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1698069042,
-        "narHash": "sha256-L6U8qNhQ3KjQ04voQ+QLQCnFbD5NuIlqC9DO9T7jIZY=",
+        "lastModified": 1698162493,
+        "narHash": "sha256-Zehw3cWiTXGGlDDjzTgIX1BhWG+049D/RcSMAiypAcM=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f540f30f1f3c76b68922550dcf5f78f42732fd37",
+        "rev": "14b54157201fd574b0fa1b3ce7394c9d3a87fbc1",
         "type": "github"
       },
       "original": {
@@ -108,10 +108,10 @@
     "mystash": {
       "flake": false,
       "locked": {
-        "lastModified": 1698083956,
-        "narHash": "sha256-n1wkNb7Mk8CEj1jjg8VzzYwWxMQSr8h3IDVfgD9pEE8=",
+        "lastModified": 1698182107,
+        "narHash": "sha256-pH7n7Zva0Upx9+dk8etBldM6Dp8tBRJW45y9lMd7K3Y=",
         "ref": "refs/heads/main",
-        "rev": "f59371b5fe13db48d42a56316089dbdf1f3479f7",
+        "rev": "629045b04c7fea0d569c7254163b60d859507917",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/bycEEE/stash.git"
