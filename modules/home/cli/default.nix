@@ -114,6 +114,7 @@ Useful links:
         devbox # A tool for creating isolated development environments using Nix
         # difftastic # A syntax-aware diff
         # git-oxide # An idiomatic, lean, fast & safe pure Rust implementation of Git
+        hugo # A fast and modern static website engine
         jql # A JSON query language tool built with Rust
         just # A handy way to save and run project-specific commands
         # lefthook # Fast and powerful Git hooks manager for any type of projects
