@@ -98,6 +98,7 @@
         username = "bchoy";
         extraModules = [
           ./profiles/personal.nix
+          ./modules/home/cli/devops.nix
           ./modules/home/darwin
           ./modules/home/secrets
         ];
@@ -107,6 +108,7 @@
         username = "brian.choy";
         extraModules = [
           ./profiles/work.nix
+          ./modules/home/cli/devops.nix
           ./modules/home/darwin
           ./modules/home/secrets
         ];
@@ -117,6 +119,7 @@
         username = "bchoy";
         extraModules = [
           ./profiles/personal.nix
+          ./modules/home/cli/devops.nix
           ./modules/home/secrets
         ];
       };

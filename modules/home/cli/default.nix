@@ -170,7 +170,7 @@ Useful links:
         # awscli2
         eksctl
         # google-cloud-sdk
-        saml2aws # CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
+        # saml2aws # CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 
         ### System Monitoring
         bandwhich # Terminal bandwidth utilization tool
