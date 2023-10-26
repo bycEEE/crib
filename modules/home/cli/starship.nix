@@ -7,11 +7,11 @@
         "$git_branch"
         "$git_status"
         "$fill"
+        "$username"
+        "$hostname"
         "$all"
         "$time"
         "$line_break"
-        "$username"
-        "$hostname"
         "$kubernetes"
         "$character"
       ];
@@ -46,7 +46,7 @@
       };
 
       username = {
-        format = "\\[[$user]($style)\\]";
+        format = "[$user]($style)";
         style_user = "bold dimmed blue";
         show_always = false;
       };
