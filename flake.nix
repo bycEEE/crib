@@ -100,6 +100,7 @@
         extraModules = [
           ./profiles/personal.nix
           ./modules/home/cli/devops.nix
+          ./modules/home/cli/pentesting.nix
           ./modules/home/darwin
           ./modules/home/secrets
         ];
@@ -130,6 +131,16 @@
         username = "icey";
         extraModules = [
           ./profiles/personal.nix
+          ./modules/home/cli/pentesting.nix
+        ];
+      };
+      "icey@fugazi" = mkHomeConfig {
+        isVm = true;
+        system = "x86_64-linux";
+        username = "icey";
+        extraModules = [
+          ./profiles/personal.nix
+          ./modules/home/cli/pentesting.nix
         ];
       };
     };
