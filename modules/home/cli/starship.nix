@@ -46,7 +46,7 @@
       };
 
       username = {
-        format = "[$user]($style)";
+        format = "[$user]($style) ";
         style_user = "bold dimmed blue";
         show_always = false;
       };
