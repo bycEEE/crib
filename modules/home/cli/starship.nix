@@ -10,6 +10,8 @@
         "$all"
         "$time"
         "$line_break"
+        "$username"
+        "$hostname"
         "$kubernetes"
         "$character"
       ];
@@ -51,8 +53,9 @@
 
       hostname = {
         ssh_only = true;
-        format = "[$ssh_symbol$hostname]($style) ";
-        trim_at = "-";
+        ssh_symbol = "🌐";
+        format = "$ssh_symbol$hostname($style) ";
+        trim_at = ".";
         style = "bold dimmed white";
       };
 
