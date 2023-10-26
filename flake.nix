@@ -121,7 +121,7 @@
         ];
       };
       "icey@scheisty" = mkHomeConfig {
-        system = "aaaarch64-linux";
+        system = "aarch64-linux";
         username = "icey";
         extraModules = [
           ./profiles/personal.nix
