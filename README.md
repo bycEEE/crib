@@ -63,7 +63,7 @@ Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended 
   cd ~/crib
 
   # Build and activate
-  nix build "github:bycEEE/crib#homeConfigurations.bchoy@BREEZY.activationPackage" && ./result/activate
+  nix build "github:bycEEE/crib#homeConfigurations.$USER@$(hostname -s).activationPackage" && ./result/activate
 
   # Clone the actual repo
   git clone git@github.com:bycEEE/crib.git .
