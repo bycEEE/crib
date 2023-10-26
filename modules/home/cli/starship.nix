@@ -3,12 +3,12 @@
     enable = true;
     settings = {
       format = lib.concatStrings [
+        "$username"
+        "$hostname"
         "$directory"
         "$git_branch"
         "$git_status"
         "$fill"
-        "$username"
-        "$hostname"
         "$all"
         "$time"
         "$line_break"
