@@ -9,7 +9,7 @@
   functions = builtins.readFile ./scripts/functions.sh;
   agent_bridge = builtins.readFile ./scripts/agent_bridge.sh;
   aliases = with pkgs; {
-    k = lib.getExe kubectl;
+    k = "kubectl";
     cat = lib.getExe bat;
     ls = lib.getExe eza;
     ll = "${lib.getExe eza} -l";
