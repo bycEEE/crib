@@ -36,6 +36,9 @@ clean:
 	# nix-collect-garbage -d
 	home-manager expire-generations "-7 days"
 
+optimize:
+	nix-store --optimise
+
 visualise:
 	nix-du -s 100MB | dot -Tsvg > result.svg
 
