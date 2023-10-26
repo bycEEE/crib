@@ -3,9 +3,9 @@
     enable = true;
     settings = {
       format = lib.concatStrings [
+        "$directory"
         "$username"
         "$hostname"
-        "$directory"
         "$git_branch"
         "$git_status"
         "$fill"
