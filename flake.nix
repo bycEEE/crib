@@ -79,7 +79,6 @@
             };
           };
         }
-        ./modules/home/secrets
       ],
       extraModules ? [],
     }:
@@ -100,6 +99,7 @@
         extraModules = [
           ./profiles/personal.nix
           ./modules/home/darwin
+          ./modules/home/secrets
         ];
       };
       "brianchoy@Brians-MacBook-Pro-Work" = mkHomeConfig {
@@ -108,12 +108,21 @@
         extraModules = [
           ./profiles/work.nix
           ./modules/home/darwin
+          ./modules/home/secrets
         ];
       };
       "bchoy@BREEZY" = mkHomeConfig {
         isWsl = true;
         system = "x86_64-linux";
         username = "bchoy";
+        extraModules = [
+          ./profiles/personal.nix
+          ./modules/home/secrets
+        ];
+      };
+      "icey@scheisty" = mkHomeConfig {
+        system = "aaaarch64-linux";
+        username = "icey";
         extraModules = [
           ./profiles/personal.nix
         ];
