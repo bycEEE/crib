@@ -23,7 +23,7 @@ Useful links:
     ./go.nix
     # ./gpg.nix
     ./navi.nix
-    ./python.nix
+    # ./python.nix
     ./ssh.nix
     # ./neovim.nix
     ./shell.nix
