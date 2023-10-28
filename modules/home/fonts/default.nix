@@ -19,6 +19,7 @@ Useful links:
           "Iosevka"
         ];
       })
+      # (pkgs.callPackage ./apple-fonts.nix {})
     ];
   };
 }
