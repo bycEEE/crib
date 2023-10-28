@@ -22,6 +22,7 @@ Useful links:
     ./htop.nix
     ./go.nix
     # ./gpg.nix
+    ./navi.nix
     ./python.nix
     ./ssh.nix
     # ./neovim.nix
@@ -94,7 +95,6 @@ Useful links:
         hyperfine # A command-line benchmarking tool
         mmv # Move/Copy/Append/Link multiple files according to a set of wildcard patterns
         moar # Pager designed to just do the right thing without any configuration
-        navi # An interactive cheatsheet tool for the command-line and application launchers
         ncurses # A free software emulation of curses
         ov # Feature-rich terminal-based text viewer
         procs # A modern replacement for ps written in Rust
