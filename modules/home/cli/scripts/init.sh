@@ -16,6 +16,8 @@ if [[ -d /opt/homebrew ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+export PATH="$HOME/.local/bin:$PATH"
+
 # # git installed asdf
 # export ASDF_DIR="$HOME/.asdf"
 
