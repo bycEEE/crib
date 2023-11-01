@@ -11,7 +11,7 @@
 in {
   programs.ssh = {
     enable = true;
-    forwardAgent = true;
+    # forwardAgent = true;
     serverAliveInterval = 20;
     serverAliveCountMax = 180;
     extraConfig = ''
