@@ -9,6 +9,7 @@ apps=(
     # Security
     "AgileBits.1Password"
     "Malwarebytes.Malwarebytes"
+    "PortSwigger.BurpSuite.Community"
 
     # Browsers
     "Google.Chrome"
