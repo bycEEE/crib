@@ -2,10 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  makeWrapper,
   zlib,
-  subversion,
-  nasm,
 }:
 stdenv.mkDerivation rec {
   pname = "braa";
@@ -16,7 +13,7 @@ stdenv.mkDerivation rec {
     sha256 = "d650d34cdf30fcbbbbf4e4f11c8f5d51fd5caa3cca58d620fa1d978b8c18919c";
   };
 
-  buildInputs = [zlib subversion nasm];
+  buildInputs = [zlib];
 
   installPhase = ''
     install -Dm755 braa $out/bin/braa
