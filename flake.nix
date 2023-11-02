@@ -122,6 +122,7 @@
         extraModules = [
           ./profiles/personal.nix
           ./modules/home/cli/devops.nix
+          ./modules/home/cli/pentesting.nix
           ./modules/home/secrets
         ];
       };
