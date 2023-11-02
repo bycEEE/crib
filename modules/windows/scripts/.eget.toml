@@ -1,0 +1,20 @@
+[global]
+    download
+["ililim/dual-key-remap"]
+    file = "dual-key-remap*"
+    show_hash = true
+    verify_sha256 = "3301529969f4c86944769bb0e5f8d663444c811e3c3e68bedb540348fc645f66"
+
+["beeradmoore/dlss-swapper"]
+    all = true
+    file = "*"
+    asset_filters = ["portable"]
+    show_hash = true
+    verify_sha256 = "e74a9b02753a71c7eb0f6c9664706b4a9a1b72bf3bac540365a12201ea202f92"
+
+["dnSpy/dnSpy"]
+    all = true
+    file = "*"
+    asset_filters = ["win64"]
+    show_hash = true
+    verify_sha256 = "78d855aef02d87195ddde4f4a89f16f03708e66ec8282cf8eb9ecc89dd469f6c"
