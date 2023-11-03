@@ -88,6 +88,8 @@ in {
 
       # environment variable
       zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-preview 'echo ''${(P)word}'
+
+      eval "$(navi widget zsh)"
     '';
     # profileExtra = ''
     #   ${lib.optionalString pkgs.stdenvNoCC.isLinux "[[ -e /etc/profile ]] && source /etc/profile"}
