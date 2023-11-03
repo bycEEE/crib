@@ -54,7 +54,7 @@ in {
 
       ### fzf-tab
       ### https://github.com/Aloxaf/fzf-tab/wiki/Preview
-      # setopt globdots # show hidden files
+      setopt globdots # show hidden files
 
       # disable sort when completing `git checkout`
       zstyle ':completion:*:git-checkout:*' sort false
