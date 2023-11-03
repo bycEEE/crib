@@ -113,6 +113,7 @@ Useful links:
         cherrybomb # A CLI tool that helps you avoid undefined user behavior by validating your API specifications
         devbox # A tool for creating isolated development environments using Nix
         # difftastic # A syntax-aware diff
+        fx # Terminal JSON viewer
         # git-oxide # An idiomatic, lean, fast & safe pure Rust implementation of Git
         hugo # A fast and modern static website engine
         jql # A JSON query language tool built with Rust
