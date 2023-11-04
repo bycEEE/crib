@@ -45,6 +45,9 @@ in {
       setopt long_list_jobs # Display PID when suspending processes as well.
       setopt notify # Report the status of backgrounds jobs immediately.
 
+      ## History
+      setopt no_hist_expand # Do not expand history in line editor.
+
       ## Set key bindings
       bindkey "^[[1;5D" backward-word # ctrl + left
       bindkey "^[[1;5C" forward-word # ctrl + right
