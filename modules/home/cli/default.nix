@@ -92,7 +92,6 @@ Useful links:
         chroma # A general purpose syntax highlighter in pure Go
         du-dust # A more intuitive version of du in rust
         duf # Disk Usage/Free Utility - a better 'df' alternative
-        glow # Render markdown on the CLI, with pizzazz!
         hyperfine # A command-line benchmarking tool
         mmv # Move/Copy/Append/Link multiple files according to a set of wildcard patterns
         moar # Pager designed to just do the right thing without any configuration
@@ -120,6 +119,7 @@ Useful links:
         jql # A JSON query language tool built with Rust
         just # A handy way to save and run project-specific commands
         # lefthook # Fast and powerful Git hooks manager for any type of projects
+        libxslt # A C library and tools to do XSL transformations
         ngrok # Allows you to expose a web server running on your local machine to the internet
         postgresql_14
         pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
@@ -157,6 +157,7 @@ Useful links:
         eget # Easily install prebuilt binaries from GitHub
         # gdu # Disk usage analyzer with console interface written in Go (clashes with git alias)
         ffmpeg # A complete, cross-platform solution to record, convert and stream audio and video
+        glow # Render markdown on the CLI, with pizzazz!
         graphviz # Graph Visualization Software
         lnav # The Log File Navigator
         # magic-wormhole-rs # Rust implementation of Magic Wormhole, with new features and enhancements
