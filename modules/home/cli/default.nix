@@ -92,6 +92,7 @@ Useful links:
         chroma # A general purpose syntax highlighter in pure Go
         du-dust # A more intuitive version of du in rust
         duf # Disk Usage/Free Utility - a better 'df' alternative
+        glow # Render markdown on the CLI, with pizzazz!
         hyperfine # A command-line benchmarking tool
         mmv # Move/Copy/Append/Link multiple files according to a set of wildcard patterns
         moar # Pager designed to just do the right thing without any configuration
