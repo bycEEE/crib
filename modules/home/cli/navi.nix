@@ -7,6 +7,10 @@
           "~/goofy/"
         ];
       };
+      shell = {
+        command = "zsh";
+        finder_command = "zsh";
+      };
     };
   };
 }
