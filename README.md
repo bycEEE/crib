@@ -73,7 +73,7 @@ Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended 
   sudo echo "$HOME/.nix-profile/bin/zsh" >> /etc/shells
 
   # Change shell
-  chsh -s $(pwd)/.nix-profile/bin/zsh
+  chsh -s $HOME/.nix-profile/bin/zsh
   ```
 
 - To enable GUI apps in Windows Start Menu:
