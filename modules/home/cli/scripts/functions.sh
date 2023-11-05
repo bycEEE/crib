@@ -24,6 +24,18 @@ function is_darwin() {
   fi
 }
 
+#Swap two files
+function swap() {
+[ -e "$1.tmp" ] && return
+  mv "$1" "$1.tmp"
+  mv "$2" "$1"
+  mv "$1.tmp" "$2"
+}
+
+function reload() {
+  source $HOME/.config/zsh/.zshrc
+}
+
 function weather() {
   curl wttr.in/"$1"
 }
