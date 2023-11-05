@@ -1,5 +1,5 @@
 {...}: {
-  programs.pueue = {
+  services.pueue = {
     enable = true;
     settings = {
       daemon = {
