@@ -8,6 +8,9 @@
           "~/goofy/"
         ];
       };
+      finder = {
+        overrides = "--layout=reverse-list";
+      };
       shell = {
         command = "zsh";
         finder_command = "zsh";
