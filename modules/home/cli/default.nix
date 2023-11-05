@@ -23,6 +23,7 @@ Useful links:
     ./go.nix
     # ./gpg.nix
     ./navi.nix
+    ./pueue.nix
     # ./python.nix
     ./ssh.nix
     # ./neovim.nix
@@ -98,7 +99,6 @@ Useful links:
         ncurses # A free software emulation of curses
         ov # Feature-rich terminal-based text viewer
         procs # A modern replacement for ps written in Rust
-        # pueue # A daemon for managing long running shell commands
         riffdiff # Riff is a wrapper around diff that highlights which parts of lines have changed.
         # sd # Intuitive find & replace CLI (sed alternative)
         tmux # A terminal multiplexer
