@@ -52,10 +52,10 @@ function weather() {
 # }
 
 function fix_zsh_history() {
-  mv $HOME/.zsh_history $HOME/.zsh_history_bad
-  strings $HOME/.zsh_history_bad > $HOME/.zsh_history
-  fc -R $HOME/.zsh_history
-  rm $HOME/.zsh_history_bad
+  mv $HOME/config/zsh/.zsh_history $HOME/config/zsh/.zsh_history_bad
+  strings $HOME/config/zsh/.zsh_history_bad > $HOME/config/zsh/.zsh_history
+  fc -R $HOME/config/zsh/.zsh_history
+  rm $HOME/config/zsh/.zsh_history_bad
 }
 
 function print_path_newline() {

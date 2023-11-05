@@ -1,6 +1,7 @@
 {...}: {
   programs.navi = {
     enable = true;
+    enableZshIntegration = false;
     settings = {
       cheats = {
         paths = [

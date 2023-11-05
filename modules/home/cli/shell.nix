@@ -8,6 +8,7 @@
   init = builtins.readFile ./scripts/init.sh;
   functions = builtins.readFile ./scripts/functions.sh;
   agent_bridge = builtins.readFile ./scripts/agent_bridge.sh;
+  navi_widget = builtins.readFile ./scripts/navi_widget.sh;
   aliases = with pkgs; {
     k = "kubectl";
     cat = lib.getExe bat;
@@ -36,8 +37,14 @@ in {
     initExtra = ''
       ${init}
       ${functions}
+      ${navi_widget}
       ${lib.optionalString isWsl ''
         ${agent_bridge}
+        # Keep current path in Windows on new tab/pane
+        keep_current_path() {
+          printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"
+        }
+        precmd_functions+=(keep_current_path)
       ''}
 
       # unset RPS1
