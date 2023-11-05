@@ -10,6 +10,7 @@
   agent_bridge = builtins.readFile ./scripts/agent_bridge.sh;
   navi_widget = builtins.readFile ./scripts/navi_widget.sh;
   aliases = with pkgs; {
+    sudo = "sudo env \"PATH=$PATH\" ";
     k = "kubectl";
     cat = lib.getExe bat;
     ls = lib.getExe eza;
