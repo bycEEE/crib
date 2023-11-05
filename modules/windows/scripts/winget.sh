@@ -29,6 +29,7 @@ apps=(
     "Microsoft.WindowsTerminal"
     # "Nvidia.CUDA"
     "PostgreSQL.pgAdmin"
+    "Python.Python.3.11"
     "wez.wezterm"
 
     # System Monitoring

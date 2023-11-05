@@ -33,6 +33,7 @@ apps=(
     "curl"
     "czkawka-gui",
     "fiddler"
+    "flow-launcher"
     "gpg"
     "gpu-z"
     "hxd"
