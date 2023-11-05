@@ -129,7 +129,7 @@ in {
           owner = "Aloxaf";
           repo = "fzf-tab";
           rev = "c2b4aa5ad2532cca91f23908ac7f00efb7ff09c9";
-          sha256 = "sha256-gvZp8P3quOtcy1Xtt1LAW1cfZ/zCtnAmnWqcwrKel6w=";
+          hash = "sha256-gvZp8P3quOtcy1Xtt1LAW1cfZ/zCtnAmnWqcwrKel6w=";
         };
       }
       {
@@ -139,7 +139,17 @@ in {
           owner = "chisui";
           repo = "zsh-nix-shell";
           rev = "v0.7.0";
-          sha256 = "sha256-oQpYKBt0gmOSBgay2HgbXiDoZo5FoUKwyHSlUrOAP5E=";
+          hash = "sha256-oQpYKBt0gmOSBgay2HgbXiDoZo5FoUKwyHSlUrOAP5E=";
+        };
+      }
+      {
+        name = "zsh-auto-notify";
+        file = "auto-notify.plugin.zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "MichaelAquilina";
+          repo = "zsh-auto-notify";
+          rev = "refs/tags/0.8.1";
+          hash = "sha256-4PH7g7OY5hASgq4xdswYaCDnys4pz/wyIVkGgaPcgBI=";
         };
       }
       # {
