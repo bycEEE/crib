@@ -10,7 +10,7 @@
 in
   stdenv.mkDerivation rec {
     pname = "snmpwn";
-    version = "v0.97b";
+    version = "0.97b";
     src = builtins.fetchGit {
       url = "https://github.com/hatlord/snmpwn";
       rev = "0dee1d02e1d24159664ad56533a081f0039a68bf";
