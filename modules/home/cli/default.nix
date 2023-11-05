@@ -166,8 +166,9 @@ Useful links:
         noti # Trigger notifications when a process completes
         ouch # A command-line utility for easily compressing and decompressing files and directories
         pandoc # Universal markup converter
+        ranger # A VIM-inspired filemanager for the console
         speedtest-cli # Command line interface for testing internet bandwidth using speedtest.net
-        # ranger # A VIM-inspired filemanager for the console
+        sshfs # A filesystem client based on the SSH File Transfer Protocol
         # translate-shell # Command-line translator using Google Translate, Bing Translator, Yandex.Translate, etc
         # zeal # Offline documentation browser inspired by Dash
 
