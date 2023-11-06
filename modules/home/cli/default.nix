@@ -23,7 +23,6 @@ Useful links:
     ./go.nix
     # ./gpg.nix
     ./navi.nix
-    ./pueue.nix
     # ./python.nix
     ./ssh.nix
     # ./neovim.nix
@@ -166,6 +165,7 @@ Useful links:
         noti # Trigger notifications when a process completes
         ouch # A command-line utility for easily compressing and decompressing files and directories
         pandoc # Universal markup converter
+        pueue # A daemon for managing long running shell commands
         ranger # A VIM-inspired filemanager for the console
         speedtest-cli # Command line interface for testing internet bandwidth using speedtest.net
         sshfs # A filesystem client based on the SSH File Transfer Protocol
