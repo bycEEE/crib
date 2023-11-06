@@ -133,16 +133,6 @@ in {
           hash = "sha256-oQpYKBt0gmOSBgay2HgbXiDoZo5FoUKwyHSlUrOAP5E=";
         };
       }
-      {
-        name = "zsh-auto-notify";
-        file = "auto-notify.plugin.zsh";
-        src = pkgs.fetchFromGitHub {
-          owner = "MichaelAquilina";
-          repo = "zsh-auto-notify";
-          rev = "refs/tags/0.8.1";
-          hash = "sha256-4PH7g7OY5hASgq4xdswYaCDnys4pz/wyIVkGgaPcgBI=";
-        };
-      }
       # {
       #   name = "zsh-bash-completions-fallback";
       #   src = pkgs.fetchFromGitHub {
