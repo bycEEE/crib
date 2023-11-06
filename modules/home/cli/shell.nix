@@ -21,6 +21,7 @@
     tree = "eza --tree --icons --tree";
     tf = "terraform";
     zj = "zellij";
+    zjr = "zellij run -- ";
     # du = "dust";
     # ps = "procs";
   };
