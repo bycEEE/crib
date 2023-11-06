@@ -26,7 +26,9 @@ apps=(
     "chrisant996.Clink"
     "Docker.DockerDesktop"
     "Insomnia.Insomnia"
+    # "Microsoft.DevHome"
     "Microsoft.WindowsTerminal"
+    "Microsoft.WindowsTerminal.Preview"
     # "Nvidia.CUDA"
     "PostgreSQL.pgAdmin"
     "Python.Python.3.11"
@@ -53,6 +55,7 @@ apps=(
     "LukaszSwiszcz.Winpinator"
     "Microsoft.PowerToys"
     "schollz.croc"
+    "StartIsBack.StartAllBack"
 
     # Misc
     "Gyan.FFmpeg"
