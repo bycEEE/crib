@@ -57,8 +57,8 @@
         C-l = "select_next_sibling";
 
         # Personal preference
-        o = ["open_below" "normal_mode"];
-        O = ["open_above" "normal_mode"];
+        # o = ["open_below" "normal_mode"];
+        # O = ["open_above" "normal_mode"];
 
         # Muscle memory
         "{" = ["goto_prev_paragraph" "collapse_selection"];
