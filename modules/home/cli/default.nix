@@ -78,7 +78,6 @@ Useful links:
         gnumake
         gnupg
         gnused
-        libnotify
         # openssh
         rclone
         ripgrep

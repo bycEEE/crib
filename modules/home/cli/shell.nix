@@ -52,7 +52,6 @@ in {
       # unset RPS1
       ## Job Control
       setopt long_list_jobs # Display PID when suspending processes as well.
-      setopt notify # Report the status of backgrounds jobs immediately.
 
       ## History
       setopt no_hist_expand # Do not expand history in line editor.
