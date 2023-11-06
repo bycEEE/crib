@@ -6,9 +6,9 @@
 }: let
   riff = lib.getExe pkgs.riffdiff;
 in {
-  home.packages = [
-    pkgs.github-cli
-    # pkgs.difftastic
+  home.packages = with pkgs; [
+    github-cli
+    # difftastic
   ];
   programs.git = {
     enable = true;
@@ -18,16 +18,6 @@ in {
       #   then "osxkeychain"
       #   else "cache --timeout=1000000000";
       # core.autocrlf = "input";
-      commit.verbose = true;
-      # fetch.prune = true;
-      http.sslVerify = true;
-      init.defaultBranch = "main";
-      pull.rebase = false;
-      push.default = "current";
-      # pull.rebase = true;
-      # push.followTags = true;
-      # push.autoSetupRemote = true;
-      commit.gpgsign = true;
       gpg.format = "ssh";
       "gpg \"ssh\"".program =
         if isWsl
@@ -35,10 +25,37 @@ in {
         else if pkgs.stdenvNoCC.isDarwin
         then "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
         else "\${pkgs.gnupg}/bin/gpg2";
-      pager.diff = "${riff}";
-      pager.show = "${riff}";
-      pager.log = "${riff}";
-      interactive.diffFilter = "${riff}";
+
+      commit = {
+        verbose = true;
+        gpgsign = true;
+      };
+
+      init = {
+        defaultBranch = "main";
+      };
+
+      push = {
+        default = "current";
+        autoSetupRemote = true;
+        # followTags = true;
+      };
+
+      pull = {
+        rebase = false;
+      };
+
+      # fetch = {
+      #   prune = true;
+      # };
+
+      pager = {
+        diff = riff;
+        show = riff;
+        log = riff;
+      };
+      interactive.diffFilter = riff;
+      http.sslVerify = true;
     };
     aliases = {
       ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi";

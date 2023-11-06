@@ -20,6 +20,7 @@ Useful links:
     ./eza.nix
     ./fzf.nix
     ./git.nix
+    ./helix.nix
     ./htop.nix
     ./go.nix
     # ./gpg.nix
@@ -64,18 +65,19 @@ Useful links:
         # nixpkgs-review # A tool for reviewing nixpkgs pull requests
         nurl # Generate Nix fetcher calls from repository URLs
         # nvfetcher # Generate nix sources expr for the latest version of packages
+        # poetry2nix # Convert poetry.lock to nix
         # rnix-lsp # Language Server Protocol implementation for the Nix language
-        # statix# Lints and suggestions for the nix programming language
+        # statix # Lints and suggestions for the nix programming language
 
         ### Linux
         # busybox # Tiny versions of common UNIX utilities in a single small executable
-        cmake # Cross-platform, open-source build system generator
-        coreutils
+        # cmake # Cross-platform, open-source build system generator
+        # coreutils
         curl
         fd
         findutils
         gawk
-        gcc
+        # gcc
         gnugrep
         gnumake
         gnupg
@@ -87,14 +89,18 @@ Useful links:
         treefmt
         wget
 
+        ffmpeg # A complete, cross-platform solution to record, convert and stream audio and video
+        libxslt # A C library and tools to do XSL transformations
+
         ### Terminal
-        brotli # Generic-purpose lossless compression algorithm
         catimg # Insanely fast image printing in your terminal
         # choose # A human-friendly and fast alternative to cut and (sometimes) awk
         chroma # A general purpose syntax highlighter in pure Go
         du-dust # A more intuitive version of du in rust
         duf # Disk Usage/Free Utility - a better 'df' alternative
+        fx # Terminal JSON viewer
         hyperfine # A command-line benchmarking tool
+        # jql # A JSON query language tool built with Rust
         mmv # Move/Copy/Append/Link multiple files according to a set of wildcard patterns
         moar # Pager designed to just do the right thing without any configuration
         ncurses # A free software emulation of curses
@@ -109,24 +115,20 @@ Useful links:
 
         ### Development
         # asdf-vm # Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more
-        bore-cli # Rust tool to create TCP tunnels
-        cherrybomb # A CLI tool that helps you avoid undefined user behavior by validating your API specifications
+
         devbox # A tool for creating isolated development environments using Nix
         # difftastic # A syntax-aware diff
-        fx # Terminal JSON viewer
         # git-oxide # An idiomatic, lean, fast & safe pure Rust implementation of Git
         hugo # A fast and modern static website engine
-        jql # A JSON query language tool built with Rust
         just # A handy way to save and run project-specific commands
         # lefthook # Fast and powerful Git hooks manager for any type of projects
-        libxslt # A C library and tools to do XSL transformations
         ngrok # Allows you to expose a web server running on your local machine to the internet
         postgresql_14
         pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
         # ruff # An Extremely fast Python linter
         shellcheck # Shell script analysis tool
         sqlite
-        tokei # A program that displays statistics about your code
+        # tokei # A program that displays statistics about your code
         yq
 
         ### System Monitoring
@@ -136,6 +138,7 @@ Useful links:
         ncdu # NCurses Disk Usage
 
         ### Network
+        # bore-cli # Rust tool to create TCP tunnels
         curlie # The power of curl, the ease of use of httpie
         dogdns # A command-line DNS client
         dnspeep # A network debugging tool for DNS
@@ -155,12 +158,11 @@ Useful links:
         croc # Easily and securely send things from one computer to another
         eget # Easily install prebuilt binaries from GitHub
         # gdu # Disk usage analyzer with console interface written in Go (clashes with git alias)
-        ffmpeg # A complete, cross-platform solution to record, convert and stream audio and video
         glow # Render markdown on the CLI, with pizzazz!
         graphviz # Graph Visualization Software
         lnav # The Log File Navigator
         # magic-wormhole-rs # Rust implementation of Magic Wormhole, with new features and enhancements
-        nali # A tool to display the location of an IP address
+        # nali # A tool to display the location of an IP address
         neofetch # A fast, highly customizable system info script
         noti # Trigger notifications when a process completes
         ouch # A command-line utility for easily compressing and decompressing files and directories
@@ -171,6 +173,9 @@ Useful links:
         sshfs # A filesystem client based on the SSH File Transfer Protocol
         # translate-shell # Command-line translator using Google Translate, Bing Translator, Yandex.Translate, etc
         # zeal # Offline documentation browser inspired by Dash
+
+        ### TODO: Categorise
+        brotli # Generic-purpose lossless compression algorithm
 
         ### Misc
         # inherit (pkgs.gitAndTools) gh;
@@ -184,8 +189,8 @@ Useful links:
         iotop-c # A top-like utility for I/O
         lurk # A simple and pretty alternative to strace
         nix-du # Disk usage analyzer for Nix store paths
-        openssl
-        openssh
+        # openssl
+        # openssh
         psmisc # A set of tools that use the proc filesystem
         traceroute # A tool for tracing the route of IP packets
       ])
@@ -200,8 +205,8 @@ Useful links:
       ];
 
     sessionVariables = {
-      EDITOR = "vim";
-      VISUAL = "vim";
+      EDITOR = "helix";
+      VISUAL = "helix";
       PAGER = "moar";
       # NODE_PATH = "${NODE_GLOBAL}/lib";
       # JAVA_HOME = "${pkgs.jdk11}";
