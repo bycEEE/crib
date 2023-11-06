@@ -2,6 +2,7 @@
   stdenv,
   lib,
   bundlerEnv,
+  fetchFromGitHub,
 }: let
   rubyEnv = bundlerEnv {
     name = "snmpwn-ruby-env";
@@ -11,17 +12,21 @@ in
   stdenv.mkDerivation rec {
     pname = "snmpwn";
     version = "0.97b";
-    src = builtins.fetchGit {
-      url = "https://github.com/hatlord/snmpwn";
+    src = fetchFromGitHub {
+      owner = "hatlord";
+      repo = "snmpwn";
       rev = "0dee1d02e1d24159664ad56533a081f0039a68bf";
+      hash = "sha256-qLv6bS+U3PojNesABf2vgU3USEzfiymTz8pEYSIufkQ=";
     };
 
     buildInputs = [rubyEnv.wrappedRuby];
 
     installPhase = ''
+      runHook preBuild
       mkdir -p $out/bin
       cp *.rb $out/bin
       mv $out/bin/snmpwn.rb $out/bin/snmpwn
+      runHook postBuild
     '';
 
     meta = with lib; {
@@ -30,5 +35,6 @@ in
       license = licenses.mit;
       maintainers = with maintainers; [bycEEE];
       platforms = platforms.unix;
+      mainProgram = "snmpwn";
     };
   }
