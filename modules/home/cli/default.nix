@@ -18,6 +18,7 @@ Useful links:
     ./aws.nix
     ./bat.nix
     ./bottom.nix
+    ./carapace.nix
     ./direnv.nix
     ./eza.nix
     ./fzf.nix
@@ -97,7 +98,10 @@ Useful links:
         libxslt # A C library and tools to do XSL transformations
 
         ### Terminal
+        # boxxy # Puts bad Linux applications in a box with only their files
+        broot # An interactive tree view, a fuzzy search, a balanced BFS descent and customizable commands
         catimg # Insanely fast image printing in your terminal
+        # chafa # Terminal graphics for the 21st century
         # choose # A human-friendly and fast alternative to cut and (sometimes) awk
         chroma # A general purpose syntax highlighter in pure Go
         du-dust # A more intuitive version of du in rust
@@ -112,6 +116,8 @@ Useful links:
         procs # A modern replacement for ps written in Rust
         riffdiff # Riff is a wrapper around diff that highlights which parts of lines have changed.
         # sd # Intuitive find & replace CLI (sed alternative)
+        silver-searcher # A code searching tool similar to ack, with a focus on speed
+        showmethekey # A tool to show the keybindings of your terminal
         tmux # A terminal multiplexer
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
         vivid # A themeable LS_COLORS generator with a rich filetype datebase
@@ -119,7 +125,6 @@ Useful links:
 
         ### Development
         # asdf-vm # Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more
-
         devbox # A tool for creating isolated development environments using Nix
         # difftastic # A syntax-aware diff
         # git-oxide # An idiomatic, lean, fast & safe pure Rust implementation of Git
@@ -177,6 +182,7 @@ Useful links:
         sshfs # A filesystem client based on the SSH File Transfer Protocol
         # translate-shell # Command-line translator using Google Translate, Bing Translator, Yandex.Translate, etc
         # zeal # Offline documentation browser inspired by Dash
+        zk # A plain text note-taking assistant for managing your Zettelkasten
 
         ### TODO: Categorise
         brotli # Generic-purpose lossless compression algorithm
