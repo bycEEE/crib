@@ -1,7 +1,7 @@
 {...}: {
   programs.navi = {
     enable = true;
-    enableZshIntegration = false;
+    enableZshIntegration = false; # We override the default FZF command in modified script
     settings = {
       cheats = {
         paths = [
