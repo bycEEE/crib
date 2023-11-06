@@ -9,22 +9,26 @@
   functions = builtins.readFile ./scripts/functions.sh;
   agent_bridge = builtins.readFile ./scripts/agent_bridge.sh;
   navi_widget = builtins.readFile ./scripts/navi_widget.sh;
-  aliases = with pkgs; {
+  aliases = {
     sudo = "sudo env \"PATH=$PATH\" ";
     k = "kubectl";
-    cat = lib.getExe bat;
-    ls = lib.getExe eza;
-    ll = "${lib.getExe eza} -l";
-    la = "${lib.getExe eza} -a";
-    lt = "${lib.getExe eza} --tree";
-    lla = "${lib.getExe eza} -la";
-    tree = "${lib.getExe eza} --tree --icons --tree";
+    cat = "bat";
+    ls = "eza";
+    ll = "eza -l";
+    la = "eza -a";
+    lt = "eza --tree";
+    lla = "eza -la";
+    tree = "eza --tree --icons --tree";
+    tf = "terraform";
+    zj = "zellij";
+    # du = "dust";
+    # ps = "procs";
   };
 in {
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
-    enableCompletion = true;
+    enableCompletion = true; # Disable this if using zsh-autocomplete plugin
     dotDir = ".config/zsh";
     autocd = false;
     defaultKeymap = "emacs";
@@ -37,6 +41,7 @@ in {
     # '';
     initExtra = ''
       source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
+      # source ${pkgs.zsh-autocomplete}/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
       ${init}
       ${functions}
       ${navi_widget}
@@ -67,11 +72,12 @@ in {
       ### https://github.com/Aloxaf/fzf-tab/wiki/Preview
       setopt globdots # show hidden files
 
+      # set descriptions format to enable group support
+      zstyle -d ':completion:*' format
+      zstyle ':completion:*:descriptions' format '[%d]'
+
       # disable sort when completing `git checkout`
       zstyle ':completion:*:git-checkout:*' sort false
-
-      # set descriptions format to enable group support
-      zstyle ':completion:*:descriptions' format '[%d]'
 
       # set list-colors to enable filename colorizing
       zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
@@ -93,12 +99,11 @@ in {
       # # show file preview
       # zstyle ':fzf-tab:complete:*:*' fzf-preview '${lib.getExe pkgs.moar} ''${(Q)realpath}'
 
-      # # show command options and subcommands
-      # zstyle ':fzf-tab:complete:*:options' fzf-preview
-      # zstyle ':fzf-tab:complete:*:argument-1' fzf-preview
-
       # environment variable
       zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-preview 'echo ''${(P)word}'
+
+      # case insensitive match completion
+      zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Case insensitive tab completion
     '';
     # profileExtra = ''
     #   ${lib.optionalString pkgs.stdenvNoCC.isLinux "[[ -e /etc/profile ]] && source /etc/profile"}

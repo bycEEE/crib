@@ -30,6 +30,7 @@ Useful links:
     ./starship.nix
     ./tealdeer.nix
     ./vim.nix
+    ./zellij.nix
   ];
 
   home = {
@@ -104,7 +105,6 @@ Useful links:
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
         vivid # A themeable LS_COLORS generator with a rich filetype datebase
         # watchman # A file watching service
-        zellij # A terminal workspace with batteries included
 
         ### Development
         # asdf-vm # Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more

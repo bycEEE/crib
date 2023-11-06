@@ -1,6 +1,6 @@
 {pkgs, ...}: {
-  home.packages = [
-    pkgs.go-tools
+  home.packages = with pkgs; [
+    go-tools
   ];
   programs.go = {
     enable = true;
