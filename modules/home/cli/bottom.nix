@@ -2,6 +2,7 @@
   programs.bottom = {
     enable = true;
     settings = {
+      # From https://github.com/hmajid2301/dotfiles/blob/main/home-manager/programs/starship.nix
       colors = {
         table_header_color = "#f2d5cf";
         all_cpu_color = "#f2d5cf";

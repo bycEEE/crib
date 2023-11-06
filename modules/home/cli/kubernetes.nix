@@ -27,8 +27,8 @@
   programs = {
     k9s = {
       enable = true;
+      # From https://github.com/hmajid2301/dotfiles/blob/main/home-manager/programs/starship.nix
       skin = {
-        # TODO: change to nix colors
         k9s = {
           body = {
             fgColor = "#${config.colorscheme.colors.base05}";
