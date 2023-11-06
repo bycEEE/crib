@@ -2,6 +2,7 @@
   isWsl,
   lib,
   pkgs,
+  nix-colors,
   ...
 }:
 /*
@@ -12,6 +13,7 @@ Useful links:
 */
 {
   imports = [
+    nix-colors.homeManagerModules.default
     ./atuin.nix
     ./aws.nix
     ./bat.nix
@@ -34,6 +36,8 @@ Useful links:
     ./vim.nix
     ./zellij.nix
   ];
+
+  colorScheme = nix-colors.colorSchemes.catppuccin-macchiato;
 
   home = {
     packages = with pkgs;
@@ -227,10 +231,8 @@ Useful links:
     # };
 
     jq.enable = true;
-
     nix-index.enable = true;
     nix-index-database.comma.enable = true;
-
     zoxide.enable = true;
   };
 }

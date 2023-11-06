@@ -26,12 +26,13 @@
     agenix.url = "github:ryantm/agenix";
     mystash.url = "git+ssh://git@github.com/bycEEE/stash.git?shallow=1";
     mystash.flake = false;
+    nix-colors.url = "github:misterio77/nix-colors";
     # homeage.url = "github:jordanisaacs/homeage";
 
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    darwin.inputs.nixpkgs.follows = "nixpkgs";
-    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
-    agenix.inputs.nixpkgs.follows = "nixpkgs";
+    # home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # darwin.inputs.nixpkgs.follows = "nixpkgs";
+    # nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+    # agenix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -41,6 +42,7 @@
     nix-index-database,
     agenix,
     mystash,
+    nix-colors,
     ...
   } @ inputs: let
     isDarwin = system: (builtins.elem system inputs.nixpkgs.lib.platforms.darwin);
@@ -89,7 +91,7 @@
           config.allowUnfree = true;
           overlays = builtins.attrValues self.overlays;
         };
-        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm agenix mystash;};
+        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm agenix mystash nix-colors;};
         modules = baseModules ++ extraModules;
       };
   in {
