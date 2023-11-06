@@ -36,6 +36,7 @@ in {
     #   fpath+=(${config.home.profileDirectory}/share/bash-completion/completions)
     # '';
     initExtra = ''
+      source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
       ${init}
       ${functions}
       ${navi_widget}
@@ -122,15 +123,6 @@ in {
         name = "fast-syntax-highlighting";
         file = "share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh";
         src = pkgs.zsh-fast-syntax-highlighting;
-      }
-      {
-        name = "fzf-tab";
-        src = pkgs.fetchFromGitHub {
-          owner = "Aloxaf";
-          repo = "fzf-tab";
-          rev = "c2b4aa5ad2532cca91f23908ac7f00efb7ff09c9";
-          hash = "sha256-gvZp8P3quOtcy1Xtt1LAW1cfZ/zCtnAmnWqcwrKel6w=";
-        };
       }
       {
         name = "zsh-nix-shell";
