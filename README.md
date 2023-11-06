@@ -207,3 +207,4 @@ Not sure how to install via Nix so maintaining a manual list here:
 - [ambroisie/nix-config](https://git.belanyi.fr/ambroisie/nix-config)
 - [okkdev/dotnix](https://github.com/okkdev/dotnix) - home manager homebrew example
 - [ryan4yin/nix-config](https://github.com/ryan4yin/nix-config) - agenix secrets example
+- [hmajid2301/dotfiles](https://github.com/hmajid2301/dotfiles) - organised and customised setup
