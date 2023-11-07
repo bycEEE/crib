@@ -136,8 +136,8 @@ Useful links:
         ngrok # Allows you to expose a web server running on your local machine to the internet
         postgresql_14
         pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
-        nodePackages.prettier # An opinionated code formatter
-        ruff # An Extremely fast Python linter
+        # nodePackages.prettier # An opinionated code formatter
+        # ruff # An Extremely fast Python linter
         shellcheck # Shell script analysis tool
         sqlite
         # tokei # A program that displays statistics about your code
