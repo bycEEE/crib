@@ -200,7 +200,7 @@ Not sure how to install via Nix so maintaining a manual list here:
 - [viperML/home-manager-wsl](https://github.com/viperML/home-manager-wsl)
 - [matthew/nixdot](https://codeberg.org/matthew/nixdot) flake parts example
 - [okpedersen/dotfiles](https://github.com/okpedersen/dotfiles) karabiner
-- [zendo/nsworld](https://github.com/zendo/nsworld/blob/main/home-manager/cli.nix) - Organised apps
+- [zendo/nsworld](https://github.com/zendo/nsworld/blob/main/home-manager/cli.nix) - Organised apps, xdg symlink examples
 - [davisrichard437/nix-dotfiles](https://gitlab.com/davisrichard437/nix-dotfiles) - package building example
 - [EdenEast/nyx](https://github.com/EdenEast/nyx)
 - [rxyhn/yuki](https://github.com/rxyhn/yuki)
@@ -208,3 +208,13 @@ Not sure how to install via Nix so maintaining a manual list here:
 - [okkdev/dotnix](https://github.com/okkdev/dotnix) - home manager homebrew example
 - [ryan4yin/nix-config](https://github.com/ryan4yin/nix-config) - agenix secrets example
 - [hmajid2301/dotfiles](https://github.com/hmajid2301/dotfiles) - organised and customised setup
+- [javacafe01/dotfiles](https://sourcegraph.com/github.com/javacafe01/dotfiles) - helix configs and other apps
+
+## TODO
+
+- Move 1password logic outside of zsh and ssh files, eg. [kclejeune/system 1password](https://github.com/kclejeune/system/blob/master/modules/home-manager/1password.nix#L1C1-L53C2).
+- Move WSL logic outside of individual files.
+- Fix Windows GitHub download script.
+- Add atuin and croc relay.
+- Maybe use sops instead of agenix.
+- Maybe use 1password to generate credentials such as on awscli2.
