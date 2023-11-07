@@ -218,3 +218,4 @@ Not sure how to install via Nix so maintaining a manual list here:
 - Add atuin and croc relay.
 - Maybe use sops instead of agenix.
 - Maybe use 1password to generate credentials such as on awscli2.
+- Add bandwhich tool for windows.
