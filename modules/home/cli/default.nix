@@ -18,7 +18,7 @@ Useful links:
     ./aws.nix
     ./bat.nix
     ./bottom.nix
-    ./carapace.nix
+    # ./carapace.nix
     ./direnv.nix
     ./eza.nix
     ./fzf.nix
