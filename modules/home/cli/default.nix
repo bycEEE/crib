@@ -62,6 +62,7 @@ Useful links:
         nil # Nix Language Server
         # nix-init # Generate Nix packages from URLs
         nix-output-monitor # Pipe your nix-build output through the nix-output-monitor (aka nom) to get additional information while building.
+        # nix-prefetch # A tool to fetch and hash Nix derivations
         nix-prefetch-git # A tool to fetch and hash git repositories
         nix-prefetch-github # A tool to fetch and hash GitHub repositories
         nix-tree # Visualize the dependency graph of a Nix derivation
@@ -89,9 +90,9 @@ Useful links:
         gnused
         # openssh
         rclone
-        ripgrep
         tree
         treefmt
+        # uutils-coreutils-noprefix # Cross-platform Rust rewrite of the GNU coreutils
         wget
 
         ffmpeg # A complete, cross-platform solution to record, convert and stream audio and video
@@ -100,7 +101,7 @@ Useful links:
         ### Terminal
         # boxxy # Puts bad Linux applications in a box with only their files
         broot # An interactive tree view, a fuzzy search, a balanced BFS descent and customizable commands
-        catimg # Insanely fast image printing in your terminal
+        # catimg # Insanely fast image printing in your terminal
         # chafa # Terminal graphics for the 21st century
         # choose # A human-friendly and fast alternative to cut and (sometimes) awk
         chroma # A general purpose syntax highlighter in pure Go
@@ -121,6 +122,7 @@ Useful links:
         tmux # A terminal multiplexer
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
         vivid # A themeable LS_COLORS generator with a rich filetype datebase
+        viu # A command-line application to view images from the terminal written in Rust
         # watchman # A file watching service
 
         ### Development
@@ -163,19 +165,21 @@ Useful links:
         trippy # A traceroute visualizer built with Rust and WebAssembly
 
         ### Utilities
+        # aspellDicts.en # English dictionary for aspell
         clipboard-jh # Cut, copy, and paste anything, anywhere, all from the terminal
         croc # Easily and securely send things from one computer to another
         eget # Easily install prebuilt binaries from GitHub
         # gdu # Disk usage analyzer with console interface written in Go (clashes with git alias)
+        # gitui # Blazing fast terminal-ui for git written in rust
         glow # Render markdown on the CLI, with pizzazz!
         graphviz # Graph Visualization Software
+        # lazygit # Simple terminal UI for git commands
         lnav # The Log File Navigator
         # magic-wormhole-rs # Rust implementation of Magic Wormhole, with new features and enhancements
         # nali # A tool to display the location of an IP address
         neofetch # A fast, highly customizable system info script
         noti # Trigger notifications when a process completes
         ouch # A command-line utility for easily compressing and decompressing files and directories
-        pandoc # Universal markup converter
         pueue # A daemon for managing long running shell commands
         ranger # A VIM-inspired filemanager for the console
         speedtest-cli # Command line interface for testing internet bandwidth using speedtest.net
@@ -239,6 +243,8 @@ Useful links:
     jq.enable = true;
     nix-index.enable = true;
     nix-index-database.comma.enable = true;
+    pandoc.enable = true;
+    ripgrep.enable = true;
     zoxide.enable = true;
   };
 }

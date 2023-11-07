@@ -14,6 +14,7 @@
       docker-compose
       # hadolint # A smarter Dockerfile linter that helps you build best practice Docker images
       # infracost # Cloud cost estimates for Terraform in pull requests
+      # lazydocker # The lazier way to manage everything docker
       # levant # An open source templating and deployment tool for HashiCorp Nomad jobs
       # nomad
       # podman # A program for managing pods, containers and container images
