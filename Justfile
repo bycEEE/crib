@@ -15,7 +15,7 @@ build:
 
 apply:
 	# nix run .#homeConfigurations.{{USERNAME}}@{{HOSTNAME}}.activationPackage
-	home-manager switch --flake .#{{USERNAME}}@{{HOSTNAME}} --show-trace
+	home-manager switch --flake .#{{USERNAME}}@{{HOSTNAME}} --show-trace -v
 
 edit package:
 	nix edit -f "<nixpkgs>" {{package}}
