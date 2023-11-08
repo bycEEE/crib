@@ -143,6 +143,7 @@
         username = "icey";
         extraModules = [
           ./profiles/personal.nix
+          ./profiles/kali.nix
           ./modules/home/cli/pentesting.nix
         ];
       };
