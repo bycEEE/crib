@@ -49,3 +49,6 @@ get-github-hash *args:
 # Gets github hash from latest release, takes param1: username, param2: reponame
 get-github-latest-release-hash *args:
 	nix-prefetch-github-latest-release -- {{args}}
+
+printenv:
+        printenv

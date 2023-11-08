@@ -78,7 +78,7 @@
               "${homePrefix system}/${username}/.local/bin"
             ];
             sessionVariables = {
-              NIX_PATH = "nixpkgs=${nixpkgs}:stable=${inputs.stable}\${NIX_PATH:+:}$NIX_PATH";
+              NIX_PATH = "nixpkgs=${nixpkgs}:stable=${inputs.stable}:home-maanger=${inputs.home-manager}\${NIX_PATH:+:}$NIX_PATH";
             };
           };
         }
