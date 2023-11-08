@@ -15,8 +15,8 @@ Useful links:
           "Hack"
           "FiraCode"
           "JetBrainsMono"
-          "Terminus"
           "Iosevka"
+          "Agave"
         ];
       })
       (pkgs.callPackage ./sf-mono-nerdfont.nix {})
