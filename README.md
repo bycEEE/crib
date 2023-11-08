@@ -56,7 +56,7 @@ Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended 
 
   ```sh
   # Determinate Systems Nix Installer
-  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root bchoy"
+  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root $USER"
 
   # Create directory
   mkdir -p ~/crib
