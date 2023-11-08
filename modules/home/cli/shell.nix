@@ -1,6 +1,7 @@
 {
   config,
   isWsl,
+  isVm,
   lib,
   pkgs,
   ...
@@ -56,11 +57,11 @@ in {
 
     # Plugins: Order matters!
     plugins = [
-      {
-        name = "nix-shell";
-        file = "share/zsh-nix-shell/nix-shell.plugin.zsh";
-        src = pkgs.zsh-nix-shell;
-      }
+      # {
+      #   name = "nix-shell";
+      #   file = "share/zsh-nix-shell/nix-shell.plugin.zsh";
+      #   src = pkgs.zsh-nix-shell;
+      # }
       {
         # fzf-tab needs to be loaded after `compinit` but before plugins which will wrap widgets such as `zsh-autosuggestions` and `fast-syntax-highlighting`
         name = "fzf-tab";
@@ -155,6 +156,14 @@ in {
           printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"
         }
         precmd_functions+=(keep_current_path)
+      ''}
+      ${lib.optionalString (pkgs.system == "x86_64-linux" && isVm) ''
+      # Not the best place to put this but whatever
+      # Make CapsLock behave like Ctrl
+      setxkbmap -option ctrl:nocaps
+
+      # Make short pressed Ctrl behave like Escape
+      xcape -e 'Control_L=Escape'
       ''}
     '';
     # profileExtra = ''
