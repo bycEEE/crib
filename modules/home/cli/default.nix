@@ -223,7 +223,7 @@ Useful links:
     sessionVariables = {
       EDITOR = "helix";
       VISUAL = "helix";
-      PAGER = "${pkgs.getExe "moar"}";
+      PAGER = lib.getExe pkgs.moar;
       MOAR = "--style=catppuccin-macchiato";
       # NODE_PATH = "${NODE_GLOBAL}/lib";
       # JAVA_HOME = "${pkgs.jdk11}";
