@@ -102,13 +102,20 @@ in {
 
       # Set key bindings
       ## showmethekey to see what key is pressed
-      bindkey "\e[27;2;13~" accept-line   # shift + enter
-      bindkey "\e[27;5;13~" accept-line   # ctrl + enter
-      bindkey "^[[1;5D" backward-word     # ctrl + left
-      bindkey "^[[1;5C" forward-word      # ctrl + right
-      bindkey "^[[1;3D" beginning-of-line # alt + left
-      bindkey "^[[1;3C" end-of-line       # alt + right
-      bindkey "^H" backward-kill-word     # ctrl + backspace (bound to backspace on kali linux)
+      bindkey ' ' magic-space                           # do history expansion on space
+      bindkey "\e[27;2;13~" accept-line                 # shift + enter
+      bindkey "\e[27;5;13~" accept-line                 # ctrl + enter
+      bindkey "^[[1;5D" backward-word                   # ctrl + left
+      bindkey "^[[1;5C" forward-word                    # ctrl + right
+      bindkey "^[[1;3D" beginning-of-line               # alt + left
+      bindkey "^[[1;3C" end-of-line                     # alt + right
+      bindkey "^H" backward-kill-word                   # ctrl + backspace
+
+      ## on a keyboard that has these keys
+      bindkey '^[[5~' beginning-of-buffer-or-history    # page up
+      bindkey '^[[6~' end-of-buffer-or-history          # page down
+      bindkey '^[[H' beginning-of-line                  # home
+      bindkey '^[[F' end-of-line                        # end
 
       # Completions
       zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Case insensitive tab completion

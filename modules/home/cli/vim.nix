@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       expandtab = true; # expand tabs to spaces
-      mouse = "a"; # enable mouse
+      mouse = "v"; # disable mouse in visual mode
     };
   };
 }
