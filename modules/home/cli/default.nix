@@ -223,7 +223,7 @@ Useful links:
     sessionVariables = {
       EDITOR = "helix";
       VISUAL = "helix";
-      PAGER = "less";
+      PAGER = "moar";
       # NODE_PATH = "${NODE_GLOBAL}/lib";
       # JAVA_HOME = "${pkgs.jdk11}";
       # PNPM_HOME = "${PNPM_DIR}";
