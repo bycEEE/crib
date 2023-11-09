@@ -1,7 +1,6 @@
 {...}: {
   programs.navi = {
     enable = true;
-    enableZshIntegration = false; # We override the default FZF command in modified script
     settings = {
       cheats = {
         paths = [
@@ -9,7 +8,7 @@
         ];
       };
       finder = {
-        overrides = "--layout=reverse-list";
+        overrides = "--layout=reverse-list --no-select-1";
       };
       shell = {
         command = "zsh";
