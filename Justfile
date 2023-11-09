@@ -31,10 +31,10 @@ repair:
 	nix-store --verify --check-contents --repair
 
 clean:
+	home-manager expire-generations "-7 days"
 	nix-store --gc
 	nix-collect-garbage --delete-older-than 7d
 	# nix-collect-garbage -d
-	home-manager expire-generations "-7 days"
 
 optimize:
 	nix-store --optimise

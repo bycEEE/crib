@@ -249,4 +249,6 @@ Useful links:
     ripgrep.enable = true;
     zoxide.enable = true;
   };
+
+  # systemd.user.startServices = "sd-switch";
 }

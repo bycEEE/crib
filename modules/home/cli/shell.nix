@@ -29,8 +29,9 @@
 in {
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = false; # Disable this if using fzf-tab plugin
+    enableAutosuggestions = true; # Disable this if using fzf-tab plugin
     enableCompletion = true; # Disable this if using zsh-autocomplete plugin
+    enableVteIntegration = true;
     dotDir = ".config/zsh";
     autocd = false;
     defaultKeymap = "emacs";
@@ -73,12 +74,11 @@ in {
         file = "share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh";
         src = pkgs.zsh-fast-syntax-highlighting;
       }
-      {
-        # fzf-tab needs to be loaded after `compinit` but before plugins which will wrap widgets such as `zsh-autosuggestions` and `fast-syntax-highlighting`
-        name = "zsh-autosuggestions";
-        file = "share/zsh-autosuggestions/zsh-autosuggestions.zsh";
-        src = pkgs.zsh-autosuggestions;
-      }
+      # {
+      #   name = "zsh-autosuggestions";
+      #   file = "share/zsh-autosuggestions/zsh-autosuggestions.zsh";
+      #   src = pkgs.zsh-autosuggestions;
+      # }
       # {
       #   name = "zsh-autocomplete";
       #   file = "share/zsh-autocomplete/zsh-autocomplete.plugin.zsh";
@@ -115,34 +115,36 @@ in {
       zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Case insensitive tab completion
       zstyle ':completion:*' list-colors "''${(s.:.)LS_COLORS}" # Colored completion (different colors for dirs/files/etc)
       zstyle ':completion:*' menu select                        # Hit 'TAB' to select
-
-      # fzf-tab
-      ### https://github.com/Aloxaf/fzf-tab/wiki/Preview
-      # set descriptions format to enable group support
-      zstyle -d ':completion:*' format
+      zstyle ':completion:*' verbose yes
+      zstyle ':completion:*:matches' group 'yes'
+      zstyle ':completion:*:warnings' format '%F{red}%B-- No match found for: %d --%b%f'
+      zstyle ':completion:*:messages' format '%d'
+      zstyle ':completion:*:corrections' format '%B%d (errors: %e)%b'
       zstyle ':completion:*:descriptions' format '[%d]'
 
-      # disable sort when completing `git checkout`
+      zstyle ':fzf-tab:*' fzf-command fzf
+
+      ## disable sort when completing `git checkout`
       zstyle ':completion:*:git-checkout:*' sort false
 
-      # preview directory's content with eza when completing cd
+      ## preview directory's content with eza when completing cd
       zstyle ':fzf-tab:complete:cd:*' fzf-preview '${lib.getExe pkgs.eza} -1 --color=always $realpath'
 
-      # switch group using `,` and `.`
+      ## switch group using `,` and `.`
       zstyle ':fzf-tab:*' switch-group ',' '.'
 
-      # give a preview of commandline arguments when completing `kill`
+      ## give a preview of commandline arguments when completing `kill`
       zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
       zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview '[[ $group == "[process ID]" ]] && ps --pid=$word -o cmd --no-headers -w -w'
       zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
 
-      # show systemd unit status
+      ## show systemd unit status
       zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
 
       # # show file preview
       # zstyle ':fzf-tab:complete:*:*' fzf-preview '${lib.getExe pkgs.moar} ''${(Q)realpath}'
 
-      # environment variable
+      ## environment variable
       zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-preview 'echo ''${(P)word}'
 
       ${init}

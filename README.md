@@ -209,6 +209,8 @@ Not sure how to install via Nix so maintaining a manual list here:
 - [ryan4yin/nix-config](https://github.com/ryan4yin/nix-config) - agenix secrets example
 - [hmajid2301/dotfiles](https://github.com/hmajid2301/dotfiles) - organised and customised setup
 - [javacafe01/dotfiles](https://sourcegraph.com/github.com/javacafe01/dotfiles) - helix configs and other apps
+- [BirkhoffLee/dotfiles](https://github.com/BirkhoffLee/dotfiles/tree/master) - zsh configs
+- [prma/willow](https://codeberg.org/prma/willow) - application and zsh configs
 
 ## TODO
 
