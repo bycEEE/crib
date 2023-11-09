@@ -102,7 +102,6 @@ in {
 
       # Set key bindings
       ## showmethekey to see what key is pressed
-      bindkey ' ' magic-space                           # do history expansion on space
       bindkey "\e[27;2;13~" accept-line                 # shift + enter
       bindkey "\e[27;5;13~" accept-line                 # ctrl + enter
       bindkey "^[[1;5D" backward-word                   # ctrl + left
