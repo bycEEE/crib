@@ -223,7 +223,8 @@ Useful links:
     sessionVariables = {
       EDITOR = "helix";
       VISUAL = "helix";
-      PAGER = "moar -colors auto -follow -no-linenumbers -style catppuccin-macchiato";
+      PAGER = "${pkgs.getExe "moar"}";
+      MOAR = "--style=catppuccin-macchiato";
       # NODE_PATH = "${NODE_GLOBAL}/lib";
       # JAVA_HOME = "${pkgs.jdk11}";
       # PNPM_HOME = "${PNPM_DIR}";
