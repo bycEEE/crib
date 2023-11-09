@@ -10,14 +10,14 @@ in {
   programs.fzf = rec {
     enable = true;
     defaultCommand = "${fd} -H --type f -E .git";
-    defaultOptions = ["--height 100%"];
+    defaultOptions = ["--height 50%"];
     fileWidgetCommand = "${defaultCommand}";
     fileWidgetOptions = [
-      "--preview '${bat} --color=always --paging=never --plain --line-range=:200 {}'"
+      "--preview '${bat} --color=always --paging=always --plain {}'"
     ];
     changeDirWidgetCommand = "${fd} -H --type d";
     changeDirWidgetOptions = [
-      "--preview '${tree}/bin/tree -C {} | head -200'"
+      "--preview '${tree}/bin/tree -C -a {}'"
     ];
     historyWidgetOptions = [];
   };

@@ -11,8 +11,8 @@
         overrides = "--layout=reverse-list --no-select-1";
       };
       shell = {
-        command = "zsh";
-        finder_command = "zsh";
+        command = "bash";
+        finder_command = "bash";
       };
     };
   };
