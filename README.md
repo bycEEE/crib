@@ -208,9 +208,10 @@ Not sure how to install via Nix so maintaining a manual list here:
 - [okkdev/dotnix](https://github.com/okkdev/dotnix) - home manager homebrew example
 - [ryan4yin/nix-config](https://github.com/ryan4yin/nix-config) - agenix secrets example
 - [hmajid2301/dotfiles](https://github.com/hmajid2301/dotfiles) - organised and customised setup
-- [javacafe01/dotfiles](https://sourcegraph.com/github.com/javacafe01/dotfiles) - helix configs and other apps
+- [javacafe01/dotfiles](https://github.com/javacafe01/dotfiles) - helix configs and other apps
 - [BirkhoffLee/dotfiles](https://github.com/BirkhoffLee/dotfiles/tree/master) - zsh configs
 - [prma/willow](https://codeberg.org/prma/willow) - application and zsh configs
+- [SoraTenshi/nixos-config](https://github.com/SoraTenshi/nixos-config) - helix and other applications
 
 ## TODO
 
@@ -221,3 +222,4 @@ Not sure how to install via Nix so maintaining a manual list here:
 - Maybe use sops instead of agenix.
 - Maybe use 1password to generate credentials such as on awscli2.
 - Add bandwhich tool for windows.
+- Add pentesting tools that exist in `default.nix` in `pentesting.nix` as well.
