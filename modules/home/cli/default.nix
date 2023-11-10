@@ -29,6 +29,7 @@ Useful links:
     # ./gpg.nix
     ./navi.nix
     # ./python.nix
+    ./skim.nix
     ./ssh.nix
     # ./neovim.nix
     ./shell.nix
