@@ -29,7 +29,7 @@
 in {
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true; # Disable this if using fzf-tab plugin
+    enableAutosuggestions = true; # Disable this if using fzf-tab plugin (maybe not necessary)
     enableCompletion = true; # Disable this if using zsh-autocomplete plugin
     enableVteIntegration = true;
     dotDir = ".config/zsh";
@@ -74,6 +74,16 @@ in {
         file = "share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh";
         src = pkgs.zsh-fast-syntax-highlighting;
       }
+      {
+        name = "forgit";
+        file = "share/zsh/zsh-forgit/forgit.plugin.zsh";
+        src = pkgs.zsh-forgit;
+      }
+      # {
+      #   name = "vi-mode";
+      #   file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+      #   src = pkgs.zsh-vi-mode;
+      # }
       # {
       #   name = "zsh-autosuggestions";
       #   file = "share/zsh-autosuggestions/zsh-autosuggestions.zsh";
@@ -186,13 +196,13 @@ in {
     # '';
   };
 
-  # programs.bash = {
-  #   enable = true;
-  #   enableCompletion = true;
-  #   # shellAliases = aliases;
-  #   initExtra = ''
-  #     ${init}
-  #     ${functions}
-  #   '';
-  # };
+  programs.bash = {
+    enable = true;
+    enableCompletion = true;
+    #   # shellAliases = aliases;
+    #   initExtra = ''
+    #     ${init}
+    #     ${functions}
+    #   '';
+  };
 }
