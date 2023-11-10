@@ -78,7 +78,6 @@ Useful links:
         # cmake # Cross-platform, open-source build system generator
         # coreutils
         curl
-        fd
         findutils
         gawk
         # gcc
@@ -91,6 +90,7 @@ Useful links:
         tree
         treefmt
         # uutils-coreutils-noprefix # Cross-platform Rust rewrite of the GNU coreutils
+        xclip
         wget
 
         ffmpeg # A complete, cross-platform solution to record, convert and stream audio and video
@@ -98,13 +98,14 @@ Useful links:
 
         ### Terminal
         # boxxy # Puts bad Linux applications in a box with only their files
-        broot # An interactive tree view, a fuzzy search, a balanced BFS descent and customizable commands
+        broot # A new way to see and navigate directory trees
         # catimg # Insanely fast image printing in your terminal
         # chafa # Terminal graphics for the 21st century
-        # choose # A human-friendly and fast alternative to cut and (sometimes) awk
-        chroma # A general purpose syntax highlighter in pure Go
-        du-dust # A more intuitive version of du in rust
+        # chroma # A general purpose syntax highlighter in pure Go
         duf # Disk Usage/Free Utility - a better 'df' alternative
+        choose # A human-friendly and fast alternative to cut and (sometimes) awk
+        du-dust # A more intuitive version of du in rust
+        fd # A simple, fast and user-friendly alternative to find.
         fx # Terminal JSON viewer
         hyperfine # A command-line benchmarking tool
         # jql # A JSON query language tool built with Rust
@@ -114,8 +115,8 @@ Useful links:
         ov # Feature-rich terminal-based text viewer
         procs # A modern replacement for ps written in Rust
         riffdiff # Riff is a wrapper around diff that highlights which parts of lines have changed.
-        # sd # Intuitive find & replace CLI (sed alternative)
-        silver-searcher # A code searching tool similar to ack, with a focus on speed
+        sd # Intuitive find & replace CLI (sed alternative)
+        silver-searcher # `ag` A code searching tool similar to ack, but faster.
         showmethekey # A tool to show the keybindings of your terminal
         tmux # A terminal multiplexer
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
@@ -134,10 +135,9 @@ Useful links:
         ngrok # Allows you to expose a web server running on your local machine to the internet
         postgresql_14
         pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
-        # nodePackages.prettier # An opinionated code formatter
+
         # ruff # An Extremely fast Python linter
         shellcheck # Shell script analysis tool
-        shfmt # A shell parser, formatter, and interpreter (POSIX/Bash/mksh)
         sqlite
         # tokei # A program that displays statistics about your code
         yq
