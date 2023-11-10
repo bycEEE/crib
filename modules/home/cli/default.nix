@@ -1,4 +1,5 @@
 {
+  config,
   isWsl,
   lib,
   pkgs,
@@ -219,9 +220,9 @@ Useful links:
       ];
 
     sessionVariables = {
-      EDITOR = "vim";
+      EDITOR = "hx";
       VISUAL = "hx";
-      PAGER = lib.getExe pkgs.moar;
+      PAGER = "moar";
       MOAR = "--style=catppuccin-macchiato";
       # NODE_PATH = "${NODE_GLOBAL}/lib";
       # JAVA_HOME = "${pkgs.jdk11}";
