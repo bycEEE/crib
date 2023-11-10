@@ -8,7 +8,7 @@
   tree = lib.getExe pkgs.tree;
 in {
   programs.skim = rec {
-    enable = true;
+    enable = false;
     defaultCommand = "${fd} -H --type f -E .git";
     # ccatppuccin macchiato theme
     defaultOptions = [
