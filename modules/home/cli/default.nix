@@ -242,6 +242,7 @@ Useful links:
     # };
 
     jq.enable = true;
+    less.enable = true;
     nix-index.enable = true;
     nix-index-database.comma.enable = true;
     pandoc.enable = true;
