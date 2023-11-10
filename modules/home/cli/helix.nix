@@ -1,28 +1,28 @@
-{...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
+  # https://github.com/fufexan/dotfiles
+  # https://github.com/SoraTenshi/nixos-config
+  imports = [./lsp.nix];
+
   programs.helix = {
     enable = true;
-    # package = inputs.helix.packages.${pkgs.system}.default.overrideAttrs (self: {
-    #   makeWrapperArgs = with pkgs;
-    #     self.makeWrapperArgs
-    #     or []
-    #     ++ [
-    #       "--suffix"
-    #       "PATH"
-    #       ":"
-    #       (lib.makeBinPath [
-    #         clang-tools
-    #         marksman
-    #         nil
-    #         nodePackages.bash-language-server
-    #         nodePackages.vscode-css-languageserver-bin
-    #         nodePackages.vscode-langservers-extracted
-    #         shellcheck
-    #       ])
-    #     ];
-    # });
+    languages = {
+      language = [
+        {
+          name = "bash";
+          auto-format = true;
+          formatter = {
+            command = lib.getExe pkgs.shfmt;
+            args = ["-i" "2"];
+          };
+        }
+      ];
+    };
     settings = {
       theme = "catppuccin_macchiato";
-
       editor = {
         color-modes = true;
         cursorline = true;
@@ -33,72 +33,37 @@
         };
         indent-guides = {
           render = true;
-          rainbow-option = "dim";
+          rainbow-option = "normal";
         };
-        lsp.display-inlay-hints = true;
-        statusline.center = ["position-percentage"];
+        lsp = {
+          display-messages = true;
+          display-inlay-hints = true;
+        };
         true-color = true;
+        bufferline = "always";
+        # whitespace.render = "all";
         whitespace.characters = {
-          newline = "↴";
-          tab = "⇥";
+          space = "·";
+          nbsp = "⍽";
+          tab = "→";
+          newline = "⤶";
+        };
+        completion-replace = true;
+
+        soft-wrap.enable = true;
+
+        statusline = {
+          separator = "of";
+          left = ["mode" "selections" "file-type" "register" "spinner" "diagnostics"];
+          center = ["file-name"];
+          right = ["file-encoding" "file-line-ending" "position-percentage" "spacer" "separator" "total-line-numbers"];
+          mode = {
+            normal = "NORMAL";
+            insert = "INSERT";
+            select = "SELECT";
+          };
         };
       };
-
-      # languages = {
-      #   language = let
-      #     prettier = lang: {
-      #       command = "${pkgs.nodePackages.prettier}/bin/prettier";
-      #       args = ["--parser" lang];
-      #     };
-      #     prettierLangs = map (e: {
-      #       name = e;
-      #       formatter = prettier e;
-      #     });
-      #     langs = ["css" "scss" "json" "html"];
-      #   in
-      #     [
-      #       {
-      #         name = "bash";
-      #         auto-format = true;
-      #         formatter = {
-      #           command = "${pkgs.shfmt}/bin/shfmt";
-      #           args = ["-i" "2"];
-      #         };
-      #       }
-      #       {
-      #         name = "clojure";
-      #         injection-regex = "(clojure|clj|edn|boot|yuck)";
-      #         file-types = ["clj" "cljs" "cljc" "clje" "cljr" "cljx" "edn" "boot" "yuck"];
-      #       }
-      #     ]
-      #     ++ prettierLangs langs;
-
-      #   language-server = {
-      #     bash-language-server = {
-      #       command = "${pkgs.nodePackages.bash-language-server}/bin/bash-language-server";
-      #       args = ["start"];
-      #     };
-
-      #     clangd = {
-      #       command = "${pkgs.clang-tools}/bin/clangd";
-      #       clangd.fallbackFlags = ["-std=c++2b"];
-      #     };
-
-      #     nil = {
-      #       command = lib.getExe pkgs.nil;
-      #       config.nil.formatting.command = ["${lib.getExe pkgs.alejandra}" "-q"];
-      #     };
-
-      #     vscode-css-language-server = {
-      #       command = "${pkgs.nodePackages.vscode-css-languageserver-bin}/bin/css-languageserver";
-      #       args = ["--stdio"];
-      #       config = {
-      #         provideFormatter = true;
-      #         css.validate.enable = true;
-      #       };
-      #     };
-      #   };
-      # };
 
       # vim-like key bindings from https://github.com/LGUG2Z/helix-vim/blob/master/config.toml
       keys.normal = {

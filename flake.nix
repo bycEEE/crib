@@ -33,6 +33,7 @@
     # darwin.inputs.nixpkgs.follows = "nixpkgs";
     # nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
     # agenix.inputs.nixpkgs.follows = "nixpkgs";
+    # nix-colors.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {

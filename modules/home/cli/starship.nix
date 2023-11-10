@@ -6,8 +6,8 @@
   programs.starship = {
     enable = true;
     settings = {
-      palette = "custom";
-      palettes.custom = {
+      palette = "catppuccin_macchiato";
+      palettes.catppuccin_macchiato = {
         rosewater = "#${config.colorscheme.colors.base06}";
         flamingo = "#${config.colorscheme.colors.base0F}";
         pink = "#f6c2e7";

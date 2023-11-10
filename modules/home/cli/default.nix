@@ -27,6 +27,7 @@ Useful links:
     ./htop.nix
     ./go.nix
     # ./gpg.nix
+    ./lsp.nix
     ./navi.nix
     # ./python.nix
     ./skim.nix
@@ -54,13 +55,11 @@ Useful links:
         trufflehog # Searches through git repositories for secrets, digging deep into commit history and branches
 
         ### Nix Tools
-        alejandra # The Uncompromising Nix Code Formatter
         cachix # Command line client for Nix binary cache hosting
         # comma # Runs programs without installing them
         # deadnix # Find and remove unused code in .nix source files
         # devenv # A tool to create development environments
         # lorri # Fast, persistent and reliable development environment for the Nix ecosystem
-        nil # Nix Language Server
         # nix-init # Generate Nix packages from URLs
         nix-output-monitor # Pipe your nix-build output through the nix-output-monitor (aka nom) to get additional information while building.
         # nix-prefetch # A tool to fetch and hash Nix derivations
@@ -68,12 +67,10 @@ Useful links:
         nix-prefetch-github # A tool to fetch and hash GitHub repositories
         nix-tree # Visualize the dependency graph of a Nix derivation
         nixos-generators # Turns configuration into outputs in different formats
-        nixpkgs-fmt # nix code formatter that would be applied on nixpkgs
         # nixpkgs-review # A tool for reviewing nixpkgs pull requests
         nurl # Generate Nix fetcher calls from repository URLs
         # nvfetcher # Generate nix sources expr for the latest version of packages
         # poetry2nix # Convert poetry.lock to nix
-        # rnix-lsp # Language Server Protocol implementation for the Nix language
         # statix # Lints and suggestions for the nix programming language
 
         ### Linux
@@ -140,6 +137,7 @@ Useful links:
         # nodePackages.prettier # An opinionated code formatter
         # ruff # An Extremely fast Python linter
         shellcheck # Shell script analysis tool
+        shfmt # A shell parser, formatter, and interpreter (POSIX/Bash/mksh)
         sqlite
         # tokei # A program that displays statistics about your code
         yq

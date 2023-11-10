@@ -166,12 +166,12 @@ in {
         precmd_functions+=(keep_current_path)
       ''}
       ${lib.optionalString (pkgs.system == "x86_64-linux" && isVm) ''
-      # Not the best place to put this but whatever
-      # Make CapsLock behave like Ctrl
-      setxkbmap -option ctrl:nocaps
+        # Not the best place to put this but whatever
+        # Make CapsLock behave like Ctrl
+        setxkbmap -option ctrl:nocaps
 
-      # Make short pressed Ctrl behave like Escape
-      xcape -e 'Control_L=Escape'
+        # Make short pressed Ctrl behave like Escape
+        xcape -e 'Control_L=Escape'
       ''}
     '';
     # profileExtra = ''
