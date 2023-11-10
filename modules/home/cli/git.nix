@@ -1,6 +1,5 @@
 {
   isWsl,
-  lib,
   pkgs,
   ...
 }: {
@@ -43,25 +42,28 @@
       #   prune = true;
       # };
 
-      pager = {
-        diff = lib.getExe pkgs.riffdiff;
-        show = lib.getExe pkgs.riffdiff;
-        log = lib.getExe pkgs.riffdiff;
-      };
-      interactive.diffFilter = lib.getExe pkgs.riffdiff;
+      # pager = {
+      #   diff = lib.getExe pkgs.riffdiff;
+      #   show = lib.getExe pkgs.riffdiff;
+      #   log = lib.getExe pkgs.riffdiff;
+      # };
+      # interactive.diffFilter = lib.getExe pkgs.riffdiff;
       http.sslVerify = true;
     };
+
     aliases = {
       ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi";
       #   fix = "commit --amend --no-edit";
       #   oops = "reset HEAD~1";
       sub = "submodule update --init --recursive";
     };
-    # difftastic = {
-    #   enable = true;
-    #   display = "inline";
-    # };
+
+    difftastic = {
+      enable = true;
+      display = "inline";
+    };
   };
+
   programs.gh.enable = true;
   programs.gh.settings.git_protocol = "ssh";
 }
