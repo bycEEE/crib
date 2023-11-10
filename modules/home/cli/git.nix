@@ -3,13 +3,7 @@
   lib,
   pkgs,
   ...
-}: let
-  riff = lib.getExe pkgs.riffdiff;
-in {
-  home.packages = with pkgs; [
-    github-cli
-    # difftastic
-  ];
+}: {
   programs.git = {
     enable = true;
     extraConfig = {
@@ -42,7 +36,7 @@ in {
       };
 
       pull = {
-        rebase = false;
+        rebase = true;
       };
 
       # fetch = {
@@ -50,11 +44,11 @@ in {
       # };
 
       pager = {
-        diff = riff;
-        show = riff;
-        log = riff;
+        diff = lib.getExe pkgs.riffdiff;
+        show = lib.getExe pkgs.riffdiff;
+        log = lib.getExe pkgs.riffdiff;
       };
-      interactive.diffFilter = riff;
+      interactive.diffFilter = lib.getExe pkgs.riffdiff;
       http.sslVerify = true;
     };
     aliases = {
@@ -68,4 +62,6 @@ in {
     #   display = "inline";
     # };
   };
+  programs.gh.enable = true;
+  programs.gh.settings.git_protocol = "ssh";
 }
