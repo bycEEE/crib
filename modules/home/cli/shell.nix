@@ -75,11 +75,11 @@ in {
         file = "share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh";
         src = pkgs.zsh-fast-syntax-highlighting;
       }
-      {
-        name = "forgit";
-        file = "share/zsh/zsh-forgit/forgit.plugin.zsh";
-        src = pkgs.zsh-forgit;
-      }
+      # {
+      #   name = "forgit";
+      #   file = "share/zsh/zsh-forgit/forgit.plugin.zsh";
+      #   src = pkgs.zsh-forgit;
+      # }
       # {
       #   name = "vi-mode";
       #   file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
