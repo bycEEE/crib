@@ -102,11 +102,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1699368917,
-        "narHash": "sha256-nUtGIWf86BOkUbtksWtfglvCZ/otP0FTZlQH8Rzc7PA=",
+        "lastModified": 1699663185,
+        "narHash": "sha256-hI3CZPINBWstkMN+ptyzWibw5eRtFCiEvO7zR61bGBs=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "6a8444467c83c961e2f5ff64fb4f422e303c98d3",
+        "rev": "691cbcc03af6ad1b5384c0e0e0b5f2298f58c5ce",
         "type": "github"
       },
       "original": {
@@ -118,10 +118,10 @@
     "mystash": {
       "flake": false,
       "locked": {
-        "lastModified": 1698182107,
-        "narHash": "sha256-pH7n7Zva0Upx9+dk8etBldM6Dp8tBRJW45y9lMd7K3Y=",
+        "lastModified": 1699663887,
+        "narHash": "sha256-o66LqlhwSd0Mk9yMj3LxJloinmgnyloB3YTu7VJhRag=",
         "ref": "refs/heads/main",
-        "rev": "629045b04c7fea0d569c7254163b60d859507917",
+        "rev": "a556aeb962c326315a8301eae31d37813914139b",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/bycEEE/stash.git"
