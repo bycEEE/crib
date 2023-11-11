@@ -223,3 +223,5 @@ Not sure how to install via Nix so maintaining a manual list here:
 - Maybe use 1password to generate credentials such as on awscli2.
 - Add bandwhich tool for windows.
 - Add pentesting tools that exist in `default.nix` in `pentesting.nix` as well.
+- Separate out tools into separate folders and consolidate reundant `home/default.nix`.
+- Fix broken `agenix` secrets.

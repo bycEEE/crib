@@ -14,7 +14,7 @@ build:
 	nix build .#homeConfigurations.{{USERNAME}}@{{HOSTNAME}}.activationPackage && ./result/activate
 
 apply:
-	# nix run .#homeConfigurations.{{USERNAME}}@{{HOSTNAME}}.activationPackage
+	# nix build .#homeConfigurations.{{USERNAME}}@{{HOSTNAME}}.activationPackage && ./result/activate
 	home-manager switch --flake .#{{USERNAME}}@{{HOSTNAME}} --show-trace -v
 
 edit package:
@@ -51,4 +51,4 @@ get-github-latest-release-hash *args:
 	nix-prefetch-github-latest-release -- {{args}}
 
 printenv:
-        printenv
+	printenv

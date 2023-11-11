@@ -1,5 +1,4 @@
 {
-  config,
   isWsl,
   lib,
   pkgs,

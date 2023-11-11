@@ -67,6 +67,8 @@
       isVm ? false,
       baseModules ? [
         inputs.nix-index-database.hmModules.nix-index
+        # TODO: might need this
+        # home-manager.darwinModules.home-manager
         ./modules/home
         ./modules/home/fonts
         ./modules/home/cli
@@ -105,7 +107,7 @@
           ./modules/home/cli/devops.nix
           ./modules/home/cli/pentesting.nix
           ./modules/home/darwin
-          ./modules/home/secrets
+          # ./modules/home/secrets
         ];
       };
       "brianchoy@Brians-MacBook-Pro-Work" = mkHomeConfig {
@@ -115,7 +117,7 @@
           ./profiles/work.nix
           ./modules/home/cli/devops.nix
           ./modules/home/darwin
-          ./modules/home/secrets
+          # ./modules/home/secrets
         ];
       };
       "bchoy@BREEZY" = mkHomeConfig {
@@ -126,7 +128,7 @@
           ./profiles/personal.nix
           ./modules/home/cli/devops.nix
           ./modules/home/cli/pentesting.nix
-          ./modules/home/secrets
+          # ./modules/home/secrets
         ];
       };
       "icey@scheisty" = mkHomeConfig {

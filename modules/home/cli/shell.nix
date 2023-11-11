@@ -14,6 +14,7 @@
     sudo = "sudo env \"PATH=$PATH\" ";
     k = "kubectl";
     cat = "bat";
+    grep = "grep --color=always";
     ls = "eza";
     ll = "eza -l";
     la = "eza -a";
@@ -196,13 +197,13 @@ in {
     # '';
   };
 
-  programs.bash = {
-    enable = true;
-    enableCompletion = true;
-    #   # shellAliases = aliases;
-    #   initExtra = ''
-    #     ${init}
-    #     ${functions}
-    #   '';
-  };
+  # programs.bash = {
+  #   enable = true;
+  #   enableCompletion = true;
+  #   #   # shellAliases = aliases;
+  #   #   initExtra = ''
+  #   #     ${init}
+  #   #     ${functions}
+  #   #   '';
+  # };
 }
