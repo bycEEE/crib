@@ -155,7 +155,7 @@ Useful links:
         dnspeep # A network debugging tool for DNS
         httpie # A Modern command line HTTP client
         iftop # Display bandwidth usage on an interface
-        # ipinfo # A command-line tool that brings you the IP address information
+        ipinfo # A command-line tool that brings you the IP address information
         mtr # A network diagnostic tool
         # nethogs # A small 'net top' tool
         nettools # A collection of useful network tools
@@ -231,6 +231,7 @@ Useful links:
 
   programs = {
     home-manager.enable = true;
+    home-manager.path = lib.mkDefault "$HOME/crib";
     # dircolors = {
     #   enable = true;
     #   enableZshIntegration = config.programs.zsh.enable;
@@ -250,5 +251,5 @@ Useful links:
     zoxide.enable = true;
   };
 
-  # systemd.user.startServices = "sd-switch";
+  systemd.user.startServices = "sd-switch";
 }

@@ -25,7 +25,9 @@ push-cachix:
 	cachix push byceee ./result
 
 rebuild:
-	sudo nixos-rebuild switch --flake .#{{USERNAME}}@{{HOSTNAME}}
+	rm -rf $HOME/.cache/nix/
+	just build
+	# sudo nixos-rebuild switch --flake .#{{USERNAME}}@{{HOSTNAME}}
 
 repair:
 	nix-store --verify --check-contents --repair
@@ -34,6 +36,8 @@ clean:
 	home-manager expire-generations "-7 days"
 	nix-store --gc
 	nix-collect-garbage --delete-older-than 7d
+	# delete everything except current generation
+	# nix-collect-garbage --delete-old
 	# nix-collect-garbage -d
 
 optimize:
