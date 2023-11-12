@@ -1,10 +1,10 @@
 function is_wsl() {
-  if [[ "$(< /proc/sys/kernel/ostype)" != Linux ]]; then
+  if [[ "$(</proc/sys/kernel/ostype)" != Linux ]]; then
     return 1 # WSL uses linux
-  elif [[ "$(< /proc/version)" == *@(Microsoft|WSL) ]]; then
-    return 0  # WSL detected
+  elif [[ "$(</proc/version)" == *@(Microsoft|WSL) ]]; then
+    return 0 # WSL detected
   else
-    return 1  # Not running on WSL
+    return 1 # Not running on WSL
   fi
 }
 
@@ -26,7 +26,7 @@ function is_darwin() {
 
 #Swap two files
 function swap() {
-[ -e "$1.tmp" ] && return
+  [ -e "$1.tmp" ] && return
   mv "$1" "$1.tmp"
   mv "$2" "$1"
   mv "$1.tmp" "$2"
@@ -64,10 +64,10 @@ function weather() {
 # }
 
 function fix_zsh_history() {
-  mv $HOME/.config/zsh/.zsh_history $HOME/.config/zsh/.zsh_history_bad
-  strings $HOME/.config/zsh/.zsh_history_bad > $HOME/.config/zsh/.zsh_history
-  fc -R $HOME/.config/zsh/.zsh_history
-  rm $HOME/.config/zsh/.zsh_history_bad
+  mv "$HOME/.config/zsh/zsh_history" "$HOME/.config/zsh/zsh_history_bad"
+  strings "$HOME/.config/zsh/zsh_history_bad" >"$HOME/.config/zsh/zsh_history"
+  fc -R "$HOME/.config/zsh/zsh_history"
+  rm "$HOME/.config/zsh/zsh_history_bad"
 }
 
 function print_path_newline() {
