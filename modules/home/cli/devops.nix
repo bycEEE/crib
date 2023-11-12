@@ -10,8 +10,8 @@
       ansible # Radically simple IT automation platform
       # colima # Container runtimes on macOS (and Linux) with minimal setup
       # dive # A tool for exploring each layer in a docker image
-      docker
-      docker-compose
+      # docker
+      # docker-compose
       # hadolint # A smarter Dockerfile linter that helps you build best practice Docker images
       # infracost # Cloud cost estimates for Terraform in pull requests
       # lazydocker # The lazier way to manage everything docker
