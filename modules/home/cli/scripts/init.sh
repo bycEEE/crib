@@ -17,7 +17,7 @@ if [[ -d /opt/homebrew ]]; then
 fi
 
 # Exegol autocompletion
-command -v exegol && eval "$(register-python-argcomplete --no-defaults exegol)"
+[[ $(command -v exegol) ]] && eval "$(register-python-argcomplete --no-defaults exegol)"
 
 # # git installed asdf
 # export ASDF_DIR="$HOME/.asdf"
