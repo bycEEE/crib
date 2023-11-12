@@ -38,7 +38,7 @@ clean:
 	nix-collect-garbage --delete-older-than 7d
 	# delete everything except current generation
 	# nix-collect-garbage --delete-old
-	# nix-collect-garbage -d
+	# sudo nix-collect-garbage -d
 
 optimize:
 	nix-store --optimise
