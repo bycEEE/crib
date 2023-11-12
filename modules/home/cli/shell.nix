@@ -196,11 +196,11 @@ in {
       ${lib.optionalString pkgs.stdenvNoCC.isLinux "[[ -e /etc/profile ]] && source /etc/profile"}
     '';
 
-    # loginExtra = ''
-    #   if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-    #     . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-    #   fi
-    # '';
+    loginExtra = ''
+      if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+        . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+      fi
+    '';
   };
 
   # programs.bash = {
