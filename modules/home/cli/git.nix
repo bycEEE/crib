@@ -1,5 +1,6 @@
 {
   isWsl,
+  lib,
   pkgs,
   ...
 }: {
@@ -42,12 +43,12 @@
       #   prune = true;
       # };
 
-      # pager = {
-      #   diff = lib.getExe pkgs.riffdiff;
-      #   show = lib.getExe pkgs.riffdiff;
-      #   log = lib.getExe pkgs.riffdiff;
-      # };
-      # interactive.diffFilter = lib.getExe pkgs.riffdiff;
+      pager = {
+        diff = lib.getExe pkgs.riffdiff;
+        #   show = lib.getExe pkgs.riffdiff;
+        #   log = lib.getExe pkgs.riffdiff;
+      };
+      interactive.diffFilter = lib.getExe pkgs.riffdiff;
       http.sslVerify = true;
     };
 
@@ -59,7 +60,7 @@
     };
 
     difftastic = {
-      enable = true;
+      enable = false;
       display = "inline";
     };
   };
