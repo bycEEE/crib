@@ -23,7 +23,7 @@
     home-manager.url = "github:nix-community/home-manager";
     darwin.url = "github:lnl7/nix-darwin";
     nix-index-database.url = "github:Mic92/nix-index-database";
-    agenix.url = "github:ryantm/agenix";
+    # agenix.url = "github:ryantm/agenix";
     # mystash.url = "git+ssh://git@github.com/bycEEE/stash.git?shallow=1";
     # mystash.flake = false;
     nix-colors.url = "github:misterio77/nix-colors";
@@ -41,7 +41,7 @@
     darwin,
     home-manager,
     nix-index-database,
-    agenix,
+    # agenix,
     # mystash,
     nix-colors,
     ...
@@ -95,7 +95,7 @@
           overlays = builtins.attrValues self.overlays;
         };
         # extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm agenix mystash nix-colors;};
-        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm agenix nix-colors;};
+        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm nix-colors;};
         modules = baseModules ++ extraModules;
       };
   in {
