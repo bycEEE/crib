@@ -116,7 +116,7 @@ in {
       setopt globdots       # Show hidden files when globbing
 
       # Compatibility bash completion
-      # autoload -U bashcompinit && bashcompinit
+      autoload -U bashcompinit && bashcompinit
 
       # Set key bindings
       ## showmethekey to see what key is pressed

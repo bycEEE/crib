@@ -16,6 +16,9 @@ if [[ -d /opt/homebrew ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# Exegol autocompletion
+command -v exegol && eval "$(register-python-argcomplete --no-defaults exegol)"
+
 # # git installed asdf
 # export ASDF_DIR="$HOME/.asdf"
 
