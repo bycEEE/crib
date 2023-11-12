@@ -1,8 +1,8 @@
 # TODO: Fix this, this doesn't work.
 {
-  config,
-  agenix,
-  mystash,
+  # config,
+  # agenix,
+  # mystash,
   ...
 }: {
   # imports = [

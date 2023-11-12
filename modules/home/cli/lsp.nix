@@ -9,10 +9,10 @@
     # Language servers
     gopls # Go
     nil # Nix
-    # rnix-lsp # Nix
-
     nodePackages.bash-language-server # Bash
     # nodePackages.typescript-language-server # Typescript
     nodePackages.yaml-language-server # YAML / JSON
+    python311Packages.python-lsp-server # Python
+    # rnix-lsp # Nix
   ];
 }
