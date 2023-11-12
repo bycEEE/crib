@@ -18,7 +18,7 @@
         then "/mnt/c/Program Files/1Password/app/8/op-ssh-sign.exe"
         else if pkgs.stdenvNoCC.isDarwin
         then "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
-        else "\${pkgs.gnupg}/bin/gpg2";
+        else "${pkgs.gnupg}/bin/gpg2";
 
       commit = {
         verbose = true;
