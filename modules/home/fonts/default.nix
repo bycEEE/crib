@@ -15,6 +15,8 @@ Useful links:
           "Hack"
           "FiraCode"
           "JetBrainsMono"
+          "Inconsolata"
+          "SourceCodePro"
           "Iosevka"
           "Agave"
         ];
