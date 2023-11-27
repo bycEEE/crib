@@ -117,7 +117,7 @@ Useful links:
         riffdiff # Riff is a wrapper around diff that highlights which parts of lines have changed.
         sd # Intuitive find & replace CLI (sed alternative)
         silver-searcher # `ag` A code searching tool similar to ack, but faster.
-        showmethekey # A tool to show the keybindings of your terminal
+        sshfs # A filesystem client based on the SSH File Transfer Protocol
         tmux # A terminal multiplexer
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
         vivid # A themeable LS_COLORS generator with a rich filetype datebase
@@ -206,6 +206,7 @@ Useful links:
         # openssl
         # openssh
         psmisc # A set of tools that use the proc filesystem
+        showmethekey # A tool to show the keybindings of your terminal
         traceroute # A tool for tracing the route of IP packets
       ])
       ++ (lib.lists.optionals (pkgs.system == "aarch64-darwin" || pkgs.system == "x86_64-darwin") [
