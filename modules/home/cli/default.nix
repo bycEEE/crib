@@ -15,7 +15,6 @@ Useful links:
   imports = [
     nix-colors.homeManagerModules.default
     ./atuin.nix
-    ./aws.nix
     ./bat.nix
     ./bottom.nix
     # ./carapace.nix

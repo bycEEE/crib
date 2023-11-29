@@ -8,6 +8,7 @@
       # DevOps
       act # Run your GitHub Actions locally
       ansible # Radically simple IT automation platform
+      awscli # Universal Command Line Interface for Amazon Web Services
       # colima # Container runtimes on macOS (and Linux) with minimal setup
       # dive # A tool for exploring each layer in a docker image
       # docker
