@@ -75,6 +75,7 @@
         ./modules/home/fonts
         ./modules/home/cli
         ./modules/home/apps
+        ./modules/home/desktop
         {
           home = {
             inherit username;
