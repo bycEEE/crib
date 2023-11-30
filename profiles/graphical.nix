@@ -4,7 +4,7 @@
   config,
   nix-colors,
   nixgl,
-  isVM,
+  isVm,
   ...
 }: {
   imports = [
@@ -59,7 +59,7 @@
   home.packages = with pkgs;
     [
     ]
-    ++ (lib.lists.optionals isVM) [
+    ++ (lib.lists.optionals isVm) [
       nixgl.nixGL.nixGLMesa
     ];
   # home.packages = with pkgs; [
