@@ -75,8 +75,8 @@
         ./modules/home/fonts
         ./modules/home/cli
         ./modules/home/apps
-        /modules/home/desktop/gnome
-        /modules/home/desktop/wms/hyprland.nix
+        ./modules/home/desktop/gnome
+        ./modules/home/desktop/wms/hyprland.nix
         {
           home = {
             inherit username;
