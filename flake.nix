@@ -27,6 +27,7 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hypr-contrib.url = "github:hyprwm/contrib";
     nwg-displays.url = "github:nwg-piotr/nwg-displays";
+    nixgl.url = "github:guibou/nixGL";
     # agenix.url = "github:ryantm/agenix";
     # mystash.url = "git+ssh://git@github.com/bycEEE/stash.git?shallow=1";
     # mystash.flake = false;
@@ -48,6 +49,7 @@
     # agenix,
     # mystash,
     nix-colors,
+    nixgl,
     nur,
     ...
   } @ inputs: let
@@ -102,7 +104,7 @@
           overlays = builtins.attrValues self.overlays;
         };
         # extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm agenix mystash nix-colors;};
-        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm nix-colors nur;};
+        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm nix-colors nixgl nur;};
         modules = baseModules ++ extraModules;
       };
   in {
@@ -178,6 +180,7 @@
       };
       # kubectl = import ./overlays/kubectl.nix;
       nur = nur.overlay;
+      nixgl = nixgl.overlay;
     };
   };
 }
