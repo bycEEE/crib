@@ -3,7 +3,6 @@
   lib,
   pkgs,
   nix-colors,
-  nur,
   ...
 }:
 /*
@@ -15,7 +14,6 @@ Useful links:
 {
   imports = [
     nix-colors.homeManagerModules.default
-    nur.hmModules.nur
     ./atuin.nix
     ./bat.nix
     ./bottom.nix

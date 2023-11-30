@@ -46,7 +46,6 @@
     # agenix,
     # mystash,
     nix-colors,
-    nur,
     ...
   } @ inputs: let
     isDarwin = system: (builtins.elem system inputs.nixpkgs.lib.platforms.darwin);
@@ -70,6 +69,7 @@
       isVm ? false,
       baseModules ? [
         inputs.nix-index-database.hmModules.nix-index
+        inputs.nur.hmModules.nur
         # TODO: might need this
         # home-manager.darwinModules.home-manager
         ./modules/home
@@ -99,7 +99,7 @@
           overlays = builtins.attrValues self.overlays;
         };
         # extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm agenix mystash nix-colors;};
-        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm nix-colors nur;};
+        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm nix-colors;};
         modules = baseModules ++ extraModules;
       };
   in {
