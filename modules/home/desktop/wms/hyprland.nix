@@ -1,27 +1,26 @@
-{ inputs
-, config
-, lib
-, pkgs
-, ...
+{
+  inputs,
+  config,
+  lib,
+  pkgs,
+  ...
 }:
-with lib;
-let
+with lib; let
   laptop_lid_switch = pkgs.writeShellScriptBin "laptop_lid_switch" ''
     #!/usr/bin/env bash
 
     if grep open /proc/acpi/button/lid/LID0/state; then
-    		hyprctl keyword monitor "eDP-1, 2256x1504@60, 0x0, 1"
+        hyprctl keyword monitor "eDP-1, 2256x1504@60, 0x0, 1"
     else
-    		if [[ `hyprctl monitors | grep "Monitor" | wc -l` != 1 ]]; then
-    				hyprctl keyword monitor "eDP-1, disable"
-    		else
-    				systemctl suspend
-    		fi
+        if [[ `hyprctl monitors | grep "Monitor" | wc -l` != 1 ]]; then
+            hyprctl keyword monitor "eDP-1, disable"
+        else
+            systemctl suspend
+        fi
     fi
   '';
   cfg = config.modules.wms.hyprland;
-in
-{
+in {
   options.modules.wms.hyprland = {
     enable = mkEnableOption "enable hyprland window manager";
   };
@@ -35,32 +34,32 @@ in
     ];
 
     nix.settings = {
-      substituters = [ "https://hyprland.cachix.org" ];
-      trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
+      substituters = ["https://hyprland.cachix.org"];
+      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
     };
 
     xdg.configFile."hypr/pyprland.json".text = ''
       {
-      	"pyprland": {
-      		"plugins": ["scratchpads"]
-      	},
-      	"scratchpads": {
-      		"term": {
-      			"command": "wezterm --class scratchpad",
-      			"margin": 50,
-      			"unfocus": "hide",
-      		},
-      		"pavucontrol": {
-      			"command": "pavucontrol",
-      			"margin": 50,
-      			"unfocus": "hide",
-      			"animation": "fromTop"
-      		},
-      		"yazi": {
-      			"command": "wezterm start --class scratchpad -- yazi",
-      			"margin": 50
-      		}
-      	}
+        "pyprland": {
+          "plugins": ["scratchpads"]
+        },
+        "scratchpads": {
+          "term": {
+            "command": "wezterm --class scratchpad",
+            "margin": 50,
+            "unfocus": "hide",
+          },
+          "pavucontrol": {
+            "command": "pavucontrol",
+            "margin": 50,
+            "unfocus": "hide",
+            "animation": "fromTop"
+          },
+          "yazi": {
+            "command": "wezterm start --class scratchpad -- yazi",
+            "margin": 50
+          }
+        }
       }
     '';
 
@@ -70,27 +69,27 @@ in
       extraConfig = ''
          # ASCII Art from https://fsymbols.com/generators/carty/
          input {
-        	kb_layout = gb
-        	touchpad {
-        		disable_while_typing=false
-        	}
+          kb_layout = gb
+          touchpad {
+            disable_while_typing=false
+          }
          }
 
          general {
-        	gaps_in = 3
-        	gaps_out = 5
-        	border_size = 3
-        	col.active_border=0xff${config.colorscheme.colors.base07}
-        	col.inactive_border=0xff${config.colorscheme.colors.base02}
+          gaps_in = 3
+          gaps_out = 5
+          border_size = 3
+          col.active_border=0xff${config.colorscheme.colors.base07}
+          col.inactive_border=0xff${config.colorscheme.colors.base02}
          }
 
          decoration {
-        	rounding=5
+          rounding=5
          }
 
          misc {
-        	vrr = 2
-        	disable_hyprland_logo = 1;
+          vrr = 2
+          disable_hyprland_logo = 1;
          }
 
          $notifycmd = notify-send -h string:x-canonical-private-synchronous:hypr-cfg -u low

@@ -71,6 +71,7 @@
         # TODO: might need this
         # home-manager.darwinModules.home-manager
         ./modules/home
+        ./modules/home/my-settings.nix
         ./modules/home/fonts
         ./modules/home/cli
         ./modules/home/apps

@@ -40,7 +40,6 @@ Useful links:
   ];
 
   colorScheme = nix-colors.colorSchemes.catppuccin-macchiato;
-
   home = {
     packages = with pkgs;
       [
