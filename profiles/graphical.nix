@@ -3,13 +3,11 @@
   lib,
   config,
   nix-colors,
-  nixgl,
   isVm,
   ...
 }: {
   imports = [
     nix-colors.homeManagerModules.default
-    nixgl.nixGLModules.default
     ../modules/home/desktop/gnome
     # ../modules/home/desktop/wms/hyprland.nix
     # ../modules/home/desktop/wms/common
