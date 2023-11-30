@@ -19,7 +19,6 @@ with lib.hm.gvariant; {
     # apps
     gnome.gnome-tweaks
     gnome.dconf-editor
-    gnome.gnome-keyring
     gnome-extension-manager
     gradience
 
