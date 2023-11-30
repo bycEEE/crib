@@ -9,6 +9,7 @@
 }: {
   imports = [
     nix-colors.homeManagerModules.default
+    nixgl.nixGLModules.default
     ../modules/home/desktop/gnome
     # ../modules/home/desktop/wms/hyprland.nix
     # ../modules/home/desktop/wms/common
@@ -56,11 +57,11 @@
   #   bind=SUPER,backspace,exec,/usr/local/bin/swaylock -S
   # '';
 
-  home.packages = with pkgs;
+  home.packages =
     [
     ]
     ++ (lib.lists.optionals isVm) [
-      nixgl.nixGLIntel
+      pkgs.nixgl.nixGLIntel
     ];
   # home.packages = with pkgs; [
   #   podman-compose
