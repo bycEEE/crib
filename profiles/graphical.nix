@@ -5,11 +5,6 @@
   config,
   ...
 }: {
-  imports = [
-    ../modules/home/desktop/gnome
-    # ../modules/home/desktop/wms/hyprland.nix
-  ];
-
   my.settings = {
     wallpaper = "~/Pictures/wallpapers/nixppuccin.png";
     default = {
