@@ -95,9 +95,9 @@
     }:
       inputs.home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
-          inherit system;
+          inherit system nur;
           config.allowUnfree = true;
-          overlays = nur.overlay builtins.attrValues self.overlays;
+          overlays = builtins.attrValues self.overlays;
         };
         # extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm agenix mystash nix-colors;};
         extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm nix-colors nur;};
