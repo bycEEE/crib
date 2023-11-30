@@ -6,7 +6,6 @@
 }: let
   inherit (nix-colors.lib-contrib {inherit pkgs;}) gtkThemeFromScheme;
 in {
-  colorScheme = nix-colors.colorSchemes.catppuccin-macchiato;
   gtk = {
     enable = true;
     font = {
