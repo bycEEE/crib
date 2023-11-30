@@ -60,7 +60,7 @@
     [
     ]
     ++ (lib.lists.optionals isVm) [
-      nixgl.auto.nixGLDefault
+      nixgl.nixGLDefault
     ];
   # home.packages = with pkgs; [
   #   podman-compose
