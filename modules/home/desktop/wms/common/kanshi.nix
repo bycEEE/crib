@@ -1,8 +1,11 @@
-{ pkgs, config, ... }:
-let
-  hz = if config.my.settings.host == "curve" then "60" else "144hz";
-in
 {
+  pkgs,
+  config,
+  ...
+}: let
+  # hz = if config.my.settings.host == "curve" then "60" else "144hz";
+  hz = "60";
+in {
   home.packages = with pkgs; [
     kanshi
   ];

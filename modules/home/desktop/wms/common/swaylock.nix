@@ -5,10 +5,11 @@
   ...
 }: let
   inherit (config.colorscheme) colors;
-  swayLoc =
-    if config.my.settings.host == "curve"
-    then "/usr/local/bin/swaylock"
-    else "${pkgs.swaylock-effects}/bin/swaylock";
+  # swayLoc =
+  #   if config.my.settings.host == "curve"
+  #   then "/usr/local/bin/swaylock"
+  #   else "${pkgs.swaylock-effects}/bin/swaylock";
+  swayLoc = "${pkgs.swaylock-effects}/bin/swaylock";
 in {
   home.packages = with pkgs; [
     nur.repos."999eagle".swayaudioidleinhibit
