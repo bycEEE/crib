@@ -150,6 +150,15 @@
           ./profiles/pentesting.nix
         ];
       };
+      "icey@sour" = mkHomeConfig {
+        isVm = true;
+        system = "x86_64-linux";
+        username = "icey";
+        extraModules = [
+          ./profiles/personal.nix
+          ./profiles/pentesting.nix
+        ];
+      };
     };
     overlays = {
       channels = final: prev: {
