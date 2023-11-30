@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    ../modules/home/desktop/gnome
+    # ../modules/home/desktop/gnome
     ../modules/home/desktop/wms/hyprland.nix
     ../modules/home/desktop/wms/common
     ../modules/home/browsers/firefox.nix
