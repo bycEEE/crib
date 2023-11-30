@@ -1,6 +1,7 @@
 {
   stdenv,
   lib,
+  net-snmp,
   bundlerEnv,
   fetchFromGitHub,
 }: let
@@ -29,12 +30,16 @@ in
       runHook postBuild
     '';
 
+    postPatch = ''
+      substituteInPlace snmpwn --replace cmd.run!("snmpwalk cmd.run!("${lib.getExe' net-snmp "snmpwalk"}
+    '';
+
     meta = with lib; {
       description = "SNMPv3 user enumerator and attack tool";
       homepage = "https://github.com/hatlord/snmpwn";
       license = licenses.mit;
       maintainers = with maintainers; [bycEEE];
-      platforms = platforms.unix;
+      platforms = platforms.linux;
       mainProgram = "snmpwn";
     };
   }
