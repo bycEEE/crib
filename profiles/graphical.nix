@@ -20,16 +20,8 @@
       firefox.enable = true;
     };
 
-    editors = {
-      helix.enable = true;
-    };
-
     wms = {
       hyprland.enable = true;
-    };
-
-    shells = {
-      zsh.enable = true;
     };
 
     terminals = {
