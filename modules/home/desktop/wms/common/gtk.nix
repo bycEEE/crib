@@ -1,12 +1,12 @@
-{ config
-, pkgs
-, inputs
-, ...
-}:
-let
-  inherit (inputs.nix-colors.lib-contrib { inherit pkgs; }) gtkThemeFromScheme;
-in
 {
+  config,
+  pkgs,
+  nix-colors,
+  ...
+}: let
+  inherit (nix-colors.lib-contrib {inherit pkgs;}) gtkThemeFromScheme;
+in {
+  colorScheme = nix-colors.colorSchemes.catppuccin-macchiato;
   gtk = {
     enable = true;
     font = {
@@ -16,7 +16,7 @@ in
 
     theme = {
       name = "${config.colorscheme.slug}";
-      package = gtkThemeFromScheme { scheme = config.colorscheme; };
+      package = gtkThemeFromScheme {scheme = config.colorscheme;};
     };
 
     iconTheme = {
@@ -33,7 +33,6 @@ in
     enable = true;
     platformTheme = "qtct";
   };
-
 
   home.sessionVariables.GTK_THEME = "${config.colorscheme.slug}";
   home.pointerCursor = {
