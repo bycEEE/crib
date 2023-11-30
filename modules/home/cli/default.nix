@@ -152,7 +152,8 @@ Useful links:
         trippy # A traceroute visualizer built with Rust and WebAssembly
 
         ### Utilities
-        # aspellDicts.en # English dictionary for aspell
+        aspellDicts.en-us # English dictionary for aspell
+        aspellDicts.en-uk # English dictionary for aspell
         clipboard-jh # Cut, copy, and paste anything, anywhere, all from the terminal
         croc # Easily and securely send things from one computer to another
         eget # Easily install prebuilt binaries from GitHub
