@@ -95,7 +95,7 @@
     }:
       inputs.home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
-          inherit system nur;
+          inherit system;
           config.allowUnfree = true;
           overlays = builtins.attrValues self.overlays;
         };
@@ -175,8 +175,7 @@
         };
       };
       # kubectl = import ./overlays/kubectl.nix;
-      extraPackages = final: prev: {
-      };
+      nur = nur.overlay;
     };
   };
 }
