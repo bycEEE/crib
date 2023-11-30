@@ -1,11 +1,9 @@
 {
   inputs,
   config,
-  lib,
   pkgs,
   ...
-}:
-with lib; let
+}: let
   laptop_lid_switch = pkgs.writeShellScriptBin "laptop_lid_switch" ''
     #!/usr/bin/env bash
 
