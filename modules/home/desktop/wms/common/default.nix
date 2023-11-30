@@ -25,6 +25,8 @@
       MOZ_ENABLE_WAYLAND = 1;
       QT_QPA_PLATFORM = "wayland";
       LIBSEAT_BACKEND = "logind";
+      SDL_VIDEODRIVER = "wayland";
+      XDG_SESSION_TYPE = "wayland";
     }
     // lib.optionalAttrs isVm {
       WLR_RENDERER_ALLOW_SOFTWARE = 1;
