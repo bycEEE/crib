@@ -1,7 +1,6 @@
 {...}: {
   programs.wezterm = {
     enable = true;
-    package = [];
     extraConfig = ''
       local wezterm = require 'wezterm'
       local act = wezterm.action
