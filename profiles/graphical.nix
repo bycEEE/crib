@@ -23,7 +23,7 @@
     };
   };
 
-  colorscheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
+  colorscheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
   # USE Gnome
   # To show nix installed apps in Gnome
