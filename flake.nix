@@ -69,8 +69,8 @@
       isWsl ? false,
       isVm ? false,
       baseModules ? [
-        inputs.nix-index-database.hmModules.nix-index
-        inputs.nur.hmModules.nur
+        nix-index-database.hmModules.nix-index
+        nur.hmModules.nur
         # TODO: might need this
         # home-manager.darwinModules.home-manager
         ./modules/home
@@ -97,7 +97,7 @@
         pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;
-          overlays = builtins.attrValues self.overlays;
+          overlays = nur.overlay builtins.attrValues self.overlays;
         };
         # extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm agenix mystash nix-colors;};
         extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm nix-colors nur;};
