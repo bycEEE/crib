@@ -220,7 +220,6 @@ Useful links:
       VISUAL = "hx";
       PAGER = "moar";
       MOAR = "--style=catppuccin-macchiato";
-      DISPLAY = ":0";
       # NODE_PATH = "${NODE_GLOBAL}/lib";
       # JAVA_HOME = "${pkgs.jdk11}";
       # PNPM_HOME = "${PNPM_DIR}";
