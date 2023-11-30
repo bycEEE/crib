@@ -13,7 +13,7 @@ Useful links:
 */
 {
   imports = [
-    nix-colors.homeManagerModules
+    nix-colors.homeManagerModules.default
     ./atuin.nix
     ./bat.nix
     ./bottom.nix
