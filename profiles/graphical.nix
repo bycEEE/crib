@@ -32,17 +32,17 @@
   xdg.mime.enable = true;
   xdg.systemDirs.data = ["${config.home.homeDirectory}/.nix-profile/share/applications"];
 
-  xdg.configFile."autostart/tailscale.desktop".text = ''
-    [Desktop Entry]
-    Type=Application
-    Exec=tailscale-systray
-    Hidden=false
-    NoDisplay=false
-    X-GNOME-Autostart-enabled=true
-    Comment[en_NG]=Start Tailscale Systray
-  '';
+  # xdg.configFile."autostart/tailscale.desktop".text = ''
+  #   [Desktop Entry]
+  #   Type=Application
+  #   Exec=tailscale-systray
+  #   Hidden=false
+  #   NoDisplay=false
+  #   X-GNOME-Autostart-enabled=true
+  #   Comment[en_NG]=Start Tailscale Systray
+  # '';
 
-  # Work Laptop different email
+  # Remove 1Password ssh agent
   programs.ssh.extraConfig = "";
 
   wayland.windowManager.hyprland.extraConfig = lib.mkAfter ''
