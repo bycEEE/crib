@@ -46,6 +46,7 @@
     # agenix,
     # mystash,
     nix-colors,
+    nur,
     ...
   } @ inputs: let
     isDarwin = system: (builtins.elem system inputs.nixpkgs.lib.platforms.darwin);
@@ -98,7 +99,7 @@
           overlays = builtins.attrValues self.overlays;
         };
         # extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm agenix mystash nix-colors;};
-        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm nix-colors;};
+        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm nix-colors nur;};
         modules = baseModules ++ extraModules;
       };
   in {
