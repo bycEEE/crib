@@ -44,15 +44,6 @@ Useful links:
   home = {
     packages = with pkgs;
       [
-        ### Security
-        _1password # 1Password CLI
-        age # Modern encryption tool with small explicit keys
-        git-secrets # Prevents you from committing secrets and credentials into git repositories
-        sops # Editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats and encrypts with AWS KMS, GCP KMS, Azure Key Vault and PGP
-        # tailscale # The easiest, most secure way to use WireGuard and 2FA
-        trivy # A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
-        trufflehog # Searches through git repositories for secrets, digging deep into commit history and branches
-
         ### Nix Tools
         cachix # Command line client for Nix binary cache hosting
         # comma # Runs programs without installing them
@@ -96,8 +87,10 @@ Useful links:
         libxslt # A C library and tools to do XSL transformations
 
         ### Terminal
+        bandwhich # Terminal bandwidth utilization tool
         # boxxy # Puts bad Linux applications in a box with only their files
         broot # A new way to see and navigate directory trees
+        btop # A monitor of resources
         # catimg # Insanely fast image printing in your terminal
         # chafa # Terminal graphics for the 21st century
         # chroma # A general purpose syntax highlighter in pure Go
@@ -110,6 +103,7 @@ Useful links:
         # jql # A JSON query language tool built with Rust
         mmv # Move/Copy/Append/Link multiple files according to a set of wildcard patterns
         moar # Pager designed to just do the right thing without any configuration
+        ncdu # NCurses Disk Usage
         ncurses # A free software emulation of curses
         ov # Feature-rich terminal-based text viewer
         procs # A modern replacement for ps written in Rust
@@ -122,6 +116,7 @@ Useful links:
         vivid # A themeable LS_COLORS generator with a rich filetype datebase
         viu # A command-line application to view images from the terminal written in Rust
         # watchman # A file watching service
+        yq
 
         ### Development
         # asdf-vm # Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more
@@ -140,12 +135,6 @@ Useful links:
         sqlite
         # tokei # A program that displays statistics about your code
         yq
-
-        ### System Monitoring
-        bandwhich # Terminal bandwidth utilization tool
-        btop # A monitor of resources
-        # ctop # Top-like interface for container metrics
-        ncdu # NCurses Disk Usage
 
         ### Network
         # bore-cli # Rust tool to create TCP tunnels
@@ -187,6 +176,34 @@ Useful links:
         # zeal # Offline documentation browser inspired by Dash
         zk # A plain text note-taking assistant for managing your Zettelkasten
 
+        ### Security
+        _1password # 1Password CLI
+        age # Modern encryption tool with small explicit keys
+        git-secrets # Prevents you from committing secrets and credentials into git repositories
+        sops # Editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats and encrypts with AWS KMS, GCP KMS, Azure Key Vault and PGP
+        # tailscale # The easiest, most secure way to use WireGuard and 2FA
+        trivy # A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+        trufflehog # Searches through git repositories for secrets, digging deep into commit history and branches
+
+        ### Nix Tools
+        cachix # Command line client for Nix binary cache hosting
+        # comma # Runs programs without installing them
+        # deadnix # Find and remove unused code in .nix source files
+        # devenv # A tool to create development environments
+        # lorri # Fast, persistent and reliable development environment for the Nix ecosystem
+        # nix-init # Generate Nix packages from URLs
+        nix-output-monitor # Pipe your nix-build output through the nix-output-monitor (aka nom) to get additional information while building.
+        # nix-prefetch # A tool to fetch and hash Nix derivations
+        nix-prefetch-git # A tool to fetch and hash git repositories
+        nix-prefetch-github # A tool to fetch and hash GitHub repositories
+        nix-tree # Visualize the dependency graph of a Nix derivation
+        nixos-generators # Turns configuration into outputs in different formats
+        # nixpkgs-review # A tool for reviewing nixpkgs pull requests
+        nurl # Generate Nix fetcher calls from repository URLs
+        # nvfetcher # Generate nix sources expr for the latest version of packages
+        # poetry2nix # Convert poetry.lock to nix
+        # statix # Lints and suggestions for the nix programming language
+
         ### TODO: Categorise
         brotli # Generic-purpose lossless compression algorithm
 
@@ -223,6 +240,7 @@ Useful links:
       VISUAL = "hx";
       PAGER = "moar";
       MOAR = "--style=catppuccin-macchiato";
+      DISPLAY = ":0";
       # NODE_PATH = "${NODE_GLOBAL}/lib";
       # JAVA_HOME = "${pkgs.jdk11}";
       # PNPM_HOME = "${PNPM_DIR}";

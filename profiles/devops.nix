@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./kubernetes.nix
+    ../modules/home/cli/kubernetes.nix
   ];
 
   home = {
@@ -10,6 +10,7 @@
       ansible # Radically simple IT automation platform
       awscli2 # Universal Command Line Interface for Amazon Web Services
       # colima # Container runtimes on macOS (and Linux) with minimal setup
+      # ctop # Top-like interface for container metrics
       # dive # A tool for exploring each layer in a docker image
       # docker
       # docker-compose
