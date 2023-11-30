@@ -20,7 +20,7 @@
       shell = "${pkgs.zsh}/bin/zsh";
       terminal = "wezterm";
       browser = "firefox";
-      editor = "helix";
+      editor = "hx";
     };
   };
 

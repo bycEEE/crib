@@ -26,9 +26,9 @@ in {
       };
 
       editor = mkOption {
-        type = types.nullOr (types.enum ["vim" "code helix"]);
+        type = types.nullOr (types.enum ["vim" "code hx"]);
         description = "The default editor to use";
-        default = "helix";
+        default = "hx";
       };
     };
 
