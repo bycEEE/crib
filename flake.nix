@@ -157,7 +157,7 @@
         system = "x86_64-linux";
         username = "icey";
         extraModules = [
-          ./profiles/gui.nix
+          ./profiles/graphical.nix
           ./profiles/personal.nix
           ./profiles/pentesting.nix
         ];

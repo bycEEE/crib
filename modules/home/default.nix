@@ -7,7 +7,6 @@ Useful links:
 */
 {
   home.stateVersion = "23.05";
-
   # home.activation = lib.mkIf isWsl {
   #   linkDesktopApplications = {
   #     after = ["writeBoundary" "createXdgUserDirectories"];

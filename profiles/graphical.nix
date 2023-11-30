@@ -20,6 +20,28 @@
     };
   };
 
+  modules = {
+    browsers = {
+      firefox.enable = true;
+    };
+
+    editors = {
+      helix.enable = true;
+    };
+
+    wms = {
+      hyprland.enable = true;
+    };
+
+    shells = {
+      zsh.enable = true;
+    };
+
+    terminals = {
+      wezterm.enable = true;
+    };
+  };
+
   colorscheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
 
   # USE Gnome
