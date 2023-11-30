@@ -23,6 +23,7 @@
     home-manager.url = "github:nix-community/home-manager";
     darwin.url = "github:lnl7/nix-darwin";
     nix-index-database.url = "github:Mic92/nix-index-database";
+    hyprland.url = "github:hyprwm/Hyprland";
     # agenix.url = "github:ryantm/agenix";
     # mystash.url = "git+ssh://git@github.com/bycEEE/stash.git?shallow=1";
     # mystash.flake = false;
@@ -155,6 +156,7 @@
         system = "x86_64-linux";
         username = "icey";
         extraModules = [
+          ./profiles/arch.nix
           ./profiles/personal.nix
           ./profiles/pentesting.nix
         ];
