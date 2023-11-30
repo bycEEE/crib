@@ -1,7 +1,6 @@
 {...}: {
   programs.wezterm = {
-    enable = false; # Disabled since it's busted on home manager
-    package = [];
+    enable = true;
     extraConfig = ''
       local wezterm = require 'wezterm'
       local act = wezterm.action
