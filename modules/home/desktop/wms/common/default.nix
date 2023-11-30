@@ -1,4 +1,10 @@
-{ pkgs, inputs, ... }: {
+{
+  pkgs,
+  inputs,
+  lib,
+  isVm,
+  ...
+}: {
   imports = [
     ./gtk.nix
     ./gammastep.nix
@@ -12,14 +18,18 @@
 
     ./notifications/swaync.nix
     ./launchers/rofi.nix
-
   ];
 
-  home.sessionVariables = {
-    MOZ_ENABLE_WAYLAND = 1;
-    QT_QPA_PLATFORM = "wayland";
-    LIBSEAT_BACKEND = "logind";
-  };
+  home.sessionVariables =
+    {
+      MOZ_ENABLE_WAYLAND = 1;
+      QT_QPA_PLATFORM = "wayland";
+      LIBSEAT_BACKEND = "logind";
+    }
+    // lib.optionalAttrs isVm {
+      WLR_RENDERER_ALLOW_SOFTWARE = 1;
+      WLR_NO_HARDWARE_CURSORS = 1;
+    };
 
   home.packages = with pkgs; [
     mplayer
