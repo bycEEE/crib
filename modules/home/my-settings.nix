@@ -16,7 +16,7 @@ in {
       terminal = mkOption {
         type = types.nullOr (types.enum ["wezterm"]);
         description = "The default terminal to use";
-        default = "${pkgs.wezterm}/bin/wezterm";
+        default = "nixGLIntel ${pkgs.wezterm}/bin/wezterm";
       };
 
       browser = mkOption {
