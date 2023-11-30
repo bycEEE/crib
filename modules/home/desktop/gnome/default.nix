@@ -17,31 +17,31 @@ with lib.hm.gvariant; {
 
   home.packages = with pkgs; [
     # apps
-    gnome.gnome-tweaks
-    gnome.dconf-editor
-    gnome-extension-manager
-    gradience
+    # gnome.gnome-tweaks
+    # gnome.dconf-editor
+    # gnome-extension-manager
+    # gradience
 
     # useful utils
     nautilus-open-any-terminal
 
     # extensions
-    gnomeExtensions.appindicator
-    gnomeExtensions.aylurs-widgets
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.extensions-sync
-    gnomeExtensions.hibernate-status-button
-    gnomeExtensions.logo-menu
-    gnomeExtensions.just-perfection
-    gnomeExtensions.pano
-    gnomeExtensions.pop-shell
-    gnomeExtensions.rounded-window-corners
-    gnomeExtensions.search-light
-    gnomeExtensions.smart-auto-move
-    gnomeExtensions.space-bar
-    gnomeExtensions.order-gnome-shell-extensions
+    # gnomeExtensions.appindicator
+    # gnomeExtensions.aylurs-widgets
+    # gnomeExtensions.blur-my-shell
+    # gnomeExtensions.extensions-sync
+    # gnomeExtensions.hibernate-status-button
+    # gnomeExtensions.logo-menu
+    # gnomeExtensions.just-perfection
+    # gnomeExtensions.pano
+    # gnomeExtensions.pop-shell
+    # gnomeExtensions.rounded-window-corners
+    # gnomeExtensions.search-light
+    # gnomeExtensions.smart-auto-move
+    # gnomeExtensions.space-bar
+    # gnomeExtensions.order-gnome-shell-extensions
 
-    libgda # used by pano extension
+    # libgda # used by pano extension
 
     # styles
     adw-gtk3
@@ -87,29 +87,23 @@ with lib.hm.gvariant; {
       name = "Open Terminal";
     };
 
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-      binding = "<Control><Alt>Delete";
-      command = "systemctl hibernate";
-      name = "Hibernate";
-    };
+    # "org/gnome/settings-daemon/plugins/power" = {
+    #   power-button-action = "hibernate";
+    # };
 
-    "org/gnome/settings-daemon/plugins/power" = {
-      power-button-action = "hibernate";
-    };
+    # "org/gnome/shell/extensions/Logo-menu" = {
+    #   hide-forcequit = true;
+    #   hide-softwarecentre = true;
+    #   menu-button-extensions-app = "com.mattjakeman.ExtensionManager.desktop";
+    #   menu-button-icon-image = 23;
+    #   menu-button-terminal = "alacritty";
+    #   show-power-options = true;
+    # };
 
-    "org/gnome/shell/extensions/Logo-menu" = {
-      hide-forcequit = true;
-      hide-softwarecentre = true;
-      menu-button-extensions-app = "com.mattjakeman.ExtensionManager.desktop";
-      menu-button-icon-image = 23;
-      menu-button-terminal = "alacritty";
-      show-power-options = true;
-    };
-
-    "org/gnome/shell/extensions/appindicator" = {
-      custom-icons = "@a(sss) []";
-      legacy-tray-enabled = true;
-    };
+    # "org/gnome/shell/extensions/appindicator" = {
+    #   custom-icons = "@a(sss) []";
+    #   legacy-tray-enabled = true;
+    # };
 
     "org/gnome/shell/extensions/aylurs-widgets" = {
       background-clock = true;
@@ -293,13 +287,13 @@ with lib.hm.gvariant; {
       workspace-indicator-style = 0;
     };
 
-    "org/gnome/shell/extensions/blur-my-shell/applications" = {
-      blur-on-overview = true;
-    };
+    # "org/gnome/shell/extensions/blur-my-shell/applications" = {
+    #   blur-on-overview = true;
+    # };
 
-    "org/gnome/shell/extensions/blur-my-shell/overview" = {
-      style-components = 2;
-    };
+    # "org/gnome/shell/extensions/blur-my-shell/overview" = {
+    #   style-components = 2;
+    # };
 
     "org/gnome/shell/extensions/just-perfection" = {
       accessibility-menu = true;
