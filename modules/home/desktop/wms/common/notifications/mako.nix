@@ -1,18 +1,15 @@
-{ config
-, pkgs
-, lib
-, ...
-}:
-with lib;
-let
-  cfg = config.modules.wms.notifications.mako;
-in
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+with lib; {
   options.modules.wms.notifications.mako = {
     enable = mkEnableOption "enable mako notification manager";
   };
 
-  config = mkIf cfg.enable {
+  config = {
     services.mako = {
       enable = true;
       defaultTimeout = 5000;

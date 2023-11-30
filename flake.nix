@@ -75,10 +75,6 @@
         ./modules/home/fonts
         ./modules/home/cli
         ./modules/home/apps
-        ./modules/home/desktop/gnome
-        ./modules/home/desktop/wms/hyprland.nix
-        ./modules/home/browsers/firefox.nix
-        ./modules/home/terminals/wezterm.nix
         {
           home = {
             inherit username;

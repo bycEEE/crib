@@ -5,6 +5,13 @@
   config,
   ...
 }: {
+  imports = [
+    ../modules/home/desktop/gnome
+    ../modules/home/desktop/wms/hyprland.nix
+    ../modules/home/browsers/firefox.nix
+    ../modules/home/terminals/wezterm.nix
+  ];
+
   my.settings = {
     wallpaper = "~/Pictures/wallpapers/nixppuccin.png";
     default = {
@@ -12,20 +19,6 @@
       terminal = "wezterm";
       browser = "firefox";
       editor = "helix";
-    };
-  };
-
-  modules = {
-    browsers = {
-      firefox.enable = true;
-    };
-
-    wms = {
-      hyprland.enable = true;
-    };
-
-    terminals = {
-      wezterm.enable = true;
     };
   };
 
