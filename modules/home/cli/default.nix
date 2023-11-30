@@ -3,6 +3,7 @@
   lib,
   pkgs,
   nix-colors,
+  nur,
   ...
 }:
 /*
@@ -14,6 +15,7 @@ Useful links:
 {
   imports = [
     nix-colors.homeManagerModules.default
+    nur.hmModules.nur
     ./atuin.nix
     ./bat.nix
     ./bottom.nix
@@ -183,25 +185,6 @@ Useful links:
         # tailscale # The easiest, most secure way to use WireGuard and 2FA
         trivy # A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
         trufflehog # Searches through git repositories for secrets, digging deep into commit history and branches
-
-        ### Nix Tools
-        cachix # Command line client for Nix binary cache hosting
-        # comma # Runs programs without installing them
-        # deadnix # Find and remove unused code in .nix source files
-        # devenv # A tool to create development environments
-        # lorri # Fast, persistent and reliable development environment for the Nix ecosystem
-        # nix-init # Generate Nix packages from URLs
-        nix-output-monitor # Pipe your nix-build output through the nix-output-monitor (aka nom) to get additional information while building.
-        # nix-prefetch # A tool to fetch and hash Nix derivations
-        nix-prefetch-git # A tool to fetch and hash git repositories
-        nix-prefetch-github # A tool to fetch and hash GitHub repositories
-        nix-tree # Visualize the dependency graph of a Nix derivation
-        nixos-generators # Turns configuration into outputs in different formats
-        # nixpkgs-review # A tool for reviewing nixpkgs pull requests
-        nurl # Generate Nix fetcher calls from repository URLs
-        # nvfetcher # Generate nix sources expr for the latest version of packages
-        # poetry2nix # Convert poetry.lock to nix
-        # statix # Lints and suggestions for the nix programming language
 
         ### TODO: Categorise
         brotli # Generic-purpose lossless compression algorithm
