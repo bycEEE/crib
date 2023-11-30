@@ -3,9 +3,7 @@
   pkgs,
   nix-colors,
   ...
-}: let
-  inherit (nix-colors.lib-contrib {inherit pkgs;}) gtkThemeFromScheme;
-in {
+}: {
   gtk = {
     enable = true;
     font = {
@@ -15,12 +13,17 @@ in {
 
     theme = {
       name = "${config.colorscheme.slug}";
-      package = gtkThemeFromScheme {scheme = config.colorscheme;};
+      package = pkgs.catppuccin-gtk.override {
+        accents = ["pink"];
+        size = "compact";
+        tweaks = ["rimless" "black"];
+        variant = "macchiato";
+      };
     };
 
     iconTheme = {
       package = pkgs.catppuccin-papirus-folders.override {
-        flavor = "mocha";
+        flavor = "macchiato";
         accent = "blue";
       };
       name = "Papirus-Dark";
@@ -35,8 +38,8 @@ in {
 
   home.sessionVariables.GTK_THEME = "${config.colorscheme.slug}";
   home.pointerCursor = {
-    package = pkgs.catppuccin-cursors.mochaLight;
-    name = "Catppuccin-Mocha-Light-Cursors";
+    package = pkgs.catppuccin-cursors.macchiatoLight;
+    name = "Catppuccin-Macchiato-Light-Cursors";
     size = 32;
     x11.enable = true;
     gtk.enable = true;
