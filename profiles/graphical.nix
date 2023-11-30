@@ -3,6 +3,8 @@
   lib,
   config,
   nix-colors,
+  nixgl,
+  isVM,
   ...
 }: {
   imports = [
@@ -54,6 +56,12 @@
   #   bind=SUPER,backspace,exec,/usr/local/bin/swaylock -S
   # '';
 
+  home.packages = with pkgs;
+    [
+    ]
+    ++ (lib.lists.optionals isVM) [
+      nixgl.nixGL.nixGLMesa
+    ];
   # home.packages = with pkgs; [
   #   podman-compose
   #   podman-tui
