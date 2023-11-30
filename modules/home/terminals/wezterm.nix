@@ -1,9 +1,4 @@
-{lib, ...}:
-with lib; {
-  options.modules.terminals.wezterm = {
-    enable = mkEnableOption "enable wezterm terminal emulator";
-  };
-
+{...}: {
   programs.wezterm = {
     enable = true;
     package = [];
