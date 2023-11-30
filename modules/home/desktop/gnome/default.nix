@@ -52,7 +52,7 @@ with lib.hm.gvariant; {
 
   dconf.settings = {
     "org/gnome/desktop/applications/terminal" = {
-      exec = "nixGLIntel ${pkgs.wezterm}/bin/wezterm";
+      exec = "${pkgs.nixGLIntel}/bin/nixGLIntel ${pkgs.wezterm}/bin/wezterm &";
     };
 
     "ca/desrt/dconf-editor" = {
