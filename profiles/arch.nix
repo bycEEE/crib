@@ -7,7 +7,7 @@
 }: {
   imports = [
     ../modules/home/desktop/gnome
-    ../modules/home/desktop/hyprland
+    ../modules/home/desktop/wms/hyprland.nix
   ];
 
   config = {
