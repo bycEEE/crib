@@ -68,8 +68,8 @@ with lib.hm.gvariant; {
       clock-show-seconds = true;
       clock-show-weekday = true;
       color-scheme = "prefer-dark";
-      # cursor-size = 32;
-      # cursor-theme = "Adwaita";
+      cursor-size = 32;
+      cursor-theme = "Adwaita";
       enable-animations = true;
       enable-hot-corners = false;
       font-antialiasing = "grayscale";

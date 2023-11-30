@@ -9,7 +9,7 @@
     nix-colors.homeManagerModules.default
     ../modules/home/desktop/gnome
     # ../modules/home/desktop/wms/hyprland.nix
-    ../modules/home/desktop/wms/common
+    # ../modules/home/desktop/wms/common
     ../modules/home/browsers/firefox.nix
     ../modules/home/terminals/wezterm.nix
   ];
@@ -45,14 +45,14 @@
   # Remove 1Password ssh agent
   programs.ssh.extraConfig = "";
 
-  wayland.windowManager.hyprland.extraConfig = lib.mkAfter ''
-    exec-once = /usr/libexec/geoclue-2.0/demos/agent
-    exec-once = warp-taskbar
+  # wayland.windowManager.hyprland.extraConfig = lib.mkAfter ''
+  #   exec-once = /usr/libexec/geoclue-2.0/demos/agent
+  #   exec-once = warp-taskbar
 
-    bind=,XF86Launch5,exec,/usr/local/bin/swaylock -S
-    bind=,XF86Launch4,exec,/usr/local/bin/swaylock -S
-    bind=SUPER,backspace,exec,/usr/local/bin/swaylock -S
-  '';
+  #   bind=,XF86Launch5,exec,/usr/local/bin/swaylock -S
+  #   bind=,XF86Launch4,exec,/usr/local/bin/swaylock -S
+  #   bind=SUPER,backspace,exec,/usr/local/bin/swaylock -S
+  # '';
 
   # home.packages = with pkgs; [
   #   podman-compose
