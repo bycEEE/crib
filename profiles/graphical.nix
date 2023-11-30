@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [
+    nix-colors.homeManagerModules.default
     # ../modules/home/desktop/gnome
     ../modules/home/desktop/wms/hyprland.nix
     ../modules/home/desktop/wms/common
