@@ -1,8 +1,8 @@
 {
   pkgs,
-  inputs,
   lib,
   config,
+  nix-colors,
   ...
 }: {
   imports = [
@@ -23,7 +23,7 @@
     };
   };
 
-  colorscheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
+  colorScheme = nix-colors.colorSchemes.catppuccin-macchiato;
 
   # USE Gnome
   # To show nix installed apps in Gnome
