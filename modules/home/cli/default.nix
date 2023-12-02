@@ -133,7 +133,7 @@ Useful links:
         shellcheck # Shell script analysis tool
         sqlite
         # tokei # A program that displays statistics about your code
-        trunk-io # Developer experience toolkit used to check, test, merge, and monitor code
+        # trunk-io # Developer experience toolkit used to check, test, merge, and monitor code
         yq
 
         ### Network

@@ -20,6 +20,7 @@
     la = "eza -a";
     lt = "eza --tree";
     lla = "eza -la";
+    mv = "mv -i";
     tree = "eza --tree --icons --tree";
     tf = "terraform";
     zj = "zellij";
