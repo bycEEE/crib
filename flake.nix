@@ -87,7 +87,8 @@
             inherit username;
             homeDirectory = "${homePrefix system}/${username}";
             sessionPath = [
-              /usr/sbin
+              "/bin"
+              "/usr/sbin"
               "${homePrefix system}/${username}/.local/bin"
             ];
             sessionVariables = {
