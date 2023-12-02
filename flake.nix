@@ -87,6 +87,7 @@
             inherit username;
             homeDirectory = "${homePrefix system}/${username}";
             sessionPath = [
+              /usr/sbin
               "${homePrefix system}/${username}/.local/bin"
             ];
             sessionVariables = {
@@ -156,7 +157,7 @@
         username = "icey";
         extraModules = [
           ./profiles/personal.nix
-          # ./profiles/pentesting.nix
+          ./profiles/pentesting.nix
         ];
       };
       "icey@sour" = mkHomeConfig {

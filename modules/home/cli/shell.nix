@@ -21,7 +21,9 @@
     lt = "eza --tree";
     lla = "eza -la";
     mv = "mv -i";
-    tree = "eza --tree --icons --tree";
+    tree = "eza --tree --icons --tree --level=1";
+    tree1 = "eza --tree --icons --tree --level=2";
+    tree2 = "eza --tree --icons --tree --level=3";
     tf = "terraform";
     zj = "zellij";
     zjr = "zellij run -- ";

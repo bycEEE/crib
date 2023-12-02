@@ -230,3 +230,4 @@ Not sure how to install via Nix so maintaining a manual list here:
 - Add pentesting tools that exist in `default.nix` in `pentesting.nix` as well.
 - Separate out tools into separate folders and consolidate reundant `home/default.nix`.
 - Fix broken `agenix` secrets.
+- Copy iTerm2 and other MacOS configs.
