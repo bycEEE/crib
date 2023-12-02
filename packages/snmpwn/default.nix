@@ -31,7 +31,7 @@ in
     '';
 
     postPatch = ''
-      substituteInPlace snmpwn --replace cmd.run!("snmpwalk cmd.run!("${lib.getExe' net-snmp "snmpwalk"}
+      substituteInPlace snmpwn.rb --replace '"cmd.run!("snmpwalk"' 'cmd.run!("${lib.getExe' net-snmp "snmpwalk"})'
     '';
 
     meta = with lib; {
