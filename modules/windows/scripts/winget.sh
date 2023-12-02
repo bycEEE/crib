@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if ! winget.exe > /dev/null 2>&1; then
+if ! winget.exe >/dev/null 2>&1; then
     echo "winget.exe command not found, make sure winget is installed and in your PATH"
     exit 1
 fi
@@ -10,6 +10,8 @@ apps=(
     "AgileBits.1Password"
     "Malwarebytes.Malwarebytes"
     "PortSwigger.BurpSuite.Community"
+    "Yubico.YubikeyManager"
+    "SatoshiLabs.trezor-suite"
 
     # Browsers
     "Google.Chrome"
