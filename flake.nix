@@ -156,7 +156,7 @@
         username = "icey";
         extraModules = [
           ./profiles/personal.nix
-          ./profiles/pentesting.nix
+          # ./profiles/pentesting.nix
         ];
       };
       "icey@sour" = mkHomeConfig {
