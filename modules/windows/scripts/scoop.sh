@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-if ! scoop > /dev/null 2>&1; then
-    echo "Scoop command not found, make sure Scoop is installed and in your PATH"
-    exit 1
+if ! scoop >/dev/null 2>&1; then
+  echo "Scoop command not found, make sure Scoop is installed and in your PATH"
+  exit 1
 fi
 
 echo "Updating Scoop..."
@@ -20,43 +20,43 @@ buckets["versions"]="https://github.com/ScoopInstaller/Versions"
 
 # Loop over the associative array and add each bucket
 for bucket in "${!buckets[@]}"; do
-    echo "Adding bucket: $bucket"
-    scoop bucket add $bucket ${buckets[$bucket]}
+  echo "Adding bucket: $bucket"
+  scoop bucket add "$bucket" "${buckets[$bucket]}"
 done
 
 echo "All buckets added successfully."
 
-
 apps=(
-    "7zip"
-    "aria2"
-    "curl"
-    "czkawka-gui",
-    "fiddler"
-    "flow-launcher"
-    "gpg"
-    "gpu-z"
-    "hxd"
-    "mpc-be"
-    "musicbee"
-    "qbittorrent"
-    "raindrop.io"
-    "rufus"
-    "ryujinx"
-    "sharex"
-    "spacesniffer"
-    "ssd-z"
-    "sudo"
-    "sysinternals"
-    "yuzu"
-    "zeal"
+  "7zip"
+  "aria2"
+  "curl"
+  # "czkawka-gui"
+  "fiddler"
+  "flow-launcher"
+  "gpg"
+  "gpu-z"
+  "hxd"
+  "mpc-be"
+  "musicbee"
+  "qbittorrent"
+  # "raindrop.io"
+  "rufus"
+  "ryujinx"
+  "sharex"
+  "spacesniffer"
+  "ssd-z"
+  "sudo"
+  # "sunshine"
+  "sysinternals"
+  "yuzu"
+  "zeal"
 )
 
 for app in "${apps[@]}"; do
-    echo "Installing app: $app"
-    scoop install $app
-    echo "Updating app: $app"
-    scoop update $app
+  echo "Installing app: $app"
+  scoop install "$app"
+  echo "Updating app: $app"
+  scoop update "$app"
 done
 
 echo "All apps added and updated successfully."
