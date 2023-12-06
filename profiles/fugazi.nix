@@ -7,6 +7,14 @@
       rlwrap # Readline wrapper: adds readline support to tools that lack it
       rustcat # Netcat alternative written in Rust
       updog # Updog is a replacement for Python's SimpleHTTPServer. It allows uploading and downloading via HTTP/S, can set ad hoc SSL certificates and use http basic auth
+
+      ## Web
+      arjun # HTTP parameter discovery suite
+      feroxbuster # Fast, simple, recursive content discovery tool
+      ffuf # Fast web fuzzer written in Go
+      gobuster # Tool used to brute-force URIs, DNS subdomains, Virtual Host names on target web servers
+      wfuzz # Web content fuzzer to facilitate web applications assessments
+      whatweb # Next generation web scanner
     ];
   };
 }
