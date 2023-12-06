@@ -7,6 +7,10 @@
       rlwrap # Readline wrapper: adds readline support to tools that lack it
       rustcat # Netcat alternative written in Rust
       updog # Updog is a replacement for Python's SimpleHTTPServer. It allows uploading and downloading via HTTP/S, can set ad hoc SSL certificates and use http basic auth
+      girsh # Automatically spawn a reverse shell fully interactive for Linux or Windows victim
+
+      ## Vulnerability Scanner
+      nuclei # Fast and customizable vulnerability scanner based on simple YAML based DSL
 
       ## Web
       arjun # HTTP parameter discovery suite
