@@ -126,15 +126,14 @@ Useful links:
         just # A handy way to save and run project-specific commands
         # lefthook # Fast and powerful Git hooks manager for any type of projects
         ngrok # Allows you to expose a web server running on your local machine to the internet
-        postgresql_14
+        # postgresql_14
         pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
 
         # ruff # An Extremely fast Python linter
         shellcheck # Shell script analysis tool
-        sqlite
+        # sqlite
         # tokei # A program that displays statistics about your code
         # trunk-io # Developer experience toolkit used to check, test, merge, and monitor code
-        yq
 
         ### Network
         # bore-cli # Rust tool to create TCP tunnels
