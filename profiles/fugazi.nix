@@ -11,6 +11,7 @@
 
       ## Vulnerability Scanner
       nuclei # Fast and customizable vulnerability scanner based on simple YAML based DSL
+      wapiti # Web application vulnerability scanner
 
       ## Web
       arjun # HTTP parameter discovery suite
