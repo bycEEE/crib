@@ -8,7 +8,6 @@
 }: let
   init = builtins.readFile ./scripts/init.sh;
   functions = builtins.readFile ./scripts/functions.sh;
-  agent_bridge = builtins.readFile ./scripts/agent_bridge.sh;
   navi_widget = builtins.readFile ./scripts/navi_widget.sh;
   aliases = {
     sudo = "sudo env \"PATH=$PATH\" ";
@@ -177,7 +176,6 @@ in {
       ${functions}
       ${navi_widget}
       ${lib.optionalString isWsl ''
-        ${agent_bridge}
         # Keep current path in Windows on new tab/pane
         # https://learn.microsoft.com/en-us/windows/terminal/tutorials/new-tab-same-directory
         keep_current_path() {

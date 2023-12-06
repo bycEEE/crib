@@ -12,13 +12,18 @@
       #   then "osxkeychain"
       #   else "cache --timeout=1000000000";
       # core.autocrlf = "input";
+
+      core = lib.mkIf isWsl {
+        sshCommand = "ssh.exe";
+      };
+
       gpg.format = "ssh";
       "gpg \"ssh\"".program =
         if isWsl
         then "/mnt/c/Program Files/1Password/app/8/op-ssh-sign.exe"
         else if pkgs.stdenvNoCC.isDarwin
         then "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
-        else "${pkgs.gnupg}/bin/gpg2";
+        else "ssh-keygen";
 
       commit = {
         verbose = true;
