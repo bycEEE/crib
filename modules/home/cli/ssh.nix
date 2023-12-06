@@ -14,8 +14,5 @@ in {
     # forwardAgent = true;
     serverAliveInterval = 20;
     serverAliveCountMax = 180;
-    extraConfig = ''
-      ${lib.optionalString (!isVm) ''IdentityAgent "${ssh_auth_sock}"''}
-    '';
   };
 }
