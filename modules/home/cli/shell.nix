@@ -155,6 +155,8 @@ in {
 
       # Completions
       zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Case insensitive tab completion
+      zstyle ':completion:*' special-dirs true
+      zstyle ':completion:*' rehash true
       zstyle ':completion:*' list-colors "''${(s.:.)LS_COLORS}" # Colored completion (different colors for dirs/files/etc)
       zstyle ':completion:*' menu select                        # Hit 'TAB' to select
       zstyle ':completion:*' verbose yes
