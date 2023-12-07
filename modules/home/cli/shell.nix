@@ -125,7 +125,7 @@ in {
       [[ -d /opt/homebrew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
       # Extra paths
-      export PATH="$PATH:~/.local/bin"
+      export PATH="$HOME/.local/bin:$PATH"
 
       setopt auto_list            # Automatically list choices on an ambiguous completion
       setopt always_to_end        # Move cursor to end of line after accepting completion
