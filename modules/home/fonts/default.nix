@@ -19,6 +19,7 @@ Useful links:
           "SourceCodePro"
           "Iosevka"
           "Agave"
+          "Monaspace"
         ];
       })
       (pkgs.callPackage ./sf-mono-nerdfont.nix {})
