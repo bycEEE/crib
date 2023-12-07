@@ -28,7 +28,7 @@ Useful links:
     # ./gpg.nix
     ./lsp.nix
     ./navi.nix
-    ./nvim.nix
+    # ./nvim.nix
     # ./python.nix
     ./skim.nix
     ./ssh.nix
