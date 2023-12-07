@@ -6,29 +6,8 @@
   pkgs,
   ...
 }: let
-  init = builtins.readFile ./scripts/init.sh;
   functions = builtins.readFile ./scripts/functions.sh;
   navi_widget = builtins.readFile ./scripts/navi_widget.sh;
-  aliases = {
-    sudo = "sudo env \"PATH=$PATH\" ";
-    k = "kubectl";
-    cat = "bat";
-    grep = "grep --color=always";
-    ls = "eza";
-    ll = "eza -l";
-    la = "eza -a";
-    lt = "eza --tree";
-    lla = "eza -la";
-    mv = "mv -i";
-    tree = "eza --tree --icons --tree --level=1";
-    tree1 = "eza --tree --icons --tree --level=2";
-    tree2 = "eza --tree --icons --tree --level=3";
-    tf = "terraform";
-    zj = "zellij";
-    zjr = "zellij run -- ";
-    # du = "dust";
-    # ps = "procs";
-  };
 in {
   programs.zsh = {
     enable = true;
@@ -38,7 +17,29 @@ in {
     dotDir = ".config/zsh";
     autocd = false;
     defaultKeymap = "emacs";
-    shellAliases = aliases;
+
+    shellAliases = {
+      sudo = "sudo env \"PATH=$PATH\" ";
+      k = "kubectl";
+      cat = "bat";
+      cp = "cp -i";
+      grep = "grep --color=always";
+      ls = "eza";
+      ll = "eza -l";
+      la = "eza -a";
+      lt = "eza --tree";
+      lla = "eza -la";
+      mv = "mv -i";
+      rip = "rip -i";
+      tree = "eza --tree --icons --tree --level=1";
+      tree1 = "eza --tree --icons --tree --level=2";
+      tree2 = "eza --tree --icons --tree --level=3";
+      tf = "terraform";
+      zj = "zellij";
+      zjr = "zellij run -- ";
+      # du = "dust";
+      # ps = "procs";
+    };
 
     dirHashes = {
       projects = "$HOME/projects";
@@ -113,9 +114,25 @@ in {
     #   fpath+=(${config.home.profileDirectory}/share/bash-completion/completions)
     # '';
     initExtra = ''
-      setopt long_list_jobs # Display PID when using jobs
-      setopt no_hist_expand # Do not expand history in line editor
-      setopt globdots       # Show hidden files when globbing
+      # Nix
+      if [[ -e "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh" ]]; then
+        . "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh"
+      fi
+
+      . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+
+      # Homebrew
+      [[ -d /opt/homebrew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+      # Extra paths
+      export PATH="$PATH:~/.local/bin"
+
+      setopt auto_list            # Automatically list choices on an ambiguous completion
+      setopt always_to_end        # Move cursor to end of line after accepting completion
+      setopt interactive_comments # Allow comments starting with # in the shell
+      setopt long_list_jobs       # Display PID when using jobs
+      setopt no_hist_expand       # Do not expand history in line editor
+      setopt globdots             # Show hidden files when globbing
 
       # Compatibility bash completion
       autoload -U bashcompinit && bashcompinit
@@ -172,7 +189,6 @@ in {
       ## environment variable
       zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-preview 'echo ''${(P)word}'
 
-      ${init}
       ${functions}
       ${navi_widget}
       ${lib.optionalString isWsl ''
