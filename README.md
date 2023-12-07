@@ -217,6 +217,8 @@ Not sure how to install via Nix so maintaining a manual list here:
 - [misterio/nix-config](https://git.sr.ht/~misterio/nix-config) - hyprland configs
 - [steveej/infra](https://gitlab.com/steveej/infra) - graphical configs, age secrets
 - [fufexan/dotfiles](https://github.com/fufexan/dotfiles)
+- [linuxmobile/kaku](https://github.com/linuxmobile/kaku) - rice, helix/nvchad configs
+- [redyf/nixdots](https://github.com/redyf/nixdots) - rice, helix, wsl configs
 
 ## TODO
 
