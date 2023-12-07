@@ -172,7 +172,7 @@ in {
       zstyle ':completion:*:git-checkout:*' sort false
 
       ## preview directory's content with eza when completing cd
-      zstyle ':fzf-tab:complete:cd:*' fzf-preview '${lib.getExe pkgs.eza} -1 --color=always $realpath'
+      zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 
       ## switch group using `,` and `.`
       zstyle ':fzf-tab:*' switch-group ',' '.'
@@ -186,7 +186,7 @@ in {
       zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
 
       # # show file preview
-      # zstyle ':fzf-tab:complete:*:*' fzf-preview '${lib.getExe pkgs.moar} ''${(Q)realpath}'
+      # zstyle ':fzf-tab:complete:*:*' fzf-preview 'moar ''${(Q)realpath}'
 
       ## environment variable
       zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-preview 'echo ''${(P)word}'
