@@ -58,6 +58,7 @@ apps=(
   "LukaszSwiszcz.Winpinator"
   "Microsoft.PowerToys"
   "schollz.croc"
+  "SomePythonThings.WingetUIStore"
   "StartIsBack.StartAllBack"
   "SyncTrayzor.SyncTrayzor"
 

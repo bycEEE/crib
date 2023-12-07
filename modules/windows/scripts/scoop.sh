@@ -38,6 +38,7 @@ apps=(
   "hxd"
   "mpc-be"
   "musicbee"
+  "onecommander"
   "qbittorrent"
   # "raindrop.io"
   "rufus"
