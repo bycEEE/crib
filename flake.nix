@@ -19,24 +19,24 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nur.url = "github:nix-community/NUR";
+    # nur.url = "github:nix-community/NUR";
     stable.url = "github:nixos/nixpkgs/nixos-23.05";
     home-manager.url = "github:nix-community/home-manager";
     darwin.url = "github:lnl7/nix-darwin";
     nix-index-database.url = "github:Mic92/nix-index-database";
-    hyprland.url = "github:hyprwm/Hyprland";
-    hypr-contrib.url = "github:hyprwm/contrib";
-    nwg-displays.url = "github:nwg-piotr/nwg-displays";
-    nixgl.url = "github:guibou/nixGL";
+    # hyprland.url = "github:hyprwm/Hyprland";
+    # hypr-contrib.url = "github:hyprwm/contrib";
+    # nwg-displays.url = "github:nwg-piotr/nwg-displays";
+    # nixgl.url = "github:guibou/nixGL";
     # agenix.url = "github:ryantm/agenix";
     # mystash.url = "git+ssh://git@github.com/bycEEE/stash.git?shallow=1";
     # mystash.flake = false;
     nix-colors.url = "github:misterio77/nix-colors";
     # homeage.url = "github:jordanisaacs/homeage";
 
-    # home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
     # darwin.inputs.nixpkgs.follows = "nixpkgs";
-    # nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
     # agenix.inputs.nixpkgs.follows = "nixpkgs";
     # nix-colors.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -49,8 +49,8 @@
     # agenix,
     # mystash,
     nix-colors,
-    nixgl,
-    nur,
+    # nixgl,
+    # nur,
     ...
   } @ inputs: let
     isDarwin = system: (builtins.elem system inputs.nixpkgs.lib.platforms.darwin);
@@ -74,7 +74,7 @@
       isVm ? false,
       baseModules ? [
         nix-index-database.hmModules.nix-index
-        nur.hmModules.nur
+        # nur.hmModules.nur
         # TODO: might need this
         # home-manager.darwinModules.home-manager
         ./modules/home
@@ -104,7 +104,7 @@
           overlays = builtins.attrValues self.overlays;
         };
         # extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm agenix mystash nix-colors;};
-        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm nix-colors nixgl nur;};
+        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm nix-colors;};
         modules = baseModules ++ extraModules;
       };
   in {
@@ -171,16 +171,16 @@
       };
     };
     overlays = {
-      channels = final: prev: {
-        # expose other channels via overlays
-        stable = import inputs.stable {
-          system = prev.system;
-          config.allowUnfree = true;
-        };
-      };
+      # channels = final: prev: {
+      #   # expose other channels via overlays
+      #   stable = import inputs.stable {
+      #     system = prev.system;
+      #     config.allowUnfree = true;
+      #   };
+      # };
       # kubectl = import ./overlays/kubectl.nix;
-      nur = nur.overlay;
-      nixgl = nixgl.overlay;
+      # nur = nur.overlay;
+      # nixgl = nixgl.overlay;
     };
   };
 }

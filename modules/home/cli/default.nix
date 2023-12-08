@@ -46,7 +46,6 @@ Useful links:
       [
         ### Nix Tools
         cachix # Command line client for Nix binary cache hosting
-        # comma # Runs programs without installing them
         # deadnix # Find and remove unused code in .nix source files
         # devenv # A tool to create development environments
         # lorri # Fast, persistent and reliable development environment for the Nix ecosystem
