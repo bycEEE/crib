@@ -61,6 +61,7 @@ apps=(
   "SomePythonThings.WingetUIStore"
   "StartIsBack.StartAllBack"
   "SyncTrayzor.SyncTrayzor"
+  "WinDirStat.WinDirStat"
 
   # Misc
   "Gyan.FFmpeg"
