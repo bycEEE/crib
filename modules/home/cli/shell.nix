@@ -134,8 +134,11 @@ in {
       setopt no_hist_expand       # Do not expand history in line editor
       setopt globdots             # Show hidden files when globbing
 
+      # Disable highlighting on paste
+      zle_highlight+=(paste:none)
+
       # Compatibility bash completion
-      autoload -U bashcompinit && bashcompinit
+      # autoload -U bashcompinit && bashcompinit
 
       # Set key bindings
       ## showmethekey to see what key is pressed
