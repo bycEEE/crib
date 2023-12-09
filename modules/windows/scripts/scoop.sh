@@ -46,6 +46,7 @@ apps=(
   "sharex"
   "spacesniffer"
   "ssd-z"
+  "sniffnet"
   "sudo"
   # "sunshine"
   "sysinternals"
