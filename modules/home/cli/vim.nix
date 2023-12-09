@@ -9,9 +9,8 @@
       set showmatch	            "Highlight matching brace
       "set visualbell	          "Use visual bell (no beeping, flashes screen)
       set title                 "Show filename in window title
-      set cursorline            "Highlight current line
 
-      "set hlsearch	 "Highlight all search results
+      set hlsearch	 "Highlight all search results
       set smartcase	 "Override the 'ignorecase' option if the search pattern contains uppercase characters
       set ignorecase "Always case-insensitive
       set incsearch	 "Searches for strings incrementally
