@@ -137,6 +137,7 @@
         extraModules = [
           ./profiles/personal.nix
           ./profiles/devops.nix
+          ./hosts/BREEZY.nix
           # ./profiles/pentesting.nix
           # ./modules/home/secrets
         ];
@@ -156,7 +157,7 @@
         username = "icey";
         extraModules = [
           ./profiles/personal.nix
-          ./profiles/fugazi.nix
+          ./hosts/fugazi.nix
         ];
       };
       "icey@sour" = mkHomeConfig {
