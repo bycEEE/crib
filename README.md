@@ -212,7 +212,6 @@ Not sure how to install via Nix so maintaining a manual list here:
 - [BirkhoffLee/dotfiles](https://github.com/BirkhoffLee/dotfiles/tree/master) - zsh configs
 - [prma/willow](https://codeberg.org/prma/willow) - application and zsh configs
 - [SoraTenshi/nixos-config](https://github.com/SoraTenshi/nixos-config) - helix and other applications
-- [eeva/home-manager](https://git.marvid.fr/eeva/home-manager) - home manager generic linux, programs configs
 - [skbolton/nix-dotfiles](https://github.com/skbolton/nix-dotfiles) - hyprland, wsl
 - [misterio/nix-config](https://git.sr.ht/~misterio/nix-config) - hyprland configs
 - [steveej/infra](https://gitlab.com/steveej/infra) - graphical configs, age secrets

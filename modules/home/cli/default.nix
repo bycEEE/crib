@@ -107,6 +107,7 @@ Useful links:
         ov # Feature-rich terminal-based text viewer
         procs # A modern replacement for ps written in Rust
         riffdiff # Riff is a wrapper around diff that highlights which parts of lines have changed.
+        rm-improved # A safe and ergonomic alternative to rm
         sd # Intuitive find & replace CLI (sed alternative)
         silver-searcher # `ag` A code searching tool similar to ack, but faster.
         sshfs # A filesystem client based on the SSH File Transfer Protocol

@@ -22,16 +22,16 @@ in
 
     buildInputs = [rubyEnv.wrappedRuby];
 
+    postPatch = ''
+      substituteInPlace ./snmpwn.rb --replace 'cmd.run!("snmpwalk' 'cmd.run!("${lib.getExe' net-snmp "snmpwalk"}'
+    '';
+
     installPhase = ''
       runHook preBuild
       mkdir -p $out/bin
       cp *.rb $out/bin
       mv $out/bin/snmpwn.rb $out/bin/snmpwn
       runHook postBuild
-    '';
-
-    postPatch = ''
-      substituteInPlace snmpwn.rb --replace '"cmd.run!("snmpwalk"' 'cmd.run!("${lib.getExe' net-snmp "snmpwalk"})'
     '';
 
     meta = with lib; {

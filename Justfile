@@ -34,8 +34,8 @@ repair:
 
 clean:
 	home-manager expire-generations "-1 days"
-	nix-store --gc
-	nix-collect-garbage --delete-older-than 7d
+	nix-collect-garbage --delete-older-than 1d
+	# nix-store --gc
 	# delete everything except current generation
 	# nix-collect-garbage --delete-old
 	# sudo nix-collect-garbage -d
