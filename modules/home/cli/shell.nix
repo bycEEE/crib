@@ -19,7 +19,8 @@ in {
     defaultKeymap = "emacs";
 
     shellAliases = {
-      sudo = "sudo env \"PATH=$PATH\" ";
+      sudo = "sudo ";
+      # sudo = "sudo env \"PATH=$PATH\" ";
       k = "kubectl";
       cat = "bat";
       cp = "cp -i";
