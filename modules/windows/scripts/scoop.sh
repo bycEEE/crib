@@ -35,6 +35,7 @@ apps=(
   "flow-launcher"
   "gpg"
   "gpu-z"
+  "hashcat"
   "hxd"
   "mpc-be"
   "musicbee"

@@ -158,7 +158,7 @@ in {
       bindkey '^[[F' end-of-line                        # end
 
       # Completions
-      zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Case insensitive tab completion
+      zstyle ':completion:*' matcher-list '''' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*' # More forgiving matches
       zstyle ':completion:*' special-dirs true
       zstyle ':completion:*' rehash true
       zstyle ':completion:*' list-colors "''${(s.:.)LS_COLORS}" # Colored completion (different colors for dirs/files/etc)
