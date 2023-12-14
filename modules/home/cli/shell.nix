@@ -204,6 +204,7 @@ in {
           printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"
         }
         precmd_functions+=(keep_current_path)
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/wsl/lib
       ''}
       ${lib.optionalString (pkgs.system == "x86_64-linux" && isVm) ''
         # Not the best place to put this but whatever
