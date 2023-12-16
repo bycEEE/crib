@@ -9,9 +9,10 @@
       act # Run your GitHub Actions locally
       ansible # Radically simple IT automation platform
       awscli2 # Universal Command Line Interface for Amazon Web Services
+      checkov # Static code analysis tool for infrastructure-as-code
       # colima # Container runtimes on macOS (and Linux) with minimal setup
       # ctop # Top-like interface for container metrics
-      # dive # A tool for exploring each layer in a docker image
+      dive # A tool for exploring each layer in a docker image
       # docker
       # docker-compose
       hadolint # A smarter Dockerfile linter that helps you build best practice Docker images
