@@ -39,7 +39,7 @@ apps=(
   # System Monitoring
   "CPUID.HWMonitor"
   "CrystalDewWorld.CrystalDiskMark"
-  "Piriform.Speccy"
+  # "Piriform.Speccy"
 
   # Gaming
   "FlawlessWidescreen.FlawlessWidescreen"
