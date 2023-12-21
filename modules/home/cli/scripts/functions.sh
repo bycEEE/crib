@@ -83,3 +83,8 @@ function precmd() {
 function work_login() {
   aws sso login --profile infra
 }
+
+# Drop cache in WSL
+function drop_cache() {
+  sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
+}
