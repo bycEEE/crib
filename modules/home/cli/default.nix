@@ -151,6 +151,7 @@ Useful links:
         rustscan # A modern replacement for nmap
         sniffnet # Cross-platform application to monitor your network traffic with ease
         trippy # A traceroute visualizer built with Rust and WebAssembly
+        xh # Friendly and fast tool for sending HTTP requests
 
         ### Utilities
         aspellDicts.en # English dictionary for aspell
@@ -162,8 +163,10 @@ Useful links:
         glow # Render markdown on the CLI, with pizzazz!
         graphviz # Graph Visualization Software
         # lazygit # Simple terminal UI for git commands
+        lemmeknow # A tool to identify anything
         lnav # The Log File Navigator
         # magic-wormhole-rs # Rust implementation of Magic Wormhole, with new features and enhancements
+        miniserve # CLI tool to serve files and directories over HTTP
         # nali # A tool to display the location of an IP address
         neofetch # A fast, highly customizable system info script
         noti # Trigger notifications when a process completes
