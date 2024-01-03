@@ -148,6 +148,7 @@ Useful links:
         # nethogs # A small 'net top' tool
         nettools # A collection of useful network tools
         prettyping # A wrapper around the standard ping tool with the objective of making the output prettier, more colorful, more compact, and easier to read
+        rathole # A TCP tunneling tool
         rustscan # A modern replacement for nmap
         sniffnet # Cross-platform application to monitor your network traffic with ease
         trippy # A traceroute visualizer built with Rust and WebAssembly
