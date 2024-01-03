@@ -10,6 +10,7 @@
       updog # Updog is a replacement for Python's SimpleHTTPServer. It allows uploading and downloading via HTTP/S, can set ad hoc SSL certificates and use http basic auth
 
       # Cracking
+      legba # A tool for cracking credentials using brute force
       stegseek # Fast steghide cracker that can be used to extract hidden data from files
 
       # Web
