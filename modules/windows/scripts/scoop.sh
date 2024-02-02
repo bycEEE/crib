@@ -32,7 +32,6 @@ apps=(
   "curl"
   # "czkawka-gui"
   "fiddler"
-  "flow-launcher"
   "gpg"
   "gpu-z"
   "hashcat"
