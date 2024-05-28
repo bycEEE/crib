@@ -11,7 +11,7 @@
 in {
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true; # Disable this if using fzf-tab plugin (maybe not necessary)
+    autosuggestion.enable = true; # Disable this if using fzf-tab plugin (maybe not necessary)
     enableCompletion = true; # Disable this if using zsh-autocomplete plugin
     enableVteIntegration = true;
     dotDir = ".config/zsh";
