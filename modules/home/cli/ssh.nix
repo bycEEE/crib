@@ -14,5 +14,8 @@ in {
     # forwardAgent = true;
     serverAliveInterval = 20;
     serverAliveCountMax = 180;
+    extraConfig = ''
+      PreferredAuthentications publickey,password
+    '';
   };
 }
