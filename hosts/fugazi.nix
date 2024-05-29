@@ -6,6 +6,10 @@
       rlwrap # Readline wrapper: adds readline support to tools that lack it
       rustcat # Netcat alternative written in Rust
 
+      # OSINT
+      maigret #  Collect a dossier on a person by username from thousands of sites
+      sherlock # Find usernames across social networks
+
       # Servers
       updog # Updog is a replacement for Python's SimpleHTTPServer. It allows uploading and downloading via HTTP/S, can set ad hoc SSL certificates and use http basic auth
 
