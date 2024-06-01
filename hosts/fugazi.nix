@@ -16,6 +16,7 @@
       # Cracking
       legba # A tool for cracking credentials using brute force
       stegseek # Fast steghide cracker that can be used to extract hidden data from files
+      firefox_decrypt # Decrypt user data from Firefox profile directory
 
       # Web
       subfinder # Subdomain discovery tool
