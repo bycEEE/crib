@@ -37,6 +37,7 @@
 
       # Utility
       nmap-formatter # A tool that allows you to convert NMAP results to html, csv, json, markdown, graphviz (dot) or sqlite. Simply put it's nmap converter.
+      himalaya # Command-line interface for email management
     ];
   };
 }
