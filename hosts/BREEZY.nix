@@ -6,7 +6,7 @@
       # hashcat # Fast password cracker
 
       # OSINT
-      maigret # Collect a dossier on a person by username from thousands of sites
+      # maigret # Collect a dossier on a person by username from thousands of sites
       sherlock # Find usernames across social networks
     ];
   };

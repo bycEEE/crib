@@ -7,7 +7,7 @@
       rustcat # Netcat alternative written in Rust
 
       # OSINT
-      maigret # Collect a dossier on a person by username from thousands of sites
+      # maigret # Collect a dossier on a person by username from thousands of sites
       sherlock # Find usernames across social networks
 
       # Servers
