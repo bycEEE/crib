@@ -62,6 +62,7 @@ apps=(
   "StartIsBack.StartAllBack"
   "SyncTrayzor.SyncTrayzor"
   "WinDirStat.WinDirStat"
+  "WerWolv.ImHex"
 
   # Misc
   "Gyan.FFmpeg"
