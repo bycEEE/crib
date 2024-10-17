@@ -208,7 +208,7 @@ Useful links:
         # openssh
         psmisc # A set of tools that use the proc filesystem
         showmethekey # A tool to show the keybindings of your terminal
-        traceroute # A tool for tracing the route of IP packets
+        # traceroute # A tool for tracing the route of IP packets
       ])
       ++ (lib.lists.optionals (pkgs.system == "aarch64-darwin" || pkgs.system == "x86_64-darwin") [
         asitop # Performance monitoring CLI tool for Apple Silicon
