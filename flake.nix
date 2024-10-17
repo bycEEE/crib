@@ -115,7 +115,7 @@
         extraModules = [
           ./profiles/personal.nix
           ./profiles/devops.nix
-          ./profiles/pentesting.nix
+          # ./profiles/pentesting.nix
           ./modules/home/darwin
           # ./modules/home/secrets
         ];
