@@ -181,7 +181,7 @@ Useful links:
         zk # A plain text note-taking assistant for managing your Zettelkasten
 
         ### Security
-        _1password # 1Password CLI
+        _1password-cli # 1Password CLI
         age # Modern encryption tool with small explicit keys
         git-secrets # Prevents you from committing secrets and credentials into git repositories
         sops # Editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats and encrypts with AWS KMS, GCP KMS, Azure Key Vault and PGP
