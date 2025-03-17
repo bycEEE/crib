@@ -26,8 +26,8 @@
       # terraform-docs # A utility to generate documentation from Terraform modules in various output formats
       # terraformer # CLI tool to generate terraform files from existing infrastructure (reverse Terraform)
       tflint # A Terraform linter focused on possible errors, best practices, etc
-      vault
-      vcluster # Create fully functional virtual kubernetes clusters
+      vault # A tool for managing secrets and protecting sensitive data
+      # vcluster # Create fully functional virtual kubernetes clusters
 
       # Cloud
       # aws-iam-authenticator # A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
