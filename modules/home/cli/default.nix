@@ -179,6 +179,7 @@ Useful links:
         # translate-shell # Command-line translator using Google Translate, Bing Translator, Yandex.Translate, etc
         # zeal # Offline documentation browser inspired by Dash
         zk # A plain text note-taking assistant for managing your Zettelkasten
+        yt-dlp # A youtube-dl fork with additional features and fixes
 
         ### Security
         _1password-cli # 1Password CLI
