@@ -52,6 +52,24 @@ Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended 
   wsl -s Ubuntu # Make default distribution
   ```
 
+- Configure `%USERPROFILE%\.wslconfig` to take advantage of [mirrored mode monitoring](https://learn.microsoft.com/en-us/windows/wsl/networking#mirrored-mode-networking):
+
+  ```toml
+  [wsl2]
+  memory=24GB
+  networkingMode=mirrored
+
+  [experimental]
+  sparseVhd=true
+  ```
+
+- Verify WSL networking mode:
+
+  ```sh
+  ❯ wslinfo --networking-mode
+  nat
+  ```
+
 - Install Nix and Home Manager:
 
   ```sh
