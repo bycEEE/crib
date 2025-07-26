@@ -67,7 +67,7 @@ Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended 
 
   ```sh
   ❯ wslinfo --networking-mode
-  nat
+  mirrored
   ```
 
 - Install Nix and Home Manager:
