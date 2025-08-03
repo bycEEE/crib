@@ -22,7 +22,7 @@
       # nomad
       # podman # A program for managing pods, containers and container images
       # skopeo # Inspect container images and repositories on registries
-      # terraform
+      terraform
       # terraform-docs # A utility to generate documentation from Terraform modules in various output formats
       # terraformer # CLI tool to generate terraform files from existing infrastructure (reverse Terraform)
       tflint # A Terraform linter focused on possible errors, best practices, etc
