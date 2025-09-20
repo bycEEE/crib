@@ -12,8 +12,12 @@ in {
   programs.ssh = {
     enable = true;
     # forwardAgent = true;
-    serverAliveInterval = 20;
-    serverAliveCountMax = 180;
+    matchBlocks = {
+      "*" = {
+        serverAliveCountMax = 180;
+        serverAliveInterval = 20;
+      };
+    };
     extraConfig = ''
       PreferredAuthentications publickey,password
     '';

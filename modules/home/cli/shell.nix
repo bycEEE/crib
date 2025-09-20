@@ -14,7 +14,7 @@ in {
     autosuggestion.enable = true; # Disable this if using fzf-tab plugin (maybe not necessary)
     enableCompletion = true; # Disable this if using zsh-autocomplete plugin
     enableVteIntegration = true;
-    dotDir = ".config/zsh";
+    dotDir = "${config.xdg.configHome}/zsh";
     autocd = false;
     defaultKeymap = "emacs";
 

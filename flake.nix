@@ -73,7 +73,7 @@
       isWsl ? false,
       isVm ? false,
       baseModules ? [
-        nix-index-database.hmModules.nix-index
+        nix-index-database.homeModules.nix-index
         # nur.hmModules.nur
         # TODO: might need this
         # home-manager.darwinModules.home-manager
