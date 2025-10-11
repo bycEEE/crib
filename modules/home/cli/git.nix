@@ -66,7 +66,9 @@
 
     difftastic = {
       enable = false;
-      display = "inline";
+      options = {
+        display = "inline";
+      };
     };
   };
 
