@@ -101,7 +101,7 @@ Useful links:
         hyperfine # A command-line benchmarking tool
         # jql # A JSON query language tool built with Rust
         mmv # Move/Copy/Append/Link multiple files according to a set of wildcard patterns
-        moar # Pager designed to just do the right thing without any configuration
+        moor # Pager designed to just do the right thing without any configuration
         ncdu # NCurses Disk Usage
         ncurses # A free software emulation of curses
         ov # Feature-rich terminal-based text viewer
@@ -224,8 +224,8 @@ Useful links:
     sessionVariables = {
       EDITOR = "hx";
       VISUAL = "hx";
-      PAGER = "moar";
-      MOAR = "--style=catppuccin-macchiato";
+      PAGER = "moor";
+      MOOR = "--style=catppuccin-macchiato";
       # NODE_PATH = "${NODE_GLOBAL}/lib";
       # JAVA_HOME = "${pkgs.jdk11}";
       # PNPM_HOME = "${PNPM_DIR}";

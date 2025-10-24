@@ -193,7 +193,7 @@ in {
       zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
 
       # # show file preview
-      # zstyle ':fzf-tab:complete:*:*' fzf-preview 'moar ''${(Q)realpath}'
+      # zstyle ':fzf-tab:complete:*:*' fzf-preview 'moor ''${(Q)realpath}'
 
       ## environment variable
       zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-preview 'echo ''${(P)word}'
