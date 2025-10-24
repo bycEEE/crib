@@ -6,6 +6,15 @@
 }: {
   programs.git = {
     enable = true;
+    settings = {
+      aliases = {
+        ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi";
+        #   fix = "commit --amend --no-edit";
+        #   oops = "reset HEAD~1";
+        sub = "submodule update --init --recursive";
+      };
+    };
+
     extraConfig = {
       # credential.helper =
       #   if pkgs.stdenvNoCC.isDarwin
@@ -55,13 +64,6 @@
       };
       interactive.diffFilter = lib.getExe pkgs.riffdiff;
       http.sslVerify = true;
-    };
-
-    aliases = {
-      ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi";
-      #   fix = "commit --amend --no-edit";
-      #   oops = "reset HEAD~1";
-      sub = "submodule update --init --recursive";
     };
 
     difftastic = {
