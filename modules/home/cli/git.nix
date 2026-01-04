@@ -7,15 +7,6 @@
   programs.git = {
     enable = true;
     settings = {
-      aliases = {
-        ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi";
-        #   fix = "commit --amend --no-edit";
-        #   oops = "reset HEAD~1";
-        sub = "submodule update --init --recursive";
-      };
-    };
-
-    extraConfig = {
       # credential.helper =
       #   if pkgs.stdenvNoCC.isDarwin
       #   then "osxkeychain"
@@ -29,7 +20,7 @@
       gpg.format = "ssh";
       "gpg \"ssh\"".program =
         if isWsl
-        then "/mnt/c/Users/bycEE/AppData/Local/1Password/app/8/op-ssh-sign.exe"
+        then "/mnt/c/Users/bycEE/AppData/Local/Microsoft/WindowsApps/op-ssh-sign.exe"
         else if pkgs.stdenvNoCC.isDarwin
         then "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
         else "ssh-keygen";
@@ -64,6 +55,13 @@
       };
       interactive.diffFilter = lib.getExe pkgs.riffdiff;
       http.sslVerify = true;
+    };
+
+    aliases = {
+      ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi";
+      #   fix = "commit --amend --no-edit";
+      #   oops = "reset HEAD~1";
+      sub = "submodule update --init --recursive";
     };
 
     difftastic = {
