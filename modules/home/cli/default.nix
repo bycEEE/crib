@@ -139,7 +139,7 @@ Useful links:
         ### Network
         # bore-cli # Rust tool to create TCP tunnels
         # curlie # The power of curl, the ease of use of httpie
-        dogdns # A command-line DNS client
+        doggo # A command-line DNS client
         dnspeep # A network debugging tool for DNS
         httpie # A Modern command line HTTP client
         iftop # Display bandwidth usage on an interface
