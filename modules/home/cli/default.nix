@@ -95,7 +95,7 @@ Useful links:
         # chroma # A general purpose syntax highlighter in pure Go
         duf # Disk Usage/Free Utility - a better 'df' alternative
         choose # A human-friendly and fast alternative to cut and (sometimes) awk
-        du-dust # A more intuitive version of du in rust
+        dust # A more intuitive version of du in rust
         fd # A simple, fast and user-friendly alternative to find.
         fx # Terminal JSON viewer
         hyperfine # A command-line benchmarking tool
