@@ -36,6 +36,7 @@ Useful links:
     ./shell.nix
     ./starship.nix
     ./tealdeer.nix
+    ./uv.nix
     ./vim.nix
     ./zellij.nix
   ];
@@ -135,6 +136,7 @@ Useful links:
         # sqlite
         # tokei # A program that displays statistics about your code
         # trunk-io # Developer experience toolkit used to check, test, merge, and monitor code
+        uv # Python package and project manager, written in Rust
 
         ### Network
         # bore-cli # Rust tool to create TCP tunnels
