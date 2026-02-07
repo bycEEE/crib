@@ -114,10 +114,10 @@ in {
       # fix formatting
       export LC_ALL=en_US.UTF-8
     '';
-    # initExtraBeforeCompInit = ''
+    # initContentBeforeCompInit = ''
     #   fpath+=(${config.home.profileDirectory}/share/bash-completion/completions)
     # '';
-    initExtra = ''
+    initContent = ''
       # Nix
       if [[ -e "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh" ]]; then
         . "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh"
@@ -228,7 +228,7 @@ in {
   #   enable = true;
   #   enableCompletion = true;
   #   #   # shellAliases = aliases;
-  #   #   initExtra = ''
+  #   #   initContent = ''
   #   #     ${init}
   #   #     ${functions}
   #   #   '';
