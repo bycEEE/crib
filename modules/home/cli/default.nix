@@ -117,6 +117,7 @@ Useful links:
         vivid # A themeable LS_COLORS generator with a rich filetype datebase
         viu # A command-line application to view images from the terminal written in Rust
         # watchman # A file watching service
+        witr # Why is this running
         yq
 
         ### Development
