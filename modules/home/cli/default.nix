@@ -162,6 +162,7 @@ Useful links:
         clipboard-jh # Cut, copy, and paste anything, anywhere, all from the terminal
         croc # Easily and securely send things from one computer to another
         eget # Easily install prebuilt binaries from GitHub
+        fastfetch # A fast, highly customizable system info script
         # gdu # Disk usage analyzer with console interface written in Go (clashes with git alias)
         # gitui # Blazing fast terminal-ui for git written in rust
         glow # Render markdown on the CLI, with pizzazz!
@@ -172,7 +173,6 @@ Useful links:
         # magic-wormhole-rs # Rust implementation of Magic Wormhole, with new features and enhancements
         miniserve # CLI tool to serve files and directories over HTTP
         # nali # A tool to display the location of an IP address
-        neofetch # A fast, highly customizable system info script
         noti # Trigger notifications when a process completes
         ouch # A command-line utility for easily compressing and decompressing files and directories
         pueue # A daemon for managing long running shell commands
