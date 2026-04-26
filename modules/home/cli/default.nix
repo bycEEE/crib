@@ -220,7 +220,6 @@ Useful links:
       ])
       ++ (lib.lists.optionals isWsl) [
         socat # Utility for bidirectional data transfer between two independent data channels, for 1Password SSH agent
-        wslu # Windows Subsystem for Linux utilities
         wsl-open # Open files in Windows from WSL
       ];
 
