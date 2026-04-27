@@ -74,7 +74,7 @@ Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended 
 
   ```sh
   # Determinate Systems Nix Installer
-  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root $USER"
+  curl -fsSL https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root $USER"
 
   # Create directory
   mkdir -p ~/crib
@@ -140,7 +140,7 @@ Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended 
 
   ```sh
   # Determinate Systems Nix Installer
-  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root bchoy brian.choy icey"
+  curl -fsSL https://install.determinate.systems/nix | sh -s -- install --extra-conf "trusted-users = root $USER"
 
   git clone git@github.com:bycEEE/crib.git ~/crib
   just build
