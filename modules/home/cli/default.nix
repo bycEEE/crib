@@ -215,8 +215,8 @@ Useful links:
         # traceroute # A tool for tracing the route of IP packets
       ])
       ++ (lib.lists.optionals (pkgs.system == "aarch64-darwin" || pkgs.system == "x86_64-darwin") [
-        asitop # Performance monitoring CLI tool for Apple Silicon
         dockutil # Command line tool for managing dock items
+        macpm # Performance monitoring CLI tool for Apple Silicon
       ])
       ++ (lib.lists.optionals isWsl) [
         socat # Utility for bidirectional data transfer between two independent data channels, for 1Password SSH agent
