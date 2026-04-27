@@ -120,9 +120,9 @@
           # ./modules/home/secrets
         ];
       };
-      "brianchoy@Brians-MacBook-Pro-Work" = mkHomeConfig {
+      "brianchoy@Brian-Choy-MacBook-Pro" = mkHomeConfig {
         system = "aarch64-darwin";
-        username = "brian.choy";
+        username = "brianchoy";
         extraModules = [
           ./profiles/work.nix
           ./profiles/devops.nix
