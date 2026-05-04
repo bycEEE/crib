@@ -21,6 +21,7 @@
       # levant # An open source templating and deployment tool for HashiCorp Nomad jobs
       # nomad
       # podman # A program for managing pods, containers and container images
+      pulumi # Cloud development platform that makes creating cloud programs easy and productive
       # skopeo # Inspect container images and repositories on registries
       terraform
       # terraform-docs # A utility to generate documentation from Terraform modules in various output formats
