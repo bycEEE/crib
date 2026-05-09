@@ -117,7 +117,19 @@ in {
     # initContentBeforeCompInit = ''
     #   fpath+=(${config.home.profileDirectory}/share/bash-completion/completions)
     # '';
-    initContent = ''
+    initContent = lib.mkMerge [
+      (lib.mkAfter ''
+        # Re-register zsh-autosuggestions' apply hook so it runs last in the
+        # zle-line-pre-redraw chain. Injected via mkAfter (order 1500) so it
+        # runs after atuin, zsh-history-substring-search, and every other
+        # plugin that registers its own pre-redraw hook — otherwise their
+        # hooks (especially fast-syntax-highlighting's) rebuild region_highlight
+        # and drop the suggestion entry, leaving the text un-styled (white).
+        autoload -Uz add-zle-hook-widget
+        add-zle-hook-widget -d zle-line-pre-redraw _zsh_autosuggest_highlight_apply
+        add-zle-hook-widget zle-line-pre-redraw _zsh_autosuggest_highlight_apply
+      '')
+      ''
       # Nix
       if [[ -e "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh" ]]; then
         . "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh"
@@ -217,7 +229,8 @@ in {
         # Make short pressed Ctrl behave like Escape
         xcape -e 'Control_L=Escape'
       ''}
-    '';
+    ''
+    ];
 
     # profileExtra = ''
     #   ${lib.optionalString pkgs.stdenvNoCC.isLinux "[[ -e /etc/profile ]] && source /etc/profile"}
