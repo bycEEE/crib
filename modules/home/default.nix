@@ -6,7 +6,7 @@ Useful links:
 - Appendix A. Configuration Options: https://nix-community.gitlab.io/home-manager/options.html
 */
 {
-  home.stateVersion = "23.05";
+  home.stateVersion = "26.05";
   # home.activation = lib.mkIf isWsl {
   #   linkDesktopApplications = {
   #     after = ["writeBoundary" "createXdgUserDirectories"];
