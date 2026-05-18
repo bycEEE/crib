@@ -8,7 +8,7 @@
     enable = true;
     # forwardAgent = true;
     enableDefaultConfig = false;
-    matchBlocks = {
+    settings = {
       "*" = {
         serverAliveCountMax = 180;
         serverAliveInterval = 20;
