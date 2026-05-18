@@ -25,17 +25,17 @@ with lib; {
 
       colors = {
         focused = {
-          background = "#${config.colorscheme.colors.base07}";
-          border = "#${config.colorscheme.colors.base07}";
-          childBorder = "#${config.colorscheme.colors.base07}";
-          indicator = "#${config.colorscheme.colors.base07}";
+          background = "#${config.colorscheme.palette.base07}";
+          border = "#${config.colorscheme.palette.base07}";
+          childBorder = "#${config.colorscheme.palette.base07}";
+          indicator = "#${config.colorscheme.palette.base07}";
           text = "#ffffff";
         };
         unfocused = {
-          background = "#${config.colorscheme.colors.base02}";
-          border = "#${config.colorscheme.colors.base02}";
-          childBorder = "#${config.colorscheme.colors.base02}";
-          indicator = "#${config.colorscheme.colors.base02}";
+          background = "#${config.colorscheme.palette.base02}";
+          border = "#${config.colorscheme.palette.base02}";
+          childBorder = "#${config.colorscheme.palette.base02}";
+          indicator = "#${config.colorscheme.palette.base02}";
           text = "#ffffff";
         };
       };
