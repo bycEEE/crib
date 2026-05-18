@@ -201,7 +201,7 @@ Useful links:
         # inherit (inputs'.agenix.packages) agenix;
         # inherit (inputs'.statix.packages) statix;
       ]
-      ++ (lib.lists.optionals (pkgs.system == "x86_64-linux") [
+      ++ (lib.lists.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
         # https://github.com/NixOS/nixpkgs/issues/222991
         # _1password-gui
         hollywood # A cli tool that turns your terminal into a Hollywood technical melodrama
@@ -214,7 +214,7 @@ Useful links:
         showmethekey # A tool to show the keybindings of your terminal
         # traceroute # A tool for tracing the route of IP packets
       ])
-      ++ (lib.lists.optionals (pkgs.system == "aarch64-darwin" || pkgs.system == "x86_64-darwin") [
+      ++ (lib.lists.optionals (pkgs.stdenv.hostPlatform.system == "aarch64-darwin" || pkgs.stdenv.hostPlatform.system == "x86_64-darwin") [
         dockutil # Command line tool for managing dock items
         macpm # Performance monitoring CLI tool for Apple Silicon
       ])
