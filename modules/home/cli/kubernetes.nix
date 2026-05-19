@@ -10,6 +10,7 @@
     kind # Kubernetes IN Docker - local clusters for testing Kubernetes
     # kompose # Tool to move from docker-compose to Kubernetes
     kubectl
+    kubectl-neat # Clean up Kubernetes yaml and json output to make it readable
     kubectx # Switch faster between clusters and namespaces in kubectl
     kubent # Easily check your clusters for use of deprecated APIs
     (wrapHelm kubernetes-helm {
@@ -19,6 +20,7 @@
       ];
     })
     kustomize
+    rakkess # kubectl plugin to show an access matrix for server resources
     # skaffold # Easy and Repeatable Kubernetes Development
     stern # Multi pod and container log tailing for Kubernetes
     # tanka # Flexible, reusable and concise configuration for Kubernetes
