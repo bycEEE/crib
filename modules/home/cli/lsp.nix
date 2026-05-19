@@ -10,9 +10,11 @@
     gopls # Go
     nil # Nix
     bash-language-server # Bash
-    # typescript-language-server # Typescript
+    lua-language-server # Lua
+    pyright # Python
+    terraform-ls # Terraform
+    typescript-language-server # Typescript
     yaml-language-server # YAML / JSON
-    python313Packages.python-lsp-server # Python
     # rnix-lsp # Nix
   ];
 }
