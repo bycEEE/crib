@@ -17,6 +17,7 @@ Useful links:
     ./atuin.nix
     ./bat.nix
     ./bottom.nix
+    ./bun.nix
     # ./carapace.nix
     ./direnv.nix
     ./eza.nix
