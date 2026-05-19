@@ -63,6 +63,8 @@
       interactive.diffFilter = lib.getExe pkgs.riffdiff;
       http.sslVerify = true;
 
+      url."git@github.com:".insteadOf = "https://github.com/";
+
       aliases = {
         ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi";
         #   fix = "commit --amend --no-edit";
