@@ -5,4 +5,6 @@
       telemetry = false;
     };
   };
+
+  home.sessionPath = ["$HOME/.bun/bin"];
 }
