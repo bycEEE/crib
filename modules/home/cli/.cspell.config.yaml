@@ -14,7 +14,7 @@ dictionaries:
   - "data-science"
   - "docker"
   - "dotnet"
-  - "en-slang"
+  # - "en-slang"
   - "filetypes"
   - "fullstack"
   - "gaming-terms"
