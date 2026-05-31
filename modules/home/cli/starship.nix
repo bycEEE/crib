@@ -83,8 +83,10 @@
         style = "green";
       };
 
-      # [git_state]
-      # format = '\[[\($state( $progress_current of $progress_total)\)]($style)\]'
+      git_state = {
+        format = "[\($state( $progress_current of $progress_total)\)]($style)";
+        disabled = false;
+      };
 
       git_status = {
         ahead = "↑";
@@ -150,6 +152,11 @@
       package = {
         format = "[$symbol$version]($style) ";
         disabled = true;
+      };
+
+      pulumi = {
+        format = "[$symbol($username@)$stack]($style) ";
+        disabled = false;
       };
 
       python = {
