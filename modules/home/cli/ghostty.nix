@@ -2,6 +2,7 @@
   programs.ghostty = {
     enable = true;
     package = null;
+    systemd.enable = false;
     settings = {
       auto-update = "check";
       auto-update-channel = "stable";
@@ -18,7 +19,7 @@
       unfocused-split-opacity = 0.5;
 
       working-directory = "inherit";
-      scrollback-limit = 50000000; # In bytes, not lines
+      scrollback-limit = 10000000; # In bytes, not lines
       bell-features = "system,audio,attention,title";
       copy-on-select = "clipboard";
       window-colorspace = "display-p3";
