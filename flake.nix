@@ -33,6 +33,7 @@
     # mystash.flake = false;
     nix-colors.url = "github:misterio77/nix-colors";
     # homeage.url = "github:jordanisaacs/homeage";
+    catppuccin.url = "github:catppuccin/nix";
 
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     # darwin.inputs.nixpkgs.follows = "nixpkgs";
@@ -51,6 +52,7 @@
     nix-colors,
     # nixgl,
     # nur,
+    catppuccin,
     ...
   } @ inputs: let
     isDarwin = system: (builtins.elem system inputs.nixpkgs.lib.platforms.darwin);
@@ -82,6 +84,7 @@
         ./modules/home/fonts
         ./modules/home/cli
         ./modules/home/apps
+        catppuccin.homeModules.catppuccin
         {
           home = {
             inherit username;

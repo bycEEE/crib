@@ -28,4 +28,5 @@ in {
     ];
     historyWidgetOptions = [];
   };
+  catppuccin.fzf.enable = true;
 }

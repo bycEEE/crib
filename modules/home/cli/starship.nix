@@ -6,36 +6,6 @@
   programs.starship = {
     enable = true;
     settings = {
-      palette = "catppuccin_macchiato";
-      palettes.catppuccin_macchiato = {
-        rosewater = "#${config.colorscheme.palette.base06}";
-        flamingo = "#${config.colorscheme.palette.base0F}";
-        pink = "#f6c2e7";
-        mauve = "#${config.colorscheme.palette.base0E}";
-        red = "#${config.colorscheme.palette.base08}";
-        maroon = "#eba0ac";
-        peach = "#${config.colorscheme.palette.base09}";
-        yellow = "#${config.colorscheme.palette.base0A}";
-        green = "#${config.colorscheme.palette.base0B}";
-        teal = "#${config.colorscheme.palette.base0C}";
-        sky = "#89dceb";
-        sapphire = "#74c7ec";
-        blue = "#${config.colorscheme.palette.base0D}";
-        lavender = "#${config.colorscheme.palette.base07}";
-        text = "#${config.colorscheme.palette.base05}";
-        subtext1 = "#bac2de";
-        subtext0 = "#a6adc8";
-        overlay2 = "#9399b2";
-        overlay1 = "#7f849c";
-        overlay0 = "#6c7086";
-        surface2 = "#${config.colorscheme.palette.base04}";
-        surface1 = "#${config.colorscheme.palette.base03}";
-        surface0 = "#${config.colorscheme.palette.base02}";
-        base = "#${config.colorscheme.palette.base00}";
-        mantle = "#${config.colorscheme.palette.base01}";
-        crust = "#11111b";
-      };
-
       format = lib.concatStrings [
         "$directory"
         "$username"
@@ -204,4 +174,5 @@
       };
     };
   };
+  catppuccin.starship.enable = true;
 }

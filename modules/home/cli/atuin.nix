@@ -19,4 +19,5 @@
       show_preview = true;
     };
   };
+  catppuccin.atuin.enable = true;
 }

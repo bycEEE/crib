@@ -258,5 +258,13 @@ Useful links:
     zoxide.enable = true;
   };
 
+  catppuccin = {
+    enable = true;
+    autoEnable = false;
+    flavor = "macchiato";
+
+    broot.enable = true;
+    btop.enable = true;
+  };
   systemd.user.startServices = "sd-switch";
 }
