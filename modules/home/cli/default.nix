@@ -19,6 +19,7 @@ Useful links:
     ./bottom.nix
     ./bun.nix
     # ./carapace.nix
+    ./cspell.nix
     ./direnv.nix
     ./eza.nix
     ./fzf.nix
