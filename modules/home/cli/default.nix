@@ -22,6 +22,7 @@ Useful links:
     ./direnv.nix
     ./eza.nix
     ./fzf.nix
+    ./ghostty.nix
     ./git.nix
     ./helix.nix
     ./htop.nix
