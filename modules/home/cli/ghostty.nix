@@ -9,23 +9,25 @@
       macos-icon = "holographic";
 
       theme = "Catppuccin Macchiato";
-      font-family = "Hack Nerd Font Mono";
+      font-family = "MonaspiceNe Nerd Font Mono";
+      font-feature = "liga,calt";
       font-size = 13.5;
       font-thicken = true;
-      font-thicken-strength = 128;
+      font-thicken-strength = 120;
       macos-titlebar-style = "tabs";
+      unfocused-split-opacity = 0.5;
       window-padding-x = 10;
       window-padding-y = 10;
-      unfocused-split-opacity = 0.5;
 
-      working-directory = "inherit";
-      scrollback-limit = 10000000; # In bytes, not lines
       bell-features = "system,audio,attention,title";
       copy-on-select = "clipboard";
+      mouse-shift-capture = true;
+      selection-word-chars = "\t'\"│`|:;,()[]{}<>$";
+      scrollback-limit = 10000000; # In bytes, not lines
       window-colorspace = "display-p3";
       window-save-state = "always";
       window-new-tab-position = "end";
-      mouse-shift-capture = true;
+      working-directory = "inherit";
     };
   };
 }
