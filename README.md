@@ -11,7 +11,10 @@
 
 ## Status
 
-Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended for personal use only since I have no clue what I'm doing. Currently based on [kclejeune/system](https://github.com/kclejeune/system) and pieces slammed together from [inspirations](#inspirations).
+Personal project for managing home environments across my Windows, WSL2, and MacOS
+setups. This repo is intended for personal use only since I am still learning Nix.
+Most of this project is based on [kclejeune/system](https://github.com/kclejeune/system)
+with pieces slammed together from [inspirations](#inspirations).
 
 ## Features
 
@@ -33,7 +36,7 @@ Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended 
 
 - Configure basic MacOS default preferences (WIP).
 - [homebrew](https://brew.sh/) package management without NixOS.
-- Bootleggedly manages application configuration for non nixpkgs applications such as iTerm2 and Karabiner.
+- Manages application configuration for non-nixpkgs applications such as iTerm2 and Karabiner.
 
 ## Installation
 
@@ -153,29 +156,6 @@ Currently learning Nix, NixOS, Home Manager, Flakes, etc. This repo is intended 
   chsh -s "$HOME/.nix-profile/bin/zsh"
   ```
 
-## Install krew plugins
-
-Not sure how to install via Nix so maintaining a manual list here:
-
-- [rakkess](https://github.com/corneliusweig/rakkess): Review Access - kubectl plugin to show an access matrix for server resources
-  `kubectl krew install access-matrix`.
-- [neat](https://github.com/itaysk/kubectl-neat): Remove clutter from Kubernetes manifests to make them more readable.
-  `kubectl krew install neat`
-- [ksniff](https://github.com/eldadru/ksniff): A kubectl plugin that utilize tcpdump and Wireshark to start a remote capture on any pod in your Kubernetes cluster.
-  `kubectl krew install sniff`
-<!-- - [kubectl-df-pv](https://github.com/yashbhutwala/kubectl-df-pv): A kubectl plugin to see df for persistent volumes.
-  `curl https://krew.sh/df-pv | zsh` -->
-- [outdated](https://github.com/replicatedhq/outdated): kubectl outdated is a kubectl plugin that displays all out-of-date images running in a Kubernetes cluster.
-  `kubectl krew install outdated`
-- [kubectl-kubesec](https://github.com/controlplaneio/kubectl-kubesec): This is a kubectl plugin for scanning Kubernetes pods, deployments, daemonsets and statefulsets with kubesec.io.
-  `kubectl krew install kubesec-scan`
-- [kubectl-node-shell](https://github.com/kvaps/kubectl-node-shell): Start a root shell in the node's host OS running. Uses an alpine pod with nsenter for Linux nodes and a HostProcess pod with PowerShell for Windows nodes.
-
-  ```sh
-  kubectl krew index add kvaps https://github.com/kvaps/krew-index
-  kubectl krew install kvaps/node-shell
-  ```
-
 ## Resources
 
 ### Learning Nix
@@ -245,7 +225,6 @@ Not sure how to install via Nix so maintaining a manual list here:
 - Add atuin and croc relay.
 - Maybe use sops instead of agenix.
 - Maybe use 1password to generate credentials such as on awscli2.
-- Add bandwhich tool for windows.
 - Add pentesting tools that exist in `default.nix` in `pentesting.nix` as well.
 - Separate out tools into separate folders and consolidate redundant `home/default.nix`.
 - Fix broken `agenix` secrets.
