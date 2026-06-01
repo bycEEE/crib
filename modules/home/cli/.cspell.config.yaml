@@ -65,6 +65,7 @@ words:
   - "fastapi"
   - "feroxbuster"
   - "ffuf"
+  - "ghostty"
   - "girsh"
   - "grabbable"
   - "hashcat"
