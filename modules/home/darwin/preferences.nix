@@ -11,6 +11,7 @@
     defaults = {
       NSGlobalDomain = {
         AppleShowAllExtensions = true; # Show all file extensions inside the Finder (killall Finder)
+        AppleShowAllFiles = true; # Show hidden files inside the Finder (killall Finder)
         NSAutomaticCapitalizationEnabled = false; # Disable automatic capitalization
         NSAutomaticDashSubstitutionEnabled = false; # Disable smart dashes
         NSAutomaticPeriodSubstitutionEnabled = false; # Disable period with double space
