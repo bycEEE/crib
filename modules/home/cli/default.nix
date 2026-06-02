@@ -269,6 +269,7 @@ Useful links:
     enable = true;
     autoEnable = false;
     flavor = "macchiato";
+    accent = "rosewater";
 
     broot.enable = true;
     btop.enable = true;
