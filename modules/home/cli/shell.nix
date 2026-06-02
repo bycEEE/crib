@@ -130,106 +130,106 @@ in {
         add-zle-hook-widget zle-line-pre-redraw _zsh_autosuggest_highlight_apply
       '')
       ''
-      # Nix
-      if [[ -e "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh" ]]; then
-        . "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh"
-      fi
+        # Nix
+        if [[ -e "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh" ]]; then
+          . "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh"
+        fi
 
-      . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+        . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 
-      # Homebrew
-      [[ -d /opt/homebrew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+        # Homebrew
+        [[ -d /opt/homebrew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-      # Extra paths
-      export PATH="$HOME/.local/bin:$PATH"
+        # Extra paths
+        export PATH="$HOME/.local/bin:$PATH"
 
-      setopt auto_list            # Automatically list choices on an ambiguous completion
-      setopt always_to_end        # Move cursor to end of line after accepting completion
-      setopt interactive_comments # Allow comments starting with # in the shell
-      setopt long_list_jobs       # Display PID when using jobs
-      setopt no_hist_expand       # Do not expand history in line editor
-      setopt globdots             # Show hidden files when globbing
+        setopt auto_list            # Automatically list choices on an ambiguous completion
+        setopt always_to_end        # Move cursor to end of line after accepting completion
+        setopt interactive_comments # Allow comments starting with # in the shell
+        setopt long_list_jobs       # Display PID when using jobs
+        setopt no_hist_expand       # Do not expand history in line editor
+        setopt globdots             # Show hidden files when globbing
 
-      # Disable highlighting on paste
-      zle_highlight+=(paste:none)
+        # Disable highlighting on paste
+        zle_highlight+=(paste:none)
 
-      # Compatibility bash completion
-      # autoload -U bashcompinit && bashcompinit
+        # Compatibility bash completion
+        # autoload -U bashcompinit && bashcompinit
 
-      # Set key bindings
-      ## showmethekey to see what key is pressed
-      bindkey "\e[27;2;13~" accept-line                 # shift + enter
-      bindkey "\e[27;5;13~" accept-line                 # ctrl + enter
-      bindkey "^[[1;5D" backward-word                   # ctrl + left
-      bindkey "^[[1;5C" forward-word                    # ctrl + right
-      bindkey "^[[1;3D" beginning-of-line               # alt + left
-      bindkey "^[[1;3C" end-of-line                     # alt + right
-      bindkey "^H" backward-kill-word                   # ctrl + backspace
+        # Set key bindings
+        ## showmethekey to see what key is pressed
+        bindkey "\e[27;2;13~" accept-line                 # shift + enter
+        bindkey "\e[27;5;13~" accept-line                 # ctrl + enter
+        bindkey "^[[1;5D" backward-word                   # ctrl + left
+        bindkey "^[[1;5C" forward-word                    # ctrl + right
+        bindkey "^[[1;3D" beginning-of-line               # alt + left
+        bindkey "^[[1;3C" end-of-line                     # alt + right
+        bindkey "^H" backward-kill-word                   # ctrl + backspace
 
-      ## on a keyboard that has these keys
-      bindkey '^[[5~' beginning-of-buffer-or-history    # page up
-      bindkey '^[[6~' end-of-buffer-or-history          # page down
-      bindkey '^[[H' beginning-of-line                  # home
-      bindkey '^[[F' end-of-line                        # end
+        ## on a keyboard that has these keys
+        bindkey '^[[5~' beginning-of-buffer-or-history    # page up
+        bindkey '^[[6~' end-of-buffer-or-history          # page down
+        bindkey '^[[H' beginning-of-line                  # home
+        bindkey '^[[F' end-of-line                        # end
 
-      # Completions
-      zstyle ':completion:*' matcher-list ''' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*' # More forgiving matches
-      zstyle ':completion:*' special-dirs true
-      zstyle ':completion:*' rehash true
-      zstyle ':completion:*' list-colors "''${(s.:.)LS_COLORS}" # Colored completion (different colors for dirs/files/etc)
-      zstyle ':completion:*' menu select                        # Hit 'TAB' to select
-      zstyle ':completion:*' verbose yes
-      zstyle ':completion:*:matches' group 'yes'
-      zstyle ':completion:*:warnings' format '%F{red}%B-- No match found for: %d --%b%f'
-      zstyle ':completion:*:messages' format '%d'
-      zstyle ':completion:*:corrections' format '%B%d (errors: %e)%b'
-      zstyle ':completion:*:descriptions' format '[%d]'
+        # Completions
+        zstyle ':completion:*' matcher-list ''' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*' # More forgiving matches
+        zstyle ':completion:*' special-dirs true
+        zstyle ':completion:*' rehash true
+        zstyle ':completion:*' list-colors "''${(s.:.)LS_COLORS}" # Colored completion (different colors for dirs/files/etc)
+        zstyle ':completion:*' menu select                        # Hit 'TAB' to select
+        zstyle ':completion:*' verbose yes
+        zstyle ':completion:*:matches' group 'yes'
+        zstyle ':completion:*:warnings' format '%F{red}%B-- No match found for: %d --%b%f'
+        zstyle ':completion:*:messages' format '%d'
+        zstyle ':completion:*:corrections' format '%B%d (errors: %e)%b'
+        zstyle ':completion:*:descriptions' format '[%d]'
 
-      zstyle ':fzf-tab:*' fzf-command fzf
+        zstyle ':fzf-tab:*' fzf-command fzf
 
-      ## disable sort when completing `git checkout`
-      zstyle ':completion:*:git-checkout:*' sort false
+        ## disable sort when completing `git checkout`
+        zstyle ':completion:*:git-checkout:*' sort false
 
-      ## preview directory's content with eza when completing cd
-      zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+        ## preview directory's content with eza when completing cd
+        zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 
-      ## switch group using `,` and `.`
-      zstyle ':fzf-tab:*' switch-group ',' '.'
+        ## switch group using `,` and `.`
+        zstyle ':fzf-tab:*' switch-group ',' '.'
 
-      ## give a preview of commandline arguments when completing `kill`
-      zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
-      zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview '[[ $group == "[process ID]" ]] && ps --pid=$word -o cmd --no-headers -w -w'
-      zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
+        ## give a preview of commandline arguments when completing `kill`
+        zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
+        zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview '[[ $group == "[process ID]" ]] && ps --pid=$word -o cmd --no-headers -w -w'
+        zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
 
-      ## show systemd unit status
-      zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
+        ## show systemd unit status
+        zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
 
-      # # show file preview
-      # zstyle ':fzf-tab:complete:*:*' fzf-preview 'moor ''${(Q)realpath}'
+        # # show file preview
+        # zstyle ':fzf-tab:complete:*:*' fzf-preview 'moor ''${(Q)realpath}'
 
-      ## environment variable
-      zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-preview 'echo ''${(P)word}'
+        ## environment variable
+        zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-preview 'echo ''${(P)word}'
 
-      ${functions}
-      ${navi_widget}
-      ${lib.optionalString isWsl ''
-        # Keep current path in Windows on new tab/pane
-        # https://learn.microsoft.com/en-us/windows/terminal/tutorials/new-tab-same-directory
-        keep_current_path() {
-          printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"
-        }
-        precmd_functions+=(keep_current_path)
-        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/wsl/lib
-      ''}
-      ${lib.optionalString (pkgs.stdenv.hostPlatform.system == "x86_64-linux" && isVm) ''
-        # Not the best place to put this but whatever
-        # Make CapsLock behave like Ctrl
-        setxkbmap -option ctrl:nocaps
+        ${functions}
+        ${navi_widget}
+        ${lib.optionalString isWsl ''
+          # Keep current path in Windows on new tab/pane
+          # https://learn.microsoft.com/en-us/windows/terminal/tutorials/new-tab-same-directory
+          keep_current_path() {
+            printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"
+          }
+          precmd_functions+=(keep_current_path)
+          export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/wsl/lib
+        ''}
+        ${lib.optionalString (pkgs.stdenv.hostPlatform.system == "x86_64-linux" && isVm) ''
+          # Not the best place to put this but whatever
+          # Make CapsLock behave like Ctrl
+          setxkbmap -option ctrl:nocaps
 
-        # Make short pressed Ctrl behave like Escape
-        xcape -e 'Control_L=Escape'
-      ''}
-    ''
+          # Make short pressed Ctrl behave like Escape
+          xcape -e 'Control_L=Escape'
+        ''}
+      ''
     ];
 
     # profileExtra = ''
