@@ -32,7 +32,6 @@ Useful links:
     ./lsp.nix
     ./navi.nix
     # ./nvim.nix
-    # ./python.nix
     ./skim.nix
     ./ssh.nix
     # ./neovim.nix
@@ -140,7 +139,6 @@ Useful links:
         # sqlite
         # tokei # A program that displays statistics about your code
         # trunk-io # Developer experience toolkit used to check, test, merge, and monitor code
-        uv # Python package and project manager, written in Rust
 
         ### Network
         # bore-cli # Rust tool to create TCP tunnels
@@ -252,6 +250,14 @@ Useful links:
 
     jq.enable = true;
     less.enable = true;
+    nh = {
+      enable = true;
+      clean = {
+        enable = true;
+        dates = "weekly"; # must be a word on Darwin
+        extraArgs = "--keep 2 --keep-since 5d";
+      };
+    };
     nix-index.enable = true;
     nix-index-database.comma.enable = true;
     pandoc.enable = true;
