@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     chart-testing # CLI tool for linting and testing Helm charts
+    eksctl # The official CLI for Amazon EKS
     helm-docs # Generate documentation from Kubernetes Helm charts
     helmfile # Declaratively deploy your Kubernetes manifests, Kustomize configs, and Charts as Helm releases. Generate all-in-one manifests for use with ArgoCD.
     kind # Kubernetes IN Docker - local clusters for testing Kubernetes
