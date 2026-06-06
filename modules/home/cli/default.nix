@@ -112,7 +112,6 @@ Useful links:
         riffdiff # Riff is a wrapper around diff that highlights which parts of lines have changed.
         rm-improved # A safe and ergonomic alternative to rm
         sd # Intuitive find & replace CLI (sed alternative)
-        silver-searcher # `ag` A code searching tool similar to ack, but faster.
         sshfs # A filesystem client based on the SSH File Transfer Protocol
         # tmux # A terminal multiplexer
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
@@ -191,8 +190,6 @@ Useful links:
         git-secrets # Prevents you from committing secrets and credentials into git repositories
         sops # Editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats and encrypts with AWS KMS, GCP KMS, Azure Key Vault and PGP
         # tailscale # The easiest, most secure way to use WireGuard and 2FA
-        trivy # A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
-        trufflehog # Searches through git repositories for secrets, digging deep into commit history and branches
 
         ### Misc
         # inherit (pkgs.gitAndTools) gh;

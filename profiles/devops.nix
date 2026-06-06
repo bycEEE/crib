@@ -34,6 +34,11 @@
       # aws-iam-authenticator # A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
       # google-cloud-sdk
       # saml2aws # CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
+
+      # Security
+      trivy # A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+      trufflehog # Searches through git repositories for secrets, digging deep into commit history and branches
+      zizmor # Static analysis tool for GitHub Actions
     ];
   };
 }
