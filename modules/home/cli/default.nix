@@ -40,7 +40,7 @@ Useful links:
     ./tealdeer.nix
     ./uv.nix
     ./vim.nix
-    ./zellij.nix
+    # ./zellij.nix
   ];
 
   colorScheme = nix-colors.colorSchemes.catppuccin-macchiato;
@@ -48,7 +48,7 @@ Useful links:
     packages = with pkgs;
       [
         ### Nix Tools
-        cachix # Command line client for Nix binary cache hosting
+        # cachix # Command line client for Nix binary cache hosting
         # deadnix # Find and remove unused code in .nix source files
         # devenv # A tool to create development environments
         # lorri # Fast, persistent and reliable development environment for the Nix ecosystem
@@ -66,6 +66,7 @@ Useful links:
         # statix # Lints and suggestions for the nix programming language
 
         ### Linux
+        brotli # Generic-purpose lossless compression algorithm
         # busybox # Tiny versions of common UNIX utilities in a single small executable
         # cmake # Cross-platform, open-source build system generator
         # coreutils
@@ -89,7 +90,6 @@ Useful links:
         libxslt # A C library and tools to do XSL transformations
 
         ### Terminal
-        bandwhich # Terminal bandwidth utilization tool
         # boxxy # Puts bad Linux applications in a box with only their files
         broot # A new way to see and navigate directory trees
         btop # A monitor of resources
@@ -114,9 +114,9 @@ Useful links:
         sd # Intuitive find & replace CLI (sed alternative)
         silver-searcher # `ag` A code searching tool similar to ack, but faster.
         sshfs # A filesystem client based on the SSH File Transfer Protocol
-        tmux # A terminal multiplexer
+        # tmux # A terminal multiplexer
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
-        vivid # A themeable LS_COLORS generator with a rich filetype datebase
+        # vivid # A themeable LS_COLORS generator with a rich filetype datebase
         viu # A command-line application to view images from the terminal written in Rust
         # watchman # A file watching service
         witr # Why is this running
@@ -124,7 +124,7 @@ Useful links:
 
         ### Development
         # asdf-vm # Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more
-        devbox # A tool for creating isolated development environments using Nix
+        # devbox # A tool for creating isolated development environments using Nix
         # difftastic # A syntax-aware diff
         # git-oxide # An idiomatic, lean, fast & safe pure Rust implementation of Git
         hugo # A fast and modern static website engine
@@ -133,14 +133,14 @@ Useful links:
         ngrok # Allows you to expose a web server running on your local machine to the internet
         # postgresql_14
         pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
-
-        # ruff # An Extremely fast Python linter
+        ruff # An Extremely fast Python linter
         shellcheck # Shell script analysis tool
         # sqlite
         # tokei # A program that displays statistics about your code
         # trunk-io # Developer experience toolkit used to check, test, merge, and monitor code
 
         ### Network
+        bandwhich # Terminal bandwidth utilization tool
         # bore-cli # Rust tool to create TCP tunnels
         # curlie # The power of curl, the ease of use of httpie
         doggo # A command-line DNS client
@@ -159,7 +159,7 @@ Useful links:
         xh # Friendly and fast tool for sending HTTP requests
 
         ### Utilities
-        aspellDicts.en # English dictionary for aspell
+        # aspellDicts.en # English dictionary for aspell
         clipboard-jh # Cut, copy, and paste anything, anywhere, all from the terminal
         croc # Easily and securely send things from one computer to another
         eget # Easily install prebuilt binaries from GitHub
@@ -176,13 +176,13 @@ Useful links:
         # nali # A tool to display the location of an IP address
         noti # Trigger notifications when a process completes
         ouch # A command-line utility for easily compressing and decompressing files and directories
-        pueue # A daemon for managing long running shell commands
-        ranger # A VIM-inspired filemanager for the console
+        # pueue # A daemon for managing long running shell commands
+        # ranger # A VIM-inspired filemanager for the console
         speedtest-cli # Command line interface for testing internet bandwidth using speedtest.net
         sshfs # A filesystem client based on the SSH File Transfer Protocol
         # translate-shell # Command-line translator using Google Translate, Bing Translator, Yandex.Translate, etc
         # zeal # Offline documentation browser inspired by Dash
-        zk # A plain text note-taking assistant for managing your Zettelkasten
+        # zk # A plain text note-taking assistant for managing your Zettelkasten
         yt-dlp # A youtube-dl fork with additional features and fixes
 
         ### Security
@@ -193,9 +193,6 @@ Useful links:
         # tailscale # The easiest, most secure way to use WireGuard and 2FA
         trivy # A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
         trufflehog # Searches through git repositories for secrets, digging deep into commit history and branches
-
-        ### TODO: Categorise
-        brotli # Generic-purpose lossless compression algorithm
 
         ### Misc
         # inherit (pkgs.gitAndTools) gh;
