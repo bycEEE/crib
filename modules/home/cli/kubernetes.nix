@@ -6,6 +6,7 @@
     helmfile # Declaratively deploy your Kubernetes manifests, Kustomize configs, and Charts as Helm releases. Generate all-in-one manifests for use with ArgoCD.
     kind # Kubernetes IN Docker - local clusters for testing Kubernetes
     # kompose # Tool to move from docker-compose to Kubernetes
+    kubecolor # Colorize kubectl output
     kubectl
     kubectl-neat # Clean up Kubernetes yaml and json output to make it readable
     kubectx # Switch faster between clusters and namespaces in kubectl
