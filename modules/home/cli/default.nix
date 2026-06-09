@@ -151,7 +151,6 @@ Useful links:
         nettools # A collection of useful network tools
         prettyping # A wrapper around the standard ping tool with the objective of making the output prettier, more colorful, more compact, and easier to read
         # rathole # A TCP tunneling tool
-        rustnet # Per-process network monitoring for your terminal: live TCP, UDP, and QUIC connections with deep packet inspection, sandboxed by default.
         rustscan # A modern replacement for nmap
         sniffnet # Cross-platform application to monitor your network traffic with ease
         trippy # A traceroute visualizer built with Rust and WebAssembly
@@ -206,6 +205,7 @@ Useful links:
         # openssl
         # openssh
         psmisc # A set of tools that use the proc filesystem
+        rustnet # Per-process network monitoring for your terminal: live TCP, UDP, and QUIC connections with deep packet inspection, sandboxed by default.
         showmethekey # A tool to show the keybindings of your terminal
         # traceroute # A tool for tracing the route of IP packets
       ])
