@@ -4,6 +4,7 @@
     alejandra # A formatter for nixpkgs
     nixpkgs-fmt # nix code formatter that would be applied on nixpkgs
     # nodePackages.prettier # An opinionated code formatter
+    ruff # An Extremely fast Python linter and formatter and code formatter
     shfmt # A shell parser, formatter, and interpreter (POSIX/Bash/mksh)
 
     # Language servers
