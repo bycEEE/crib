@@ -18,15 +18,22 @@ in {
       "--color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6"
       "--color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
     ];
-    fileWidgetCommand = "${defaultCommand}";
-    fileWidgetOptions = [
-      "--preview '${bat} --color=always --paging=always --plain {}'"
-    ];
-    changeDirWidgetCommand = "${fd} -H --type d";
-    changeDirWidgetOptions = [
-      "--preview '${tree}/bin/tree -C -a {}'"
-    ];
-    historyWidgetOptions = [];
+    fileWidget = {
+      command = "${defaultCommand}";
+      options = [
+        "--preview '${bat} --color=always --paging=always --plain {}'"
+      ];
+    };
+    changeDirWidget = {
+      command = "${fd} -H --type d";
+      options = [
+        "--preview '${tree}/bin/tree -C -a {}'"
+      ];
+    };
+    historyWidget = {
+      command = "";
+      options = [];
+    };
   };
   catppuccin.fzf.enable = true;
 }
