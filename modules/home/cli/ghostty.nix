@@ -28,6 +28,8 @@
       window-save-state = "always";
       window-new-tab-position = "end";
       working-directory = "inherit";
+
+      macos-auto-secure-input = false; # Fixes issue with global key remaps
     };
   };
 }
