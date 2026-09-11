@@ -140,6 +140,9 @@ in {
         # Homebrew
         [[ -d /opt/homebrew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
+        # Cargo
+        [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
+
         # Extra paths
         export PATH="$HOME/.local/bin:$PATH"
 
