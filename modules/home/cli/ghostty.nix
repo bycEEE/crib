@@ -21,8 +21,9 @@
 
       bell-features = "system,audio,attention,title";
       copy-on-select = "clipboard";
+      clipboard-trim-trailing-spaces = true;
       mouse-shift-capture = true;
-      selection-word-chars = "\" \\t'\"│`|:,()[]{}<>$\"";
+      selection-word-chars = ''\\t' \\"│`|:,()[]{}<>$'';
       scrollback-limit = 10000000; # In bytes, not lines
       window-colorspace = "display-p3";
       window-save-state = "always";
