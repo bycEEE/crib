@@ -85,6 +85,7 @@ words:
   - "cuda"
   - "cudnn"
   - "cyclegan"
+  - "dtrack"
   - "fargate"
   - "fastapi"
   - "feroxbuster"
