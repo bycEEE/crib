@@ -24,7 +24,6 @@
       mouse-shift-capture = true;
       clipboard-trim-trailing-spaces = true;
       selection-word-chars = "\" \\t'\"│`|:,()[]{}<>$";
-      scrollback-limit = 10000000; # In bytes, not lines
       window-colorspace = "display-p3";
       window-save-state = "always";
       window-new-tab-position = "end";
