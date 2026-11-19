@@ -10,6 +10,7 @@
     # Language servers
     bash-language-server # Bash
     gopls # Go
+    jsonnet-language-server # Jsonnet
     just-lsp # Justfile
     nil # Nix
     lua-language-server # Lua
