@@ -21,6 +21,13 @@ in {
       focus_pane_right = "cmd+alt+right";
       focus_pane_up = "cmd+alt+up";
       focus_pane_down = "cmd+alt+down";
+
+      previous_workspace = "cmd+up";
+      next_workspace = "cmd+down";
+      switch_workspace = "cmd+1..9";
+
+      previous_agent = "cmd+shift+up";
+      next_agent = "cmd+shift+down";
     };
 
     ui = {

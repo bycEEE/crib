@@ -1,4 +1,4 @@
-{...}: {
+{lib, ...}: {
   programs.ghostty = {
     enable = true;
     package = null;
@@ -42,7 +42,19 @@
         "performable:super+alt+arrow_right=goto_split:right"
         "performable:super+alt+arrow_up=goto_split:up"
         "performable:super+alt+arrow_down=goto_split:down"
-      ];
+        # ghostty always consumes these (jump_to_prompt/goto_tab), so hand them
+        # to herdr outright: workspaces, agents, and workspace by index
+        "super+arrow_up=unbind"
+        "super+arrow_down=unbind"
+        "super+shift+arrow_up=unbind"
+        "super+shift+arrow_down=unbind"
+        "super+9=unbind"
+      ]
+      # ghostty binds both the character (super+1) and physical key (super+digit_1)
+      ++ (lib.concatMap (n: [
+        "super+${toString n}=unbind"
+        "super+digit_${toString n}=unbind"
+      ]) [1 2 3 4 5 6 7 8]);
     };
   };
 }
