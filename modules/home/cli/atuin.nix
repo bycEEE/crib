@@ -17,7 +17,11 @@
       style = "compact";
       # show preview of command at bottom
       show_preview = true;
+      # capture AI agent sessions (Claude Code, Codex, ...) so `atuin threads resume` can find them
+      threads.capture = true;
     };
+    # threads are captured by the daemon (runs as a launchd agent on macOS)
+    daemon.enable = true;
   };
   catppuccin.atuin.enable = true;
 }
