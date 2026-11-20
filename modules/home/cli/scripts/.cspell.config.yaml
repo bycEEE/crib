@@ -106,6 +106,7 @@ words:
   - "keybind"
   - "legba"
   - "letsencrypt"
+  - "libsonnet"
   - "localstack"
   - "loguru"
   - "macchiato"

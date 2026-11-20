@@ -81,7 +81,6 @@ Useful links:
         # openssh
         rclone
         tree
-        treefmt
         # uutils-coreutils-noprefix # Cross-platform Rust rewrite of the GNU coreutils
         xclip
         wget
