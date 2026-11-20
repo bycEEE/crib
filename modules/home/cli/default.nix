@@ -26,6 +26,7 @@ Useful links:
     ./ghostty.nix
     ./git.nix
     ./helix.nix
+    ./herdr.nix
     ./htop.nix
     ./go.nix
     # ./gpg.nix
