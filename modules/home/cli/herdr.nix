@@ -1,6 +1,8 @@
 {pkgs, ...}: let
   toml = pkgs.formats.toml {};
 in {
+  home.packages = [pkgs.herdr];
+
   xdg.configFile."herdr/config.toml".source = toml.generate "herdr-config.toml" {
     onboarding = false;
 
