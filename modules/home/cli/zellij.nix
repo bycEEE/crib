@@ -1,6 +1,6 @@
 {...}: {
   programs.zellij = {
-    enable = true;
+    enable = false;
     settings = {
       theme = "Catppuccin Macchiato";
       pane_frames = false;
