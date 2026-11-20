@@ -20,7 +20,7 @@ Useful links:
     ./bun.nix
     # ./carapace.nix
     ./cspell.nix
-    ./direnv.nix
+    # ./direnv.nix
     ./eza.nix
     ./fzf.nix
     ./ghostty.nix
@@ -30,6 +30,7 @@ Useful links:
     ./go.nix
     # ./gpg.nix
     ./lsp.nix
+    ./mise.nix
     ./navi.nix
     # ./nvim.nix
     ./skim.nix
