@@ -2,7 +2,6 @@
   isWsl,
   lib,
   pkgs,
-  nix-colors,
   ...
 }:
 /*
@@ -13,7 +12,6 @@ Useful links:
 */
 {
   imports = [
-    nix-colors.homeManagerModules.default
     ./atuin.nix
     ./bat.nix
     ./bottom.nix
@@ -45,7 +43,6 @@ Useful links:
     # ./zellij.nix
   ];
 
-  colorScheme = nix-colors.colorSchemes.catppuccin-macchiato;
   home = {
     packages = with pkgs;
       [

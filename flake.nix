@@ -21,29 +21,27 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     stable.url = "github:nixos/nixpkgs/nixos-26.05";
     home-manager.url = "github:nix-community/home-manager";
-    darwin.url = "github:lnl7/nix-darwin";
+    # darwin.url = "github:lnl7/nix-darwin";
     nix-index-database.url = "github:Mic92/nix-index-database";
     # agenix.url = "github:ryantm/agenix";
     # mystash.url = "git+ssh://git@github.com/bycEEE/stash.git?shallow=1";
     # mystash.flake = false;
-    nix-colors.url = "github:misterio77/nix-colors";
     catppuccin.url = "github:catppuccin/nix";
 
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    darwin.inputs.nixpkgs.follows = "nixpkgs";
+    # darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+    catppuccin.inputs.nixpkgs.follows = "nixpkgs";
     # agenix.inputs.nixpkgs.follows = "nixpkgs";
-    # nix-colors.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
     self,
-    darwin,
+    # darwin,
     home-manager,
     nix-index-database,
     # agenix,
     # mystash,
-    nix-colors,
     catppuccin,
     ...
   } @ inputs: let
@@ -97,8 +95,8 @@
           config.allowUnfree = true;
           overlays = builtins.attrValues self.overlays;
         };
-        # extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm agenix mystash nix-colors;};
-        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm nix-colors;};
+        # extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm agenix mystash;};
+        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm;};
         modules = baseModules ++ extraModules;
       };
   in {
