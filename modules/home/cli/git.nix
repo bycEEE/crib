@@ -65,7 +65,7 @@
 
       url."git@github.com:".insteadOf = "https://github.com/";
 
-      aliases = {
+      alias = {
         ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi";
         #   fix = "commit --amend --no-edit";
         #   oops = "reset HEAD~1";
