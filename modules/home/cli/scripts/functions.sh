@@ -1,39 +1,32 @@
 function is_wsl() {
-  if [[ "$(</proc/sys/kernel/ostype)" != Linux ]]; then
-    return 1 # WSL uses linux
-  elif [[ "$(</proc/version)" == *@(Microsoft|WSL) ]]; then
-    return 0 # WSL detected
-  else
-    return 1 # Not running on WSL
-  fi
+  # /proc doesn't exist on macOS; WSL kernels report "microsoft" in /proc/version
+  [[ -r /proc/version && "$(</proc/version)" == *(microsoft|Microsoft|WSL)* ]]
 }
 
 function is_linux() {
-  if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    return 0
-  else
-    return 1
-  fi
+  [[ "$OSTYPE" == linux* ]]
 }
 
 function is_darwin() {
-  if [[ "$OSTYPE" == "darwin"* ]]; then
-    return 0
-  else
+  [[ "$OSTYPE" == darwin* ]]
+}
+
+# Swap two files
+function swap() {
+  if [[ $# -ne 2 || ! -e "$1" || ! -e "$2" ]]; then
+    echo "usage: swap <file1> <file2> (both must exist)" >&2
     return 1
   fi
+  if [[ -e "$1.tmp" ]]; then
+    echo "swap: $1.tmp already exists, refusing to overwrite" >&2
+    return 1
+  fi
+  mv "$1" "$1.tmp" && mv "$2" "$1" && mv "$1.tmp" "$2"
 }
 
-#Swap two files
-function swap() {
-  [ -e "$1.tmp" ] && return
-  mv "$1" "$1.tmp"
-  mv "$2" "$1"
-  mv "$1.tmp" "$2"
-}
-
+# Start a fresh shell (re-sourcing .zshrc in place re-runs every plugin/hook)
 function reload() {
-  source $HOME/.config/zsh/.zshrc
+  exec zsh
 }
 
 function weather() {
@@ -64,19 +57,13 @@ function weather() {
 # }
 
 function fix_zsh_history() {
-  mv "$HOME/.config/zsh/zsh_history" "$HOME/.config/zsh/zsh_history_bad"
-  strings "$HOME/.config/zsh/zsh_history_bad" >"$HOME/.config/zsh/zsh_history"
-  fc -R "$HOME/.config/zsh/zsh_history"
-  rm "$HOME/.config/zsh/zsh_history_bad"
+  local hist="${HISTFILE:-$HOME/.config/zsh/zsh_history}"
+  mv "$hist" "$hist.bad" || return 1
+  strings "$hist.bad" >"$hist" && fc -R "$hist" && rm "$hist.bad"
 }
 
 function print_path_newline() {
   echo "${PATH//:/$'\n'}"
-}
-
-# Set window title
-function precmd() {
-  echo -ne "\033]0;$(pwd | sed -e "s;^$HOME;~;")\a"
 }
 
 # Run work commands

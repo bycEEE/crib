@@ -121,8 +121,8 @@ in {
       export HOMEBREW_NO_ANALYTICS=1
 
 
-      # fix formatting
-      export LC_ALL=en_US.UTF-8
+      # Default locale; individual LC_* vars can still override it (unlike LC_ALL)
+      export LANG=en_US.UTF-8
     '';
     # initContentBeforeCompInit = ''
     #   fpath+=(${config.home.profileDirectory}/share/bash-completion/completions)
