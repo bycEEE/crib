@@ -26,7 +26,7 @@ patterns:
     pattern: /\bgithub:[\w.-]+\/[\w.-]+/g
 dictionaryDefinitions:
   - name: "personal"
-    path: "./personal-words.txt"
+    path: "./.cspell-personal.txt"
     addWords: true
 # Enabled by default (no need to list): aws, companies, cryptocurrencies,
 # filetypes, software-terms, web-services.
