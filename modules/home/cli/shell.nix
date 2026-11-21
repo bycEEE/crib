@@ -38,7 +38,7 @@ in {
       k = "kubectl";
       cat = "bat";
       cp = "cp -i";
-      grep = "grep --color=always";
+      grep = "grep --color=auto";
       ls = "eza";
       ll = "eza -l";
       la = "eza -a";

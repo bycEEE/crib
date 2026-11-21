@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     # Formatters
-    alejandra # A formatter for nixpkgs
     jsonnet # Includes jsonnetfmt
     nixpkgs-fmt # nix code formatter that would be applied on nixpkgs
     # nodePackages.prettier # An opinionated code formatter

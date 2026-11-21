@@ -3,7 +3,7 @@
     enable = true;
     icons = "auto";
     extraOptions = [
-      "--color=always"
+      "--color=auto"
       "--group-directories-first"
       "--header"
       "--time-style=long-iso"

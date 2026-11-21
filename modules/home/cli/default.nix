@@ -32,7 +32,6 @@ Useful links:
     ./mise.nix
     ./navi.nix
     ./neovim.nix
-    ./skim.nix
     ./ssh.nix
     ./shell.nix
     ./starship.nix
@@ -53,10 +52,7 @@ Useful links:
         # nix-init # Generate Nix packages from URLs
         nix-output-monitor # Pipe your nix-build output through the nix-output-monitor (aka nom) to get additional information while building.
         # nix-prefetch # A tool to fetch and hash Nix derivations
-        nix-prefetch-git # A tool to fetch and hash git repositories
-        nix-prefetch-github # A tool to fetch and hash GitHub repositories
         nix-tree # Visualize the dependency graph of a Nix derivation
-        nixos-generators # Turns configuration into outputs in different formats
         # nixpkgs-review # A tool for reviewing nixpkgs pull requests
         nurl # Generate Nix fetcher calls from repository URLs
         # nvfetcher # Generate nix sources expr for the latest version of packages
@@ -109,7 +105,6 @@ Useful links:
         riffdiff # Riff is a wrapper around diff that highlights which parts of lines have changed.
         rm-improved # A safe and ergonomic alternative to rm
         sd # Intuitive find & replace CLI (sed alternative)
-        sshfs # A filesystem client based on the SSH File Transfer Protocol
         # tmux # A terminal multiplexer
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
         # vivid # A themeable LS_COLORS generator with a rich filetype datebase

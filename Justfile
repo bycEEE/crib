@@ -49,13 +49,13 @@ visualise:
 diff:
 	nix profile diff-closures --profile ~/.local/state/nix/profiles/home-manager
 
-# Gets github hash from URL, takes param1: username, param2: reponame
-get-github-hash *args:
-	nix-prefetch-github {{args}}
+# Prints a fetchFromGitHub call with hash; rev defaults to the default branch HEAD
+get-github-hash owner repo rev="":
+	nurl https://github.com/{{owner}}/{{repo}} {{rev}}
 
-# Gets github hash from latest release, takes param1: username, param2: reponame
-get-github-latest-release-hash *args:
-	nix-prefetch-github-latest-release -- {{args}}
+# Same, pinned to the repo's latest GitHub release tag
+get-github-latest-release-hash owner repo:
+	nurl https://github.com/{{owner}}/{{repo}} "$(gh release view -R {{owner}}/{{repo}} --json tagName -q .tagName)"
 
 printenv:
 	printenv
