@@ -15,7 +15,7 @@
     enable = true;
     settings = {
       # credential.helper =
-      #   if pkgs.stdenvNoCC.isDarwin
+      #   if pkgs.stdenvNoCC.hostPlatform.isDarwin
       #   then "osxkeychain"
       #   else "cache --timeout=1000000000";
       # core.autocrlf = "input";
@@ -28,7 +28,7 @@
       "gpg \"ssh\"".program =
         if isWsl
         then "/mnt/c/Users/bycEE/AppData/Local/Microsoft/WindowsApps/op-ssh-sign.exe"
-        else if pkgs.stdenvNoCC.isDarwin
+        else if pkgs.stdenvNoCC.hostPlatform.isDarwin
         then "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
         else "ssh-keygen";
 
