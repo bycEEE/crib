@@ -1,4 +1,5 @@
 {
+  inputs,
   isWsl,
   lib,
   pkgs,
@@ -124,7 +125,8 @@
         # lefthook # Fast and powerful Git hooks manager for any type of projects
         ngrok # Allows you to expose a web server running on your local machine to the internet
         # postgresql_14
-        pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
+        # From stable: on unstable, Swift (needed by .NET on macOS) currently fails to build
+        inputs.stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
         shellcheck # Shell script analysis tool
         # sqlite
         # tokei # A program that displays statistics about your code

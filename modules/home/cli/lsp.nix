@@ -1,4 +1,7 @@
-{ pkgs, ... }: {
+{ inputs, pkgs, ... }:
+let
+  stable = inputs.stable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+in {
   home.packages = with pkgs; [
     # Formatters
     jsonnet # Includes jsonnetfmt
@@ -16,7 +19,8 @@
     jsonnet-language-server # Jsonnet
     just-lsp # Justfile
     lua-language-server # Lua
-    marksman # Markdown
+    # From stable: on unstable, Swift (needed by .NET on macOS) currently fails to build
+    stable.marksman # Markdown
     nil # Nix
     pyright # Python
     taplo # TOML
