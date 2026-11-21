@@ -63,7 +63,6 @@
       system ? "x86_64-linux",
       nixpkgs ? inputs.nixpkgs,
       isWsl ? false,
-      isVm ? false,
       baseModules ? [
         nix-index-database.homeModules.nix-index
         # nur.hmModules.nur
@@ -95,8 +94,8 @@
           config.allowUnfree = true;
           overlays = builtins.attrValues self.overlays;
         };
-        # extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm agenix mystash;};
-        extraSpecialArgs = {inherit self inputs nixpkgs isWsl isVm;};
+        # extraSpecialArgs = {inherit self inputs nixpkgs isWsl agenix mystash;};
+        extraSpecialArgs = {inherit self inputs nixpkgs isWsl;};
         modules = baseModules ++ extraModules;
       };
   in {
@@ -135,7 +134,6 @@
         ];
       };
       "icey@scheisty" = mkHomeConfig {
-        isVm = true;
         system = "aarch64-linux";
         username = "icey";
         extraModules = [
@@ -144,7 +142,6 @@
         ];
       };
       "icey@fugazi" = mkHomeConfig {
-        isVm = true;
         system = "x86_64-linux";
         username = "icey";
         extraModules = [
@@ -161,9 +158,7 @@
       #     config.allowUnfree = true;
       #   };
       # };
-      # kubectl = import ./overlays/kubectl.nix;
       # nur = nur.overlay;
-      # nixgl = nixgl.overlay;
     };
   };
 }

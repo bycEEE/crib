@@ -16,9 +16,9 @@ Useful links:
     ./bat.nix
     ./bottom.nix
     ./bun.nix
-    # ./carapace.nix
+    ./carapace.nix
     ./cspell.nix
-    # ./direnv.nix
+    ./direnv.nix
     ./eza.nix
     ./fzf.nix
     ./ghostty.nix
@@ -27,20 +27,19 @@ Useful links:
     ./herdr.nix
     ./htop.nix
     ./go.nix
-    # ./gpg.nix
+    ./gpg.nix
     ./lsp.nix
     ./mise.nix
     ./navi.nix
-    # ./nvim.nix
+    ./neovim.nix
     ./skim.nix
     ./ssh.nix
-    # ./neovim.nix
     ./shell.nix
     ./starship.nix
     ./tealdeer.nix
     ./uv.nix
     ./vim.nix
-    # ./zellij.nix
+    ./zellij.nix
   ];
 
   home = {

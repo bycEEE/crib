@@ -1,6 +1,6 @@
 {config, ...}: {
   programs.direnv = {
-    enable = true;
+    enable = false;
     nix-direnv.enable = true;
     stdlib = ''
       # # stolen from @i077; store .direnv in cache instead of project dir
