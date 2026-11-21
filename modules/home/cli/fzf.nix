@@ -27,7 +27,7 @@ in {
     changeDirWidget = {
       command = "${fd} -H --type d";
       options = [
-        "--preview '${tree}/bin/tree -C -a {}'"
+        "--preview '${tree} -C -a {}'"
       ];
     };
     historyWidget = {
