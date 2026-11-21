@@ -72,7 +72,6 @@
         # TODO: might need this
         # home-manager.darwinModules.home-manager
         ./modules/home
-        ./modules/home/my-settings.nix
         ./modules/home/fonts
         ./modules/home/cli
         ./modules/home/apps
@@ -153,16 +152,6 @@
         extraModules = [
           ./profiles/personal.nix
           ./hosts/fugazi.nix
-        ];
-      };
-      "icey@sour" = mkHomeConfig {
-        isVm = true;
-        system = "x86_64-linux";
-        username = "icey";
-        extraModules = [
-          ./profiles/graphical.nix
-          ./profiles/personal.nix
-          ./profiles/pentesting.nix
         ];
       };
     };

@@ -1,7 +1,6 @@
 {
   config,
   isWsl,
-  isVm,
   lib,
   pkgs,
   ...
@@ -223,14 +222,6 @@ in {
           }
           precmd_functions+=(keep_current_path)
           export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/wsl/lib
-        ''}
-        ${lib.optionalString (pkgs.stdenv.hostPlatform.system == "x86_64-linux" && isVm) ''
-          # Not the best place to put this but whatever
-          # Make CapsLock behave like Ctrl
-          setxkbmap -option ctrl:nocaps
-
-          # Make short pressed Ctrl behave like Escape
-          xcape -e 'Control_L=Escape'
         ''}
       ''
     ];
