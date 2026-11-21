@@ -208,7 +208,6 @@
           || pkgs.stdenv.hostPlatform.system == "x86_64-darwin"
         )
         [
-          dockutil # Command line tool for managing dock items
           macpm # Performance monitoring CLI tool for Apple Silicon
         ]
       )
@@ -248,7 +247,13 @@
       clean = {
         enable = true;
         dates = "weekly"; # must be a word on Darwin
-        extraArgs = "--keep 2 --keep-since 5d";
+        # Must be a list: on macOS a string is passed to nh as a single argument and fails
+        extraArgs = [
+          "--keep"
+          "2"
+          "--keep-since"
+          "5d"
+        ];
       };
     };
     nix-index.enable = true;
