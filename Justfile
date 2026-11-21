@@ -32,7 +32,8 @@ rebuild:
 repair:
 	nix-store --verify --check-contents --repair
 
-clean:
+# Runs `optimize` afterwards (dedupe the store once garbage is gone)
+clean: && optimize
 	home-manager expire-generations "-1 days"
 	nix-collect-garbage --delete-older-than 1d
 	# nix-store --gc
