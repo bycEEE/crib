@@ -24,10 +24,10 @@ push-cachix:
 	just build
 	cachix push byceee ./result
 
+# Like build, but re-evaluates from scratch instead of trusting the eval cache.
+# Keeps ~/.cache/nix (fetched inputs, tarballs) so nothing is re-downloaded.
 rebuild:
-	rm -rf $HOME/.cache/nix/
-	just build
-	# sudo nixos-rebuild switch --flake .#{{USERNAME}}@{{HOSTNAME}}
+	nix build .#homeConfigurations.{{USERNAME}}@{{HOSTNAME}}.activationPackage --option eval-cache false && ./result/activate
 
 repair:
 	nix-store --verify --check-contents --repair
@@ -51,7 +51,7 @@ diff:
 
 # Gets github hash from URL, takes param1: username, param2: reponame
 get-github-hash *args:
-	nix run github:seppeljordan/nix-prefetch-github -- {{args}}
+	nix-prefetch-github {{args}}
 
 # Gets github hash from latest release, takes param1: username, param2: reponame
 get-github-latest-release-hash *args:
