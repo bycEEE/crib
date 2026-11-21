@@ -11,10 +11,13 @@
   programs.helix = {
     enable = true;
     languages = {
+      # Formatters run on `:format` only (auto-format = false: no format-on-save).
+      # Languages not listed here format through their language server
+      # (gopls, yaml-language-server, vscode-json-language-server, ...).
       language = [
         {
           name = "bash";
-          auto-format = true;
+          auto-format = false;
           formatter = {
             command = lib.getExe pkgs.shfmt;
             args = [
@@ -23,6 +26,53 @@
             ];
           };
         }
+        {
+          name = "nix";
+          auto-format = false;
+          formatter = {
+            command = lib.getExe pkgs.nixfmt;
+            args = [ "-" ];
+          };
+        }
+        {
+          name = "python";
+          auto-format = false;
+          formatter = {
+            command = lib.getExe pkgs.ruff;
+            # --stdin-filename lets ruff find the project's pyproject.toml / ruff.toml
+            args = [
+              "format"
+              "--stdin-filename"
+              "%{buffer_name}"
+              "-"
+            ];
+          };
+        }
+        {
+          name = "jsonnet";
+          auto-format = false;
+          formatter = {
+            command = lib.getExe' pkgs.jsonnet "jsonnetfmt";
+            args = [ "-" ];
+          };
+        }
+      ]
+      # Helix formats these on save by default; turn that off too.
+      ++ map (name: {
+        inherit name;
+        auto-format = false;
+      }) [
+        "json"
+        "jsonc"
+        "go"
+        "gomod"
+        "gowork"
+        "hcl"
+        "tfvars"
+        "html"
+        "css"
+        "scss"
+        "rust"
       ];
     };
     settings = {

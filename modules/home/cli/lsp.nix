@@ -10,14 +10,19 @@
 
     # Language servers
     bash-language-server # Bash
+    dockerfile-language-server # Dockerfile (docker-langserver)
     gopls # Go
+    helm-ls # Helm chart templates (helm_ls)
     jsonnet-language-server # Jsonnet
     just-lsp # Justfile
-    nil # Nix
     lua-language-server # Lua
+    marksman # Markdown
+    nil # Nix
     pyright # Python
+    taplo # TOML
     terraform-ls # Terraform
     typescript-language-server # Typescript
+    vscode-langservers-extracted # JSON, HTML, CSS (vscode-json-language-server etc.)
     yaml-language-server # YAML / JSON
     # rnix-lsp # Nix
   ];
