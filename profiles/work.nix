@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   programs.git = {
     settings = {
       user.name = "Brian Choy";

@@ -2,11 +2,13 @@
   pkgs,
   lib,
   ...
-}: let
+}:
+let
   fd = lib.getExe pkgs.fd;
   bat = lib.getExe pkgs.bat;
   tree = lib.getExe pkgs.tree;
-in {
+in
+{
   programs.fzf = rec {
     enable = true;
     defaultCommand = "${fd} -H --type f -E .git";
@@ -32,7 +34,7 @@ in {
     };
     historyWidget = {
       command = "";
-      options = [];
+      options = [ ];
     };
   };
   catppuccin.fzf.enable = true;

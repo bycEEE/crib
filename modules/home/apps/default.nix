@@ -2,8 +2,10 @@
   lib,
   pkgs,
   ...
-}: {
-  home.packages = with pkgs;
+}:
+{
+  home.packages =
+    with pkgs;
     [
       # czkawka # Multi functional app to find duplicates, empty folders, similar images etc
     ]

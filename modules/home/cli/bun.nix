@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   programs.bun = {
     enable = true;
     settings = {
@@ -6,5 +6,5 @@
     };
   };
 
-  home.sessionPath = ["$HOME/.bun/bin"];
+  home.sessionPath = [ "$HOME/.bun/bin" ];
 }

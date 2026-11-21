@@ -5,10 +5,10 @@
   ...
 }:
 /*
-home-manager configuration
-Useful links:
-- Home Manager Manual: https://nix-community.gitlab.io/home-manager/
-- Appendix A. Configuration Options: https://nix-community.gitlab.io/home-manager/options.html
+  home-manager configuration
+  Useful links:
+  - Home Manager Manual: https://nix-community.gitlab.io/home-manager/
+  - Appendix A. Configuration Options: https://nix-community.gitlab.io/home-manager/options.html
 */
 {
   imports = [
@@ -42,7 +42,8 @@ Useful links:
   ];
 
   home = {
-    packages = with pkgs;
+    packages =
+      with pkgs;
       [
         ### Nix Tools
         # cachix # Command line client for Nix binary cache hosting
@@ -201,10 +202,16 @@ Useful links:
         showmethekey # A tool to show the keybindings of your terminal
         # traceroute # A tool for tracing the route of IP packets
       ])
-      ++ (lib.lists.optionals (pkgs.stdenv.hostPlatform.system == "aarch64-darwin" || pkgs.stdenv.hostPlatform.system == "x86_64-darwin") [
-        dockutil # Command line tool for managing dock items
-        macpm # Performance monitoring CLI tool for Apple Silicon
-      ])
+      ++ (lib.lists.optionals
+        (
+          pkgs.stdenv.hostPlatform.system == "aarch64-darwin"
+          || pkgs.stdenv.hostPlatform.system == "x86_64-darwin"
+        )
+        [
+          dockutil # Command line tool for managing dock items
+          macpm # Performance monitoring CLI tool for Apple Silicon
+        ]
+      )
       ++ (lib.lists.optionals isWsl) [
         socat # Utility for bidirectional data transfer between two independent data channels, for 1Password SSH agent
         wsl-open # Open files in Windows from WSL

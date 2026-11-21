@@ -3,7 +3,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   programs.difftastic = {
     enable = false;
     options = {
@@ -26,11 +27,12 @@
 
       gpg.format = "ssh";
       "gpg \"ssh\"".program =
-        if isWsl
-        then "/mnt/c/Users/bycEE/AppData/Local/Microsoft/WindowsApps/op-ssh-sign.exe"
-        else if pkgs.stdenvNoCC.hostPlatform.isDarwin
-        then "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
-        else "ssh-keygen";
+        if isWsl then
+          "/mnt/c/Users/bycEE/AppData/Local/Microsoft/WindowsApps/op-ssh-sign.exe"
+        else if pkgs.stdenvNoCC.hostPlatform.isDarwin then
+          "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+        else
+          "ssh-keygen";
 
       commit = {
         verbose = true;

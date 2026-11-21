@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   programs.neovim = {
     enable = false;
     # viAlias = true;

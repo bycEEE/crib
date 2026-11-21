@@ -1,4 +1,4 @@
-{config, ...}: {
+{ config, ... }: {
   programs.direnv = {
     enable = false;
     nix-direnv.enable = true;

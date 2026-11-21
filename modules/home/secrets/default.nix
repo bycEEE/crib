@@ -4,7 +4,8 @@
   # agenix,
   # mystash,
   ...
-}: {
+}:
+{
   # imports = [
   #   agenix.homeManagerModules.default
   # ];

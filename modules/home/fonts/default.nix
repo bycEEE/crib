@@ -1,9 +1,9 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 /*
-home-manager configuration
-Useful links:
-- Home Manager Manual: https://nix-community.gitlab.io/home-manager/
-- Appendix A. Configuration Options: https://nix-community.gitlab.io/home-manager/options.html
+  home-manager configuration
+  Useful links:
+  - Home Manager Manual: https://nix-community.gitlab.io/home-manager/
+  - Appendix A. Configuration Options: https://nix-community.gitlab.io/home-manager/options.html
 */
 {
   fonts.fontconfig.enable = true;
@@ -18,7 +18,7 @@ Useful links:
       nerd-fonts.iosevka
       nerd-fonts.agave
       nerd-fonts.monaspace
-      (pkgs.callPackage ./sf-mono-nerdfont.nix {})
+      (pkgs.callPackage ./sf-mono-nerdfont.nix { })
       # (pkgs.callPackage ./apple-fonts.nix {})
     ];
   };

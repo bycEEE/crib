@@ -1,4 +1,4 @@
-{pkgs}:
+{ pkgs }:
 pkgs.stdenvNoCC.mkDerivation rec {
   pname = "sf-mono-nerdfont";
   version = "dc5a3e6fcc2e16ad476b7be3c3c17c2273b260ea";

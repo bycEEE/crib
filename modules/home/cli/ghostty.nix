@@ -1,4 +1,4 @@
-{lib, ...}: {
+{ lib, ... }: {
   programs.ghostty = {
     enable = true;
     package = null;
@@ -51,10 +51,22 @@
         "super+9=unbind"
       ]
       # ghostty binds both the character (super+1) and physical key (super+digit_1)
-      ++ (lib.concatMap (n: [
-        "super+${toString n}=unbind"
-        "super+digit_${toString n}=unbind"
-      ]) [1 2 3 4 5 6 7 8]);
+      ++ (lib.concatMap
+        (n: [
+          "super+${toString n}=unbind"
+          "super+digit_${toString n}=unbind"
+        ])
+        [
+          1
+          2
+          3
+          4
+          5
+          6
+          7
+          8
+        ]
+      );
     };
   };
 }

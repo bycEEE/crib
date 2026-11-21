@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     chart-testing # CLI tool for linting and testing Helm charts
     eksctl # The official CLI for Amazon EKS

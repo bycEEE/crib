@@ -1,6 +1,6 @@
 # https://macos-defaults.com
 # https://lupin3000.github.io/macOS/defaults/
-{...}: {
+{ ... }: {
   targets.darwin = {
     currentHostDefaults = {
       "com.apple.controlcenter" = {

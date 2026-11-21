@@ -4,10 +4,12 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   functions = builtins.readFile ./scripts/functions.sh;
   navi_widget = builtins.readFile ./scripts/navi_widget.sh;
-in {
+in
+{
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true; # Disable this if using fzf-tab plugin (maybe not necessary)
@@ -131,16 +133,18 @@ in {
       # Homebrew: static equivalent of `brew shellenv` (saves a fork per shell).
       # Order 550 = before compinit, so brew's completions are picked up.
       # Appended to fpath so Nix-provided completions keep precedence.
-      (lib.mkOrder 550 (lib.optionalString pkgs.stdenv.hostPlatform.isDarwin ''
-        if [[ -d /opt/homebrew ]]; then
-          export HOMEBREW_PREFIX="/opt/homebrew"
-          export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
-          export HOMEBREW_REPOSITORY="/opt/homebrew"
-          export PATH="/opt/homebrew/bin:/opt/homebrew/sbin''${PATH+:$PATH}"
-          export INFOPATH="/opt/homebrew/share/info:''${INFOPATH:-}"
-          fpath+=(/opt/homebrew/share/zsh/site-functions)
-        fi
-      ''))
+      (lib.mkOrder 550 (
+        lib.optionalString pkgs.stdenv.hostPlatform.isDarwin ''
+          if [[ -d /opt/homebrew ]]; then
+            export HOMEBREW_PREFIX="/opt/homebrew"
+            export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
+            export HOMEBREW_REPOSITORY="/opt/homebrew"
+            export PATH="/opt/homebrew/bin:/opt/homebrew/sbin''${PATH+:$PATH}"
+            export INFOPATH="/opt/homebrew/share/info:''${INFOPATH:-}"
+            fpath+=(/opt/homebrew/share/zsh/site-functions)
+          fi
+        ''
+      ))
       (lib.mkAfter ''
         # Re-register zsh-autosuggestions' apply hook so it runs last in the
         # zle-line-pre-redraw chain. Injected via mkAfter (order 1500) so it
@@ -255,7 +259,7 @@ in {
   #   #   '';
   # };
 
-  home.activation.clearZcompdump = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  home.activation.clearZcompdump = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     run rm -f "${config.xdg.configHome}/zsh/.zcompdump" "${config.xdg.configHome}/zsh/.zcompdump.zwc"
   '';
 }

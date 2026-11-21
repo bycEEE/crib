@@ -2,11 +2,12 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   programs.gpg = {
     enable = false;
     scdaemonSettings =
-      {}
+      { }
       // lib.optionalAttrs pkgs.stdenvNoCC.hostPlatform.isDarwin {
         disable-ccid = true;
       };

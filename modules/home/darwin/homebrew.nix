@@ -4,7 +4,8 @@
   pkgs,
   lib,
   ...
-}: let
+}:
+let
   taps = [
     "homebrew/bundle"
     "homebrew/cask"
@@ -43,32 +44,25 @@
     # }
   ];
 in
-  with lib; {
-    home.sessionPath = ["/opt/homebrew/bin"];
+with lib;
+{
+  home.sessionPath = [ "/opt/homebrew/bin" ];
 
-    home.file.".Brewfile" = {
-      text =
-        (concatMapStrings
-          (tap: ''tap "'' + tap + "\"\n")
-          taps)
-        + (concatMapStrings
-          (brew: ''brew "'' + brew + "\"\n")
-          brews)
-        + (concatMapStrings
-          (cask: ''cask "'' + cask + "\"\n")
-          casks)
-        + (concatMapStrings
-          (font: ''cask "font-'' + font + "\"\n")
-          fonts)
-        + (concatMapStrings
-          ({
-            name,
-            id,
-          }:
-            ''mas "'' + name + ''", id: '' + id + "\n")
-          mas);
-      onChange = ''
-        /opt/homebrew/bin/brew bundle install --cleanup --verbose --no-upgrade --force --no-lock --global
-      '';
-    };
-  }
+  home.file.".Brewfile" = {
+    text =
+      (concatMapStrings (tap: ''tap "'' + tap + "\"\n") taps)
+      + (concatMapStrings (brew: ''brew "'' + brew + "\"\n") brews)
+      + (concatMapStrings (cask: ''cask "'' + cask + "\"\n") casks)
+      + (concatMapStrings (font: ''cask "font-'' + font + "\"\n") fonts)
+      + (concatMapStrings (
+        {
+          name,
+          id,
+        }:
+        ''mas "'' + name + ''", id: '' + id + "\n"
+      ) mas);
+    onChange = ''
+      /opt/homebrew/bin/brew bundle install --cleanup --verbose --no-upgrade --force --no-lock --global
+    '';
+  };
+}
