@@ -160,5 +160,10 @@
       # };
       # nur = nur.overlay;
     };
+
+    # `nix fmt` formats every .nix file in the repo with nixfmt (via treefmt)
+    formatter =
+      inputs.nixpkgs.lib.genAttrs ["aarch64-darwin" "x86_64-linux" "aarch64-linux"]
+      (system: inputs.nixpkgs.legacyPackages.${system}.nixfmt-tree);
   };
 }

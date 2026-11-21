@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     # Formatters
     jsonnet # Includes jsonnetfmt
-    nixpkgs-fmt # nix code formatter that would be applied on nixpkgs
+    nixfmt # Official Nix formatter (RFC 166 style)
     # nodePackages.prettier # An opinionated code formatter
     ruff # An Extremely fast Python linter and formatter and code formatter
     shfmt # A shell parser, formatter, and interpreter (POSIX/Bash/mksh)
