@@ -9,7 +9,7 @@
     settings = {
       # nix manages this
       update_check = false;
-      # search history from session by default
+      # search history from all sessions and hosts by default
       filter_mode = "global";
       # fuzzy finder search syntax borrowed from fzf
       search_mode = "skim";
